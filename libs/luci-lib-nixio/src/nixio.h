@@ -107,7 +107,7 @@ int nixio__mode_write(int mode, char *modestr);
 
 int nixio__push_stat(lua_State *L, nixio_stat_t *buf);
 
-extern const char nixio__bin2hex[16];
+const char nixio__bin2hex[16];
 
 /* Module functions */
 void nixio_open_file(lua_State *L);
