@@ -102,6 +102,47 @@ var UIElement = baseclass.extend(/** @lends LuCI.ui.AbstractElement.prototype */
 	},
 
 	/**
+	 * Set the current placeholder value of the input widget.
+	 *
+	 * @instance
+	 * @memberof LuCI.ui.AbstractElement
+	 * @param {string|string[]|null} value
+	 * The placeholder to set for the input element. Only applicable to text
+	 * inputs, not to radio buttons, selects or similar.
+	 */
+	setPlaceholder: function(value) {
+		var node = this.node ? this.node.querySelector('input,textarea') : null;
+		if (node) {
+			switch (node.getAttribute('type') || 'text') {
+			case 'password':
+			case 'search':
+			case 'tel':
+			case 'text':
+			case 'url':
+				if (value != null && value != '')
+					node.setAttribute('placeholder', value);
+				else
+					node.removeAttribute('placeholder');
+			}
+		}
+	},
+
+	/**
+	 * Check whether the input value was altered by the user.
+	 *
+	 * @instance
+	 * @memberof LuCI.ui.AbstractElement
+	 * @returns {boolean}
+	 * Returns `true` if the input value has been altered by the user or
+	 * `false` if it is unchaged. Note that if the user modifies the initial
+	 * value and changes it back to the original state, it is still reported
+	 * as changed.
+	 */
+	isChanged: function() {
+		return (this.node ? this.node.getAttribute('data-changed') : null) == 'true';
+	},
+
+	/**
 	 * Check whether the current input value is valid.
 	 *
 	 * @instance
