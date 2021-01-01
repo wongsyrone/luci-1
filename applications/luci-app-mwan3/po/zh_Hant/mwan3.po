@@ -3,15 +3,15 @@
 #
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-07 16:38+0000\n"
-"Last-Translator: Hulen <shift0106@gmail.com>\n"
+"PO-Revision-Date: 2020-12-26 06:29+0000\n"
+"Last-Translator: operator <omniplay@hotmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsmwan3/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:176
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:192
@@ -121,7 +121,7 @@ msgstr "檢查路由表"
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:34
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:34
 msgid "Collecting data..."
-msgstr "收集資料中..."
+msgstr "收集資料中……"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:28
 msgid "Critical"
@@ -212,11 +212,11 @@ msgstr "故障檢測間隔"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:108
 msgid "Failure latency [ms]"
-msgstr ""
+msgstr "故障等待時間[ms]"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:120
 msgid "Failure packet loss [%]"
-msgstr ""
+msgstr "失敗封包遺失[％]"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:24
 msgid "Firewall loglevel"
@@ -240,15 +240,15 @@ msgstr "全局"
 
 #: applications/luci-app-mwan3/root/usr/share/rpcd/acl.d/luci-app-mwan3.json:3
 msgid "Grant UCI access for luci-app-mwan3"
-msgstr ""
+msgstr "給予 UCI 存取 luci-app-mwan3 的權限"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:80
 msgid "Hotplug ifdown"
-msgstr "Hotplug ifdown"
+msgstr "熱插拔ifdown"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:79
 msgid "Hotplug ifup"
-msgstr "Hotplug ifup"
+msgstr "熱插拔ifup"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:29
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:56
@@ -266,11 +266,11 @@ msgstr "IPv4"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:23
 msgid "IPv4 and IPv6"
-msgstr ""
+msgstr "IPv4 和 IPv6"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:24
 msgid "IPv4 only"
-msgstr ""
+msgstr "僅 IPv4"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:35
 msgid "IPv6"
@@ -278,7 +278,7 @@ msgstr "IPv6"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:25
 msgid "IPv6 only"
-msgstr ""
+msgstr "僅 IPv6"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:32
 msgid "Info"
@@ -350,7 +350,7 @@ msgstr "載入中"
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:19
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:72
 msgid "Logging"
-msgstr "日誌"
+msgstr "記錄中"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:23
 msgid "Loglevel"
@@ -456,7 +456,7 @@ msgstr "分配的成員"
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:33
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:25
 msgid "Metric"
-msgstr "躍點數"
+msgstr "公測數"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:190
 msgid "Missing both IP rules for interface %s"
@@ -489,7 +489,7 @@ msgstr "未定義介面 %s 的跟蹤主機。"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:31
 msgid "Notice"
-msgstr "注意"
+msgstr "通知"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:60
 msgid "Notification"
@@ -545,7 +545,7 @@ msgstr "Ping 跟蹤 IP"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:54
 msgid "Policies"
-msgstr "策略"
+msgstr "政策"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:42
 msgid ""
@@ -565,7 +565,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:51
 msgid "Policy"
-msgstr "策略"
+msgstr "政策"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:103
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:75
@@ -583,11 +583,11 @@ msgstr "故障恢復間隔"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:129
 msgid "Recovery latency [ms]"
-msgstr ""
+msgstr "恢復延遲[ms]"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:141
 msgid "Recovery packet loss [%]"
-msgstr ""
+msgstr "恢復封包遺失[％]"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:40
 msgid "Routing table %d"
@@ -638,12 +638,12 @@ msgstr "單位為秒。接受的值：1-1000000。留空則使用預設值 600 �
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:73
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:27
 msgid "Source address"
-msgstr "源位址"
+msgstr "來源位址"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:79
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:31
 msgid "Source port"
-msgstr "源埠"
+msgstr "來源埠"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:55
 msgid "Sticky"
@@ -780,7 +780,7 @@ msgstr "警告"
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:39
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:29
 msgid "Weight"
-msgstr "比重"
+msgstr "重量"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:26
 msgid ""
@@ -828,6 +828,9 @@ msgid ""
 ">Interfaces may not share the same name as configured members, policies or "
 "rules"
 msgstr ""
+"mwan3 要求所有在 /etc/config/network 中的介面 (interface) 設定獨立的 metric 參數<br />介面名稱要和/"
+"etc/config/network的一致<br />名稱可以包含字元 A-Z，a-z，0-9，_ ，但不能有空格<br "
+"/>介面名稱也不能和設定的成員，原則，或者規則相同"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:88
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:28
