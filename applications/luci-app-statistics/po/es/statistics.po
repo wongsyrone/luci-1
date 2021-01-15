@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:41+0200\n"
-"PO-Revision-Date: 2020-12-13 19:21+0000\n"
+"PO-Revision-Date: 2021-01-12 22:24+0000\n"
 "Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsstatistics/es/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/apcups.js:7
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/apcups.json:2
@@ -64,6 +64,7 @@ msgid "Base Directory"
 msgstr "Directorio de base"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:16
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:16
 msgid "Basic monitoring"
 msgstr "Monitorización básica"
 
@@ -121,15 +122,15 @@ msgstr "Cambia la propiedad del archivo de socket al grupo especificado."
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/chrony.js:8
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/chrony.json:2
 msgid "Chrony"
-msgstr ""
+msgstr "Chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:6
 msgid "Chrony Plugin Configuration"
-msgstr ""
+msgstr "Configuración del complemento Chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:32
 msgid "Chrony monitoring enabled"
-msgstr ""
+msgstr "Monitoreo de Chrony activado"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/olsrd.js:21
 msgid "CollectLinks"
@@ -315,6 +316,7 @@ msgstr "Activar estadísticas"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/processes.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:21
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:13
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/thermal.js:13
@@ -463,7 +465,7 @@ msgstr "Host"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:14
 msgid "Host running chrony"
-msgstr ""
+msgstr "Host ejecutando Chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:51
 msgid "Hostname"
@@ -594,6 +596,7 @@ msgstr "Monitoreo de memoria activado"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:25
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:41
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:47
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:21
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/thermal.js:34
 msgid "Monitor all except specified"
 msgstr "Monitorizar todos menos los especificados"
@@ -693,6 +696,7 @@ msgstr[1] "Monitoreo de todos los discos excepto %d"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/interface.js:32
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:36
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:54
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:33
 msgid "Monitoring all but one interface"
 msgid_plural "Monitoring all but %d interfaces"
 msgstr[0] "Monitoreo de todas las interfaces menos una"
@@ -721,6 +725,7 @@ msgstr "Monitoreo de todos excepto %s, %s, %s"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/interface.js:30
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:34
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:52
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:31
 msgid "Monitoring all interfaces"
 msgstr "Monitorear todas las interfaces"
 
@@ -775,6 +780,7 @@ msgstr[1] "Monitorear %d hosts"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/interface.js:34
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:38
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:56
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:35
 msgid "Monitoring one interface"
 msgid_plural "Monitoring %d interfaces"
 msgstr[0] "Monitoreo de una interfaz"
@@ -921,11 +927,11 @@ msgstr "Puerto para comunicación apcupsd"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:20
 msgid "Port for chronyd"
-msgstr ""
+msgstr "Puerto para chronyd"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:15
 msgid "Possibly bug in collectd. Only 127.0.0.1 and localhost work"
-msgstr ""
+msgstr "Posiblemente error en collectd. Solo 127.0.0.1 y localhost funcionan"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/processes.js:7
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/processes.json:2
@@ -988,6 +994,14 @@ msgstr "Filas por RRA"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iptables.js:161
 msgid "Rule monitoring enabled"
 msgstr "Monitoreo de reglas activado"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/snmp6.js:7
+msgid "SNMP6"
+msgstr "SNMP6"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:7
+msgid "SNMP6 Plugin Configuration"
+msgstr "Configuración del complemento SNMP6"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/sqm.js:7
 msgid "SQM"
@@ -1069,6 +1083,10 @@ msgstr "Mostrar valores máximos en lugar de promedios"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpufreq.js:23
 msgid "Simple CPU frequency monitoring enabled"
 msgstr "Monitoreo de frecuencia de CPU simple activado"
+
+#: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/snmp6.json:2
+msgid "Snmp6"
+msgstr "Snmp6"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/unixsock.js:34
 msgid "Socket %s active"
@@ -1221,6 +1239,7 @@ msgstr "El nombre de la cadena no debe contener espacios"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:7
 msgid "The chrony plugin will monitor chrony NTP server statistics"
 msgstr ""
+"El complemento chrony monitoreará las estadísticas del servidor NTP de chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iptables.js:153
 msgid "The comment to match must not contain spaces"
@@ -1405,6 +1424,12 @@ msgstr ""
 "El plugin \"sensors\" usa el marco de trabajo de sensores de Linux para "
 "recopilar estadísticas ambientales."
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:8
+msgid "The snmp6 plugin collects IPv6 statistics for selected interfaces."
+msgstr ""
+"El complemento snmp6 recopila estadísticas de IPv6 para las interfaces "
+"seleccionadas."
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/splash_leases.js:7
 msgid ""
 "The splash leases plugin uses libuci to collect statistics about splash "
@@ -1487,7 +1512,7 @@ msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:25
 msgid "Timeout for polling chrony"
-msgstr ""
+msgstr "Tiempo de espera para la votación chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:80
 msgid "Try to lookup fully qualified hostname"

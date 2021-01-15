@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-30 02:30+0000\n"
-"Last-Translator: operator <omniplay@hotmail.com>\n"
+"PO-Revision-Date: 2021-01-11 18:32+0000\n"
+"Last-Translator: akibou <jinwenxin1997@icloud.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsshadowsocks-libev/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -154,7 +154,7 @@ msgstr "一般設定"
 
 #: applications/luci-app-shadowsocks-libev/root/usr/share/rpcd/acl.d/luci-app-shadowsocks-libev.json:3
 msgid "Grant service list access to LuCI app shadowsocks-libev"
-msgstr "授予服務列表存取LuCI應用程式shadowsocks-libev的權限"
+msgstr "授予 luci-app-shadowsocks-libev 擁有服務列表存取的權限"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/shadowsocks-libev.js:192
 msgid "IPv6 First"
@@ -252,7 +252,7 @@ msgstr "僅對來自這些網絡界面的封包應用規則"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:115
 msgid "Overview"
-msgstr "總覽"
+msgstr "概覽"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/shadowsocks-libev.js:248
 msgid "Package is not installed"
