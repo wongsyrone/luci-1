@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2021-01-02 13:00+0000\n"
+"PO-Revision-Date: 2021-02-11 14:23+0000\n"
 "Last-Translator: Satoru Yoshida <ramat@ram.ne.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/luci/ja/"
 ">\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:931
 msgid "%.1f dB"
@@ -22,7 +22,7 @@ msgstr "%.1f dB"
 msgid "%d Bit"
 msgstr "%d ビット"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3707
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3709
 msgid "%d invalid field(s)"
 msgstr "無効な入力欄: %d個"
 
@@ -62,7 +62,7 @@ msgstr "-- 追加項目 --"
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3738
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:783
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:1021
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:1990
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:1992
 #: modules/luci-compat/luasrc/view/cbi/header.htm:8
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:88
 msgid "-- Please choose --"
@@ -70,7 +70,7 @@ msgstr "-- 選択してください --"
 
 #: modules/luci-base/htdocs/luci-static/resources/cbi.js:276
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:1022
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:1991
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:1993
 #: modules/luci-compat/luasrc/view/cbi/header.htm:9
 msgid "-- custom --"
 msgstr "-- カスタム --"
@@ -267,11 +267,11 @@ msgstr ""
 "<br />注意: 編集前のcrontabファイルが空の場合、手動でcronサービスを再起動する"
 "必要があります。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2736
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2738
 msgid "A directory with the same name already exists."
 msgstr "同じ名前のディレクトリがすでに存在します。"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2670
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2671
 msgid "A new login is required since the authentication session expired."
 msgstr "認証セッションの期限が切れたため、再ログインが必要です。"
 
@@ -360,7 +360,7 @@ msgstr ""
 msgid "ATM device number"
 msgstr "ATMデバイス番号"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:37
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:36
 msgid "ATU-C System Vendor ID"
 msgstr "ATU-CシステムベンダーID"
 
@@ -540,14 +540,13 @@ msgstr "管理"
 msgid "Advanced Settings"
 msgstr "詳細設定"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:28
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:27
 msgid "Aggregate Transmit Power (ACTATP)"
 msgstr "総送信電力（ACTATP）"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:258
-#, fuzzy
 msgid "Aggregation Selection Logic"
-msgstr "アグリゲーション選択ロジック"
+msgstr "集計の選択ロジック"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:261
 msgid "Aggregator: All slaves down or has no slaves (stable, 0)"
@@ -775,16 +774,16 @@ msgstr "すべてのゾーン"
 msgid "Apply backup?"
 msgstr "バックアップを適用しますか？"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4294
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4296
 msgid "Apply request failed with status <code>%h</code>"
 msgstr "適用のリクエストに失敗しました ステータスコード:<code>%h</code>"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2181
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4160
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2182
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4162
 msgid "Apply unchecked"
 msgstr "チェックなしの適用"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4233
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4235
 msgid "Applying configuration changes… %ds"
 msgstr "設定を適用中… 残り最大%d秒"
 
@@ -1031,8 +1030,8 @@ msgstr "ブート時に起動"
 msgid "Broadcast policy (broadcast, 3)"
 msgstr "ブロードキャストポリシー（broadcast、3）"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2826
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3817
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2828
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3819
 msgid "Browse…"
 msgstr "参照…"
 
@@ -1062,8 +1061,8 @@ msgstr "キャッシュ済"
 msgid "Call failed"
 msgstr "呼び出しに失敗しました"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2919
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3826
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2921
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3828
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:14
 #: modules/luci-compat/luasrc/view/cbi/simpleform.htm:52
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:187
@@ -1137,11 +1136,11 @@ msgstr ""
 msgid "Chain"
 msgstr "チェイン"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4046
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4048
 msgid "Changes"
 msgstr "変更"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4329
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4331
 msgid "Changes have been reverted."
 msgstr "変更は取り消されました。"
 
@@ -1161,11 +1160,11 @@ msgstr "チャネル"
 
 #: modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json:75
 msgid "Channel Analysis"
-msgstr ""
+msgstr "チャネル分析"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/channel_analysis.js:377
 msgid "Channel Width"
-msgstr ""
+msgstr "チャネル幅"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:174
 msgid "Check filesystems before mount"
@@ -1313,16 +1312,16 @@ msgstr ""
 msgid "Compute outgoing checksum (optional)."
 msgstr "送信チェックサムを計算します（オプション）。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4046
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4048
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:426
 msgid "Configuration"
 msgstr "設定"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4208
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4210
 msgid "Configuration changes applied."
 msgstr "設定が適用されました。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4146
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4148
 msgid "Configuration changes have been rolled back!"
 msgstr "設定がロールバックされました！"
 
@@ -1398,7 +1397,7 @@ msgstr "内容が保存されました。"
 msgid "Continue"
 msgstr "続行"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4182
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4184
 msgid ""
 "Could not regain access to the device after applying the configuration "
 "changes. You might need to reconnect if you modified network related "
@@ -1556,7 +1555,7 @@ msgid "DS-Lite AFTR address"
 msgstr "DS-Lite AFTRアドレス"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:889
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:45
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:44
 msgid "DSL"
 msgstr "DSL"
 
@@ -1577,7 +1576,7 @@ msgstr "DTIM間隔"
 msgid "DUID"
 msgstr "DUID"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:22
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:21
 msgid "Data Rate"
 msgstr "データレート"
 
@@ -1628,7 +1627,7 @@ msgstr ""
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2662
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2666
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3154
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2888
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2890
 #: modules/luci-compat/luasrc/view/cbi/nsection.htm:11
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:162
 #: modules/luci-compat/luasrc/view/cbi/tsection.htm:16
@@ -1640,7 +1639,7 @@ msgstr "削除"
 msgid "Delete key"
 msgstr "鍵を削除"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2785
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2787
 msgid "Delete request failed: %s"
 msgstr "削除の要求に失敗しました: %s"
 
@@ -1657,7 +1656,7 @@ msgstr "Delivery Traffic Indication Message（DTIM）間隔"
 msgid "Description"
 msgstr "説明"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2884
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2886
 msgid "Deselect"
 msgstr "選択を解除"
 
@@ -1710,7 +1709,7 @@ msgstr "デバイスを再起動中…"
 msgid "Device not managed by ModemManager."
 msgstr "モデムマネージャーはデバイスを管理していません。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4181
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4183
 msgid "Device unreachable!"
 msgstr "デバイスにアクセスできません！"
 
@@ -1727,7 +1726,7 @@ msgstr "診断"
 msgid "Dial number"
 msgstr "ダイヤル番号"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2681
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2683
 msgid "Directory"
 msgstr "ディレクトリ"
 
@@ -1802,9 +1801,9 @@ msgstr "切断の試行に失敗しました。"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:606
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2861
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3325
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4063
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4152
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3327
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4065
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4154
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1696
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:330
 msgid "Dismiss"
@@ -1853,7 +1852,7 @@ msgstr "ローカルネットワークへの逆引きを転送しない"
 msgid "Do not send a hostname"
 msgstr "ホスト名を送信しない"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2771
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2773
 msgid "Do you really want to delete \"%s\" ?"
 msgstr "本当に\"%s\"を削除しますか？"
 
@@ -1865,7 +1864,7 @@ msgstr "本当に以下のSSH公開鍵を削除しますか？"
 msgid "Do you really want to erase all settings?"
 msgstr "本当にすべての設定を消去しますか？"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2769
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2771
 msgid "Do you really want to recursively delete the directory \"%s\" ?"
 msgstr "本当にディレクトリ\"%s\"を再帰的に削除しますか？"
 
@@ -2175,7 +2174,7 @@ msgstr "消去中..."
 msgid "Error"
 msgstr "エラー"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:30
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:29
 msgid "Errored seconds (ES)"
 msgstr "エラー秒数（ES）"
 
@@ -2287,7 +2286,7 @@ msgstr "FTプロトコル"
 msgid "Failed to change the system password."
 msgstr "システムパスワードの変更に失敗しました。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4140
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4142
 msgid "Failed to confirm apply within %ds, waiting for rollback…"
 msgstr "%d秒以内に適用できませんでした。ロールバック中です…"
 
@@ -2295,15 +2294,15 @@ msgstr "%d秒以内に適用できませんでした。ロールバック中で�
 msgid "Failed to execute \"/etc/init.d/%s %s\" action: %s"
 msgstr "\"/etc/init.d/%s %s\"の実行に失敗しました: %s"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2689
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2691
 msgid "File"
 msgstr "ファイル"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2636
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2638
 msgid "File not accessible"
 msgstr "ファイルにアクセスできません"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2827
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2829
 msgid "Filename"
 msgstr "ファイル名"
 
@@ -2454,7 +2453,7 @@ msgstr "フォームトークンの不一致"
 msgid "Forward DHCP traffic"
 msgstr "DHCPトラフィックを転送"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:29
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:28
 msgid "Forward Error Correction Seconds (FECS)"
 msgstr "前方誤り訂正秒（FECS）"
 
@@ -2698,7 +2697,7 @@ msgstr "HE.netユーザー名"
 msgid "Hang Up"
 msgstr "ハングアップ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:34
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:33
 msgid "Header Error Code Errors (HEC)"
 msgstr "ヘッダーエラーコードエラー（HEC）"
 
@@ -3460,7 +3459,7 @@ msgstr "言語"
 msgid "Language and Style"
 msgstr "言語とスタイル"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:24
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:23
 msgid "Latency"
 msgstr "遅延"
 
@@ -3508,7 +3507,7 @@ msgstr ""
 "する可能性があります。 可能な限り 802.11b レートを許可しないことをお勧めしま"
 "す。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4048
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4050
 msgid "Legend:"
 msgstr "凡例:"
 
@@ -3525,7 +3524,7 @@ msgstr ""
 msgid "Limit listening to these interfaces, and loopback."
 msgstr "リッスンをこれらのインターフェースとループバックに限定します。"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:25
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:24
 msgid "Line Attenuation (LATN)"
 msgstr "回線減衰（LATN）"
 
@@ -3631,11 +3630,11 @@ msgstr "負荷"
 msgid "Load Average"
 msgstr "システム平均負荷"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2954
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2956
 msgid "Loading directory contents…"
 msgstr "ディレクトリの内容を読み込み中…"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:1948
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:1949
 #: modules/luci-base/luasrc/view/view.htm:4
 #: modules/luci-mod-status/luasrc/view/admin_status/index.htm:12
 msgid "Loading view…"
@@ -3756,7 +3755,7 @@ msgstr "ログイン"
 msgid "Logout"
 msgstr "ログアウト"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:32
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:31
 msgid "Loss of Signal Seconds (LOSS)"
 msgstr "信号損失秒数（LOSS）"
 
@@ -3856,7 +3855,7 @@ msgstr "手動"
 msgid "Master"
 msgstr "マスター"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:23
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:22
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr "到達可能な最大データレート（ATTNDR）"
 
@@ -4138,7 +4137,7 @@ msgid "NTP server candidates"
 msgstr "NTPサーバー候補"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2542
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3803
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3805
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:27
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:710
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/leds.js:67
@@ -4242,7 +4241,7 @@ msgstr "接続済みクライアントなし"
 msgid "No data received"
 msgstr "受信済みデータなし"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2894
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2896
 msgid "No entries in this directory"
 msgstr "このディレクトリ内にエントリーがありません"
 
@@ -4320,7 +4319,7 @@ msgstr "割り当てられたゾーンがありません"
 msgid "Noise"
 msgstr "ノイズ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:27
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:26
 msgid "Noise Margin (SNR)"
 msgstr "ノイズマージン（SNR）"
 
@@ -4328,8 +4327,7 @@ msgstr "ノイズマージン（SNR）"
 msgid "Noise:"
 msgstr "ノイズ:"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:35
-#, fuzzy
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:34
 msgid "Non Pre-emptive CRC errors (CRC_P)"
 msgstr "非プリエンプティブCRCエラー（CRC_P）"
 
@@ -4381,6 +4379,8 @@ msgid ""
 "Note: Some wireless drivers do not fully support 802.11w. E.g. mwlwifi may "
 "have problems"
 msgstr ""
+"注：一部のワイヤレス ドライバーは、802.11w を完全にはサポートしていません。 "
+"例えば、 mwlwifi に問題がある可能性があります"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:167
 msgid "Notice"
@@ -4503,11 +4503,11 @@ msgstr "オプション\"%s\"に無効な入力値が含まれています。"
 msgid "Option \"%s\" must not be empty."
 msgstr "オプション\"%s\"を設定してください。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4055
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4057
 msgid "Option changed"
 msgstr "変更されるオプション"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4057
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4059
 msgid "Option removed"
 msgstr "削除されるオプション"
 
@@ -4714,7 +4714,7 @@ msgstr "内部ルートに使用されるテーブルを上書き"
 msgid "Overview"
 msgstr "概要"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2737
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2739
 msgid "Overwrite existing file \"%s\" ?"
 msgstr "既存のファイル\"%s\"を上書きしますか？"
 
@@ -4894,7 +4894,7 @@ msgstr "内部クライアント証明書のパス"
 msgid "Path to inner Private Key"
 msgstr "内部秘密鍵のパス"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2731
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2732
 msgid "Paused"
 msgstr "一時停止中"
 
@@ -4979,7 +4979,7 @@ msgstr "パケット"
 msgid "Please enter your username and password."
 msgstr "ユーザー名とパスワードを入力してください。"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3786
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3788
 msgid "Please select the file to upload."
 msgstr "アップロードするファイルを選択してください。"
 
@@ -5000,12 +5000,11 @@ msgstr "ポートステータス:"
 msgid "Potential negation of: %s"
 msgstr "存在しない可能性があります: %s"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:38
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:37
 msgid "Power Management Mode"
 msgstr "電力管理モード"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:36
-#, fuzzy
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:35
 msgid "Pre-emptive CRC errors (CRCP_P)"
 msgstr "プリエンプティブCRCエラー（CRCP_P）"
 
@@ -5071,10 +5070,6 @@ msgstr "秘密鍵"
 #: modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json:63
 msgid "Processes"
 msgstr "プロセス"
-
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:21
-msgid "Profile"
-msgstr "プロファイル"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/iptables.js:66
 msgid "Prot."
@@ -5165,7 +5160,7 @@ msgstr "RTS/CTSしきい値"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:48
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:83
 msgid "RX"
-msgstr "受信"
+msgstr "RX"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/60_wifi.js:232
 msgid "RX Rate"
@@ -5261,7 +5256,7 @@ msgstr "このインターフェースを再接続"
 msgid "References"
 msgstr "参照"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2725
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2726
 msgid "Refreshing"
 msgstr "更新中"
 
@@ -5443,7 +5438,7 @@ msgstr "WEPをサポートするwpa-supplicantが必要"
 msgid "Reselection policy for primary slave"
 msgstr "プライマリスレーブの再選択ポリシー"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2203
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2204
 #: modules/luci-base/luasrc/view/sysauth.htm:39
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:30
@@ -5498,19 +5493,19 @@ msgstr "バックアップを復元"
 msgid "Reveal/hide password"
 msgstr "パスワードを表示/隠す"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4071
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4073
 msgid "Revert"
 msgstr "元に戻す"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4156
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4158
 msgid "Revert changes"
 msgstr "変更の取り消し"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4338
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4340
 msgid "Revert request failed with status <code>%h</code>"
 msgstr "取り消しのリクエストに失敗しました ステータスコード:<code>%h</code>"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4318
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4320
 msgid "Reverting configuration…"
 msgstr "設定を元に戻しています…"
 
@@ -5573,7 +5568,7 @@ msgstr "デバイスをマウントする前にファイルシステムチェッ
 msgid "Run filesystem check"
 msgstr "ファイルシステムチェックを実行"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2364
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2365
 msgid "Runtime error"
 msgstr "ランタイムエラー"
 
@@ -5629,7 +5624,7 @@ msgid "SWAP"
 msgstr "スワップ"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2866
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2198
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2199
 #: modules/luci-compat/luasrc/view/cbi/error.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:26
 #: modules/luci-compat/luasrc/view/cbi/header.htm:20
@@ -5638,8 +5633,8 @@ msgstr "スワップ"
 msgid "Save"
 msgstr "保存"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2180
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4067
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2181
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4069
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:22
 msgid "Save & Apply"
 msgstr "保存&適用"
@@ -5665,11 +5660,11 @@ msgstr "スキャン"
 msgid "Scheduled Tasks"
 msgstr "スケジュールタスク"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4051
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4053
 msgid "Section added"
 msgstr "追加されるセクション"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4053
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4055
 msgid "Section removed"
 msgstr "削除されるセクション"
 
@@ -5687,9 +5682,9 @@ msgstr ""
 "を選択してください。正しいファームウェアであること、デバイスに適したものであ"
 "ることが確かな場合のみ使用してください！"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2638
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2778
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2943
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2640
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2780
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2945
 msgid "Select file…"
 msgstr "ファイルを選択…"
 
@@ -5731,7 +5726,7 @@ msgstr "サービスタイプ"
 msgid "Services"
 msgstr "サービス"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2668
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2669
 msgid "Session expired"
 msgstr "セッション期限切れ"
 
@@ -5785,7 +5780,7 @@ msgstr "操作モードの設定に失敗しました"
 msgid "Setup DHCP Server"
 msgstr "DHCPサーバーをセットアップ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:31
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:30
 msgid "Severely Errored Seconds (SES)"
 msgstr "重大エラー秒数（SES）"
 
@@ -5828,19 +5823,19 @@ msgstr "信号強度"
 msgid "Signal / Noise"
 msgstr "信号強度 / ノイズ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:26
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:25
 msgid "Signal Attenuation (SATN)"
 msgstr "信号減衰（SATN）"
 
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:124
 msgid "Signal Refresh Rate"
-msgstr ""
+msgstr "信号のリフレッシュ レート"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/wireless.js:260
 msgid "Signal:"
 msgstr "信号:"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3804
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3806
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:217
 msgid "Size"
 msgstr "サイズ"
@@ -6193,7 +6188,7 @@ msgstr "開始優先順位"
 msgid "Start refresh"
 msgstr "更新開始"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4271
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4273
 msgid "Starting configuration apply…"
 msgstr "設定の適用を開始しています…"
 
@@ -6325,7 +6320,7 @@ msgstr "プロトコルを切り替える"
 msgid "Switch to CIDR list notation"
 msgstr "CIDRリスト表記へ切り替える"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2673
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2675
 msgid "Symbolic link"
 msgstr "シンボリックリンク"
 
@@ -6465,7 +6460,7 @@ msgstr ""
 "非表示の無線ネットワークに接続する場合、正しいSSIDを手動で指定する必要があり"
 "ます"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4147
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4149
 msgid ""
 "The device could not be reached within %d seconds after applying the pending "
 "changes, which caused the configuration to be rolled back for safety "
@@ -6672,7 +6667,7 @@ msgstr ""
 msgid "There are no active leases"
 msgstr "アクティブなリースはありません"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4286
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4288
 msgid "There are no changes to apply"
 msgstr "適用する変更はありません"
 
@@ -6813,7 +6808,7 @@ msgstr "タイムアウト"
 msgid "Timezone"
 msgstr "タイムゾーン"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2678
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2679
 msgid "To login…"
 msgstr "ログイン…"
 
@@ -6979,7 +6974,7 @@ msgstr "ファイアウォールを再起動できません: %s"
 msgid "Unable to save contents: %s"
 msgstr "内容を保存できません: %s"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:33
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:32
 msgid "Unavailable Seconds (UAS)"
 msgstr "使用不可秒数（UAS）"
 
@@ -7021,7 +7016,7 @@ msgstr "アンマウント"
 msgid "Unnamed key"
 msgstr "名前がない鍵"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3991
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3993
 msgid "Unsaved Changes"
 msgstr "保存されていない変更"
 
@@ -7051,7 +7046,7 @@ msgstr "上へ"
 msgid "Up Delay"
 msgstr "上り遅延"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3878
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3880
 msgid "Upload"
 msgstr "アップロード"
 
@@ -7068,21 +7063,21 @@ msgstr ""
 msgid "Upload archive..."
 msgstr "アーカイブをアップロード..."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2832
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2834
 msgid "Upload file"
 msgstr "ファイルをアップロード"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2807
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2809
 msgid "Upload file…"
 msgstr "ファイルをアップロード…"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2754
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3866
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2756
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3868
 msgid "Upload request failed: %s"
 msgstr "アップロードのリクエストに失敗: %s"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3785
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3839
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3787
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3841
 msgid "Uploading file…"
 msgstr "ファイルをアップロード中…"
 
@@ -7496,12 +7491,16 @@ msgid ""
 "Where Wi-Fi Multimedia (WMM) Mode QoS is disabled, clients may be limited to "
 "802.11a/802.11g rates."
 msgstr ""
+"Wi-Fiマルチメディア（WMM）モードのQoSが無効になっている場合、クライアントは"
+"802.11a /802.11gレートに制限される場合があります。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1076
 msgid ""
 "Where the ESSID is hidden, clients may fail to roam and airtime efficiency "
 "may be significantly reduced."
 msgstr ""
+"ESSID が非表示の場合、クライアントがローミングに失敗し、通信時間の効率が大幅"
+"に低下する可能性があります。"
 
 #: modules/luci-compat/luasrc/view/cbi/wireless_modefreq.htm:166
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:471
@@ -8129,7 +8128,6 @@ msgid "value with at least %d characters"
 msgstr "%d文字以上の値"
 
 #: modules/luci-base/htdocs/luci-static/resources/validation.js:445
-#, fuzzy
 msgid "value with at most %d characters"
 msgstr "最大%d文字の値"
 
@@ -8144,6 +8142,9 @@ msgstr "はい"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« 戻る"
+
+#~ msgid "Profile"
+#~ msgstr "プロファイル"
 
 #~ msgid ""
 #~ "Requires the 'full' version of wpad/hostapd and support from the wifi "
