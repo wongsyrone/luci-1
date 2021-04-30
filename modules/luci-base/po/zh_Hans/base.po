@@ -4,15 +4,15 @@
 #
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-13 11:51+0000\n"
-"Last-Translator: xiazhang <xz@xia.plus>\n"
+"PO-Revision-Date: 2021-04-23 07:01+0000\n"
+"Last-Translator: Meano Lee <meanocat@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "openwrt/luci/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1271
 msgid "%.1f dB"
@@ -171,60 +171,56 @@ msgstr "802.11w 重试超时"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:966
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
-msgstr "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
+msgstr "<abbr title=\"基本服务集标识符\">BSSID</abbr>"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:326
 msgid "<abbr title=\"Domain Name System\">DNS</abbr> query port"
-msgstr "<abbr title=\"Domain Name System\">DNS</abbr> 查询端口"
+msgstr "<abbr title=\"域名系统\">DNS</abbr> 查询端口"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:317
 msgid "<abbr title=\"Domain Name System\">DNS</abbr> server port"
-msgstr "<abbr title=\"Domain Name System\">DNS</abbr> 服务器端口"
+msgstr "<abbr title=\"域名系统\">DNS</abbr> 服务器端口"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:260
 msgid ""
 "<abbr title=\"Domain Name System\">DNS</abbr> servers will be queried in the "
 "order of the resolvfile"
-msgstr ""
-"按照“解析文件”里的顺序查询 <abbr title=\"Domain Name System\">DNS</abbr> 服务"
-"器"
+msgstr "按照“解析文件”里的顺序查询 <abbr title=\"域名系统\">DNS</abbr> 服务器"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:955
 msgid "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
-msgstr "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
+msgstr "<abbr title=\"扩展服务集标识符\">ESSID</abbr>"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:491
 msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Address"
-msgstr "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr> 地址"
+msgstr "<abbr title=\"互联网协议第 4 版\">IPv4</abbr> 地址"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:42
 msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Gateway"
-msgstr "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr> 网关"
+msgstr "<abbr title=\"互联网协议第 4 版\">IPv4</abbr> 网关"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:532
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:36
 msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Netmask"
-msgstr "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr> 子网掩码"
+msgstr "<abbr title=\"互联网协议第 4 版\">IPv4</abbr> 子网掩码"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:31
 msgid ""
 "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address or Network "
 "(CIDR)"
-msgstr ""
-"<abbr title=\"Internet Protocol Version 6\">IPv6</abbr> 地址或网段（CIDR）"
+msgstr "<abbr title=\"互联网协议第 6 版\">IPv6</abbr> 地址或网段（CIDR）"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:42
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
-msgstr "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr> 网关"
+msgstr "<abbr title=\"互联网协议第 6 版\">IPv6</abbr> 网关"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:520
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
-msgstr ""
-"<abbr title=\"Internet Protocol Version 6\">IPv6</abbr> 后缀（十六进制）"
+msgstr "<abbr title=\"互联网协议第 6 版\">IPv6</abbr> 后缀（十六进制）"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/leds.js:58
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
-msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> 配置"
+msgstr "<abbr title=\"发光二极管\">LED</abbr> 配置"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/leds.js:69
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Name"
@@ -232,47 +228,46 @@ msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> 名称"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:431
 msgid "<abbr title=\"Media Access Control\">MAC</abbr>-Address"
-msgstr "<abbr title=\"Media Access Control\">MAC</abbr> 地址"
+msgstr "<abbr title=\"媒体访问控制\">MAC</abbr> 地址"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:636
 msgid "<abbr title=\"Neighbour Discovery Protocol\">NDP</abbr>-Proxy"
-msgstr "<abbr title=\"Neighbour Discovery Protocol\">NDP</abbr> 代理"
+msgstr "<abbr title=\"邻居发现协议\">NDP</abbr> 代理"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:603
 msgid "<abbr title=\"Router Advertisement\">RA</abbr> Hop Limit"
-msgstr "<abbr title=\"Router Advertisement\">RA</abbr> 跳数限制"
+msgstr "<abbr title=\"路由器通告\">RA</abbr> 跳数限制"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:585
 msgid "<abbr title=\"Router Advertisement\">RA</abbr> Lifetime"
-msgstr "<abbr title=\"Router Advertisement\">RA</abbr> 生命周期"
+msgstr "<abbr title=\"路由器通告\">RA</abbr> 生命周期"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:594
 msgid "<abbr title=\"Router Advertisement\">RA</abbr> MTU"
-msgstr "<abbr title=\"Router Advertisement\">RA</abbr> MTU"
+msgstr "<abbr title=\"路由器通告\">RA</abbr> MTU"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:555
 msgid "<abbr title=\"Router Advertisement\">RA</abbr>-Service"
-msgstr "<abbr title=\"Router Advertisement\">RA</abbr> 服务"
+msgstr "<abbr title=\"路由器通告\">RA</abbr> 服务"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:514
 msgid "<abbr title=\"The DHCP Unique Identifier\">DUID</abbr>"
-msgstr "<abbr title=\"The DHCP Unique Identifier\">DUID</abbr>"
+msgstr "<abbr title=\"DHCP唯一标识符\">DUID</abbr>"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:335
 msgid ""
 "<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Dynamic Host Configuration "
 "Protocol\">DHCP</abbr> leases"
 msgstr ""
-"<abbr title=\"maximal\">最大</abbr> <abbr title=\"Dynamic Host Configuration "
-"Protocol\">DHCP</abbr> 租约数量"
+"<abbr title=\"maximal\">最大</abbr> <abbr title=\"动态主机配置协议\">DHCP</abbr> 租约数量"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:344
 msgid ""
 "<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Extension Mechanisms for "
 "Domain Name System\">EDNS0</abbr> packet size"
 msgstr ""
-"<abbr title=\"maximal\">最大</abbr> <abbr title=\"Extension Mechanisms for "
-"Domain Name System\">EDNS0</abbr> 数据包大小"
+"<abbr title=\"maximal\">最大</abbr> <abbr title=\"域名系统的扩展机制\">EDNS0</abbr> "
+"数据包大小"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:353
 msgid "<abbr title=\"maximal\">Max.</abbr> concurrent queries"
@@ -299,15 +294,12 @@ msgid ""
 "downstream, and uses <abbr title=\"Prefix Delegation\">PD</abbr> locally.</"
 "li></ul>"
 msgstr ""
-"<ul style=\"list-style-type:none;\"> <li><strong>服务器模式</strong>：路由器"
-"通过 <abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> 报文（发"
-"送至 <code>ff02::1</code>）宣传自己是默认的 IPv6 网关，并向下游设备提供 "
-"<abbr title=\"Prefix Delegation\">PD</abbr>。</li> <li><strong>中继模式</"
-"strong>：路由器从上游中继 <abbr title=\"Router Advertisement, ICMPv6 Type "
-"134\">RA</abbr>，并将上游（如WAN）接口的配置和前缀扩展到下游（如LAN）接口。</"
-"li> <li><strong>混合模式</strong>：路由器同时做服务器+中继，将上游配置和前缀"
-"扩展到下游，并在本地使用 <abbr title=\"Prefix Delegation\">PD</abbr>。</li></"
-"ul>"
+"<ul style=\"list-style-type:none;\"> <li><strong>服务器模式</strong>：路由器通过 <abbr "
+"title=\"路由器通告，ICMPv6 类型 134\">RA</abbr> 报文（发送至 <code>ff02::1</code>）通告自己是默认的 "
+"IPv6 网关，并向下游设备提供 <abbr title=\"前缀授权\">PD</abbr>。</li> "
+"<li><strong>中继模式</strong>：路由器从上游中继 <abbr title=\"路由器通告，ICMPv6 类型 134\""
+">RA</abbr>，并将上游（如 WAN）接口的配置和前缀扩展到下游（如 LAN）接口。</li> <li><strong>混合模式</strong>："
+"路由器同时做服务器 + 中继，将上游配置和前缀扩展到下游，并在本地使用 <abbr title=\"前缀授权\">PD</abbr>。</li></ul>"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:625
 msgid ""
@@ -319,11 +311,11 @@ msgid ""
 "<li><strong>hybrid mode</strong>: Router does combination of server+relay.</"
 "li></ul>"
 msgstr ""
-"<ul style=\"list-style-type:none;\"> <li><strong>服务器模式</strong>：路由器"
-"向下游接口分配IP和委托前缀（<abbr title=\"Prefix Delegation\">PD</abbr>）。</"
-"li> <li><strong>中继模式</strong>：路由器向下游中继 WAN 接口的配置，以支持缺"
-"少 <abbr title=\"Prefix Delegation\">PD</abbr> 的上行链路。</li> <li><strong>"
-"混合模式</strong>：服务器+中继的组合。</li></ul>"
+"<ul style=\"list-style-type:none;\"> "
+"<li><strong>服务器模式</strong>：路由器向下游接口分配IP和委托前缀（<abbr title=\"前缀授权\""
+">PD</abbr>）。</li> <li><strong>中继模式</strong>：路由器向下游中继 WAN 接口的配置，以支持缺少 <abbr "
+"title=\"前缀授权\">PD</abbr> 的上行链路。</li> "
+"<li><strong>混合模式</strong>：服务器+中继的组合。</li></ul>"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:480
 msgid "A configuration for the device \"%s\" already exists"
@@ -379,7 +371,7 @@ msgstr "ARP 校验"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:373
 msgid "ARP mode to consider a slave as being up"
-msgstr "在 ARP 模式下将从机视为已启动"
+msgstr "在 ARP 模式下将从属设备视为已启动"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:77
 msgid "ARP monitoring is not supported for the selected policy!"
@@ -448,7 +440,7 @@ msgstr "接入集中器"
 msgid "Access Point"
 msgstr "接入点 AP"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:360
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:358
 msgid "Actions"
 msgstr "操作"
 
@@ -458,11 +450,11 @@ msgstr "活跃"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:203
 msgid "Active <abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Routes"
-msgstr "活动的 <abbr title=\"Internet Protocol Version 4\">IPv4</abbr> 路由"
+msgstr "活动的 <abbr title=\"互联网协议第 4 版\">IPv4</abbr> 路由"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:209
 msgid "Active <abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Routes"
-msgstr "活动的 <abbr title=\"Internet Protocol Version 6\">IPv6</abbr> 路由"
+msgstr "活动的 <abbr title=\"互联网协议第 6 版\">IPv6</abbr> 路由"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/30_network.js:81
 msgid "Active Connections"
@@ -525,7 +517,7 @@ msgstr "添加 IPv6 地址…"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/leds.js:65
 msgid "Add LED action"
-msgstr "添加 LED 动作"
+msgstr "添加 LED 事件"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/switch.js:219
 msgid "Add VLAN"
@@ -769,7 +761,7 @@ msgstr "保存表单时出错："
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:125
 msgid "An optional, short description for this device"
-msgstr "此设备的可选简短备注"
+msgstr "此设备的可选简短描述"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1232
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:20
@@ -1019,7 +1011,7 @@ msgstr "返回至概览"
 msgid "Back to configuration"
 msgstr "返回至配置"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:363
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:361
 msgid "Backup"
 msgstr "备份"
 
@@ -1027,7 +1019,7 @@ msgstr "备份"
 msgid "Backup / Flash Firmware"
 msgstr "备份/升级"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:323
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:321
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:12
 msgid "Backup file list"
 msgstr "文件备份列表"
@@ -1043,9 +1035,9 @@ msgstr "基设备"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:920
 msgid "Beacon Interval"
-msgstr "Beacon 间隔"
+msgstr "信标间隔"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:324
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:322
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:46
 msgid ""
 "Below is the determined list of files to backup. It consists of changed "
@@ -1190,7 +1182,7 @@ msgstr "调用失败"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:902
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1979
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:128
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:272
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:270
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:203
 msgid "Cancel"
 msgstr "取消"
@@ -1300,7 +1292,7 @@ msgstr "正在检查归档…"
 msgid "Checking image…"
 msgstr "正在检查镜像…"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:399
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:397
 msgid "Choose mtdblock"
 msgstr "选择 mtdblock"
 
@@ -1329,13 +1321,13 @@ msgstr "算法"
 msgid "Cisco UDP encapsulation"
 msgstr "Cisco UDP 封装"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:363
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:361
 msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
 "configuration files."
 msgstr "点击“生成备份”下载当前配置文件的 tar 存档。"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:396
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:394
 msgid ""
 "Click \"Save mtdblock\" to download specified mtdblock file. (NOTE: THIS "
 "FEATURE IS FOR PROFESSIONALS! )"
@@ -1419,7 +1411,7 @@ msgid "Compute outgoing checksum (optional)."
 msgstr "计算传出校验和（可选）。"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4049
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:426
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:424
 msgid "Configuration"
 msgstr "配置"
 
@@ -1494,14 +1486,14 @@ msgid "Consider the slave up when any ARP IP target is reachable (any, 0)"
 msgstr "当任一 ARP IP 目标可达时认为从属设备在线（any，0）"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/crontab.js:18
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:340
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:338
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:55
 msgid "Contents have been saved."
 msgstr "内容已保存。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:746
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:132
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:264
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:262
 msgid "Continue"
 msgstr "继续"
 
@@ -1561,7 +1553,7 @@ msgstr "当前功率"
 msgid "Custom Interface"
 msgstr "自定义接口"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:382
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:380
 msgid ""
 "Custom files (certificates, scripts) may remain on the system. To prevent "
 "this, perform a factory-reset first."
@@ -1717,6 +1709,11 @@ msgid ""
 "<li><strong>stateful-only</strong>: No SLAAC. Router assigns an IPv6 address "
 "to a host via DHCPv6.</li></ul>"
 msgstr ""
+"默认值是有状态 + 无状态<br /> <ul style=\"list-style-type:none;\"> "
+"<li><strong>无状态</strong>：路由器广播前缀，主机使用 <abbr title=\"无状态地址自动配置\">SLAAC</abbr> "
+"自行分配自己的地址，不使用 DHCPv6。</li> <li><strong>无状态 + 有状态</strong>：使用 SLAAC 的同时， "
+"路由器通过 DHCPv6 将 IPv6 地址分配给主机。</li> <li><strong>仅有状态</strong>：不使用 SLAAC，路由器通过 "
+"DHCPv6 将 IPv6 地址分配给主机。</li></ul>"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/default-on.js:11
 msgid "Default state"
@@ -1881,9 +1878,7 @@ msgstr "禁用"
 msgid ""
 "Disable <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> for "
 "this interface."
-msgstr ""
-"不在此接口提供 <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</"
-"abbr> 服务。"
+msgstr "不在此接口提供 <abbr title=\"动态主机配置协议\">DHCP</abbr> 服务。"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:174
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:373
@@ -1946,7 +1941,7 @@ msgstr "尝试断开连接失败。"
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4066
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4155
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1705
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:330
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:328
 msgid "Dismiss"
 msgstr "关闭"
 
@@ -1965,9 +1960,8 @@ msgid ""
 "Forwarder for <abbr title=\"Network Address Translation\">NAT</abbr> "
 "firewalls"
 msgstr ""
-"Dnsmasq 为 <abbr title=\"Network Address Translation\">NAT</abbr> 防火墙提供"
-"了一个集成的 <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> "
-"服务器和 <abbr title=\"Domain Name System\">DNS</abbr> 转发器"
+"Dnsmasq 为 <abbr title=\"网络地址转换\">NAT</abbr> 防火墙提供了一个集成的 <abbr title="
+"\"动态主机配置协议\">DHCP</abbr> 服务器和 <abbr title=\"域名系统\">DNS</abbr> 转发器"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:252
 msgid "Do not cache negative replies, e.g. for not existing domains"
@@ -2032,8 +2026,8 @@ msgid ""
 "Don't forward <abbr title=\"Domain Name System\">DNS</abbr>-Requests without "
 "<abbr title=\"Domain Name System\">DNS</abbr>-Name"
 msgstr ""
-"不转发没有 <abbr title=\"Domain Name System\">DNS</abbr> 名称的 <abbr title="
-"\"Domain Name System\">DNS</abbr> 解析请求"
+"不转发没有 <abbr title=\"域名系统\">DNS</abbr> 名称的 <abbr title=\"域名系统\">DNS</abbr> "
+"解析请求"
 
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:152
 msgid "Down"
@@ -2043,11 +2037,11 @@ msgstr "下行"
 msgid "Down Delay"
 msgstr "下行延迟"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:366
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:364
 msgid "Download backup"
 msgstr "下载备份"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:404
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:402
 msgid "Download mtdblock"
 msgstr "下载 mtdblock"
 
@@ -2082,7 +2076,7 @@ msgstr "轻型双栈（RFC6333）"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:524
 msgid "Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
-msgstr "动态 <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
+msgstr "动态 <abbr title=\"动态主机配置协议\">DHCP</abbr>"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/6in4.js:60
 msgid "Dynamic tunnel"
@@ -2154,12 +2148,11 @@ msgstr "启用"
 msgid ""
 "Enable <abbr title=\"Internet Group Management Protocol\">IGMP</abbr> "
 "snooping"
-msgstr ""
-"启用 <abbr title=\"Internet Group Management Protocol\">IGMP</abbr> 嗅探"
+msgstr "启用 <abbr title=\"互联网组管理协议\">IGMP</abbr> 嗅探"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:640
 msgid "Enable <abbr title=\"Spanning Tree Protocol\">STP</abbr>"
-msgstr "开启 <abbr title=\"Spanning Tree Protocol\">STP</abbr>"
+msgstr "开启 <abbr title=\"生成树协议\">STP</abbr>"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:174
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:367
@@ -2169,7 +2162,7 @@ msgstr "启用 DNS 查找"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:292
 msgid "Enable Dynamic Shuffling Of Flows"
-msgstr "启用流的动态随机分配"
+msgstr "启用流的动态调整"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/6in4.js:60
 msgid "Enable HE.net dynamic endpoint update"
@@ -2607,25 +2600,25 @@ msgstr "固件版本"
 msgid "Fixed source port for outbound DNS queries"
 msgstr "指定的 DNS 查询源端口"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:283
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:421
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:281
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:419
 msgid "Flash image..."
 msgstr "刷写固件…"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:279
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:277
 msgid "Flash image?"
 msgstr "刷写固件？"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:411
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:409
 msgid "Flash new firmware image"
 msgstr "刷写新的固件"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:356
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:354
 msgid "Flash operations"
 msgstr "刷新操作"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:286
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:288
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:290
 msgid "Flashing…"
 msgstr "正在刷写…"
 
@@ -2666,8 +2659,11 @@ msgid "Force link"
 msgstr "强制链路"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:255
-msgid "Force upgrade"
-msgstr "强制升级"
+msgid ""
+"Force upgrade: Select 'Force upgrade' to flash the image even if the image "
+"format check fails. Use only if you are sure that the firmware is correct "
+"and meant for your device!"
+msgstr "强制升级：选择“强制升级”，即使镜像格式检查失败，也刷入镜像。只有当您确定固件是正确的并且适用您的设备时才使用！"
 
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:90
 msgid "Force use of NAT-T"
@@ -2788,7 +2784,7 @@ msgstr "生成密钥"
 msgid "Generate PMK locally"
 msgstr "本地生成 PMK"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:368
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:366
 msgid "Generate archive"
 msgstr "生成备份"
 
@@ -2937,7 +2933,7 @@ msgstr "请求头错误代码错误（HEC）"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/heartbeat.js:5
 msgid "Heartbeat interval (kernel: heartbeat)"
-msgstr "心跳间隔（kernel：heartbeat）"
+msgstr "间歇闪烁（kernel：heartbeat）"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:644
 msgid "Hello interval"
@@ -2951,7 +2947,7 @@ msgstr "此处配置设备的基础信息，如主机名称或时区。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1085
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
-msgstr "隐藏 <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
+msgstr "隐藏 <abbr title=\"扩展服务集标识符\">ESSID</abbr>"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/iptables.js:293
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/iptables.js:332
@@ -2979,7 +2975,7 @@ msgstr "主机到期超时"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:31
 msgid "Host-<abbr title=\"Internet Protocol Address\">IP</abbr> or Network"
-msgstr "主机 <abbr title=\"Internet Protocol Address\">IP</abbr> 或网络"
+msgstr "主机 <abbr title=\"互联网地址\">IP</abbr> 或网络"
 
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pppoe.js:88
 msgid "Host-Uniq tag content"
@@ -3307,9 +3303,9 @@ msgid ""
 "slow process as the swap-device cannot be accessed with the high datarates "
 "of the <abbr title=\"Random Access Memory\">RAM</abbr>."
 msgstr ""
-"如果物理内存不足，闲置数据可自动移到交换设备暂存，以增加可用的 <abbr title="
-"\"Random Access Memory\">RAM</abbr>。请注意：数据交换的过程会非常慢，因为交换"
-"设备无法像 <abbr title=\"Random Access Memory\">RAM</abbr> 那样的高速地访问。"
+"如果物理内存不足，闲置数据可自动移到交换设备暂存，以增加可用的 <abbr title=\"随机存取存储器\""
+">RAM</abbr>。请注意：数据交换的过程会非常慢，因为交换设备无法像 <abbr title=\"随机存取存储器\">RAM</abbr> "
+"那样的高速地访问。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:197
 msgid "Ignore <code>/etc/hosts</code>"
@@ -3323,7 +3319,7 @@ msgstr "忽略此接口"
 msgid "Ignore resolve file"
 msgstr "忽略解析文件"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:419
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:417
 msgid "Image"
 msgstr "镜像"
 
@@ -3800,8 +3796,7 @@ msgstr "链路活动"
 msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
-msgstr ""
-"将请求转发到的 <abbr title=\"Domain Name System\">DNS</abbr> 服务器列表"
+msgstr "此列表将域名解析请求转发到指定 <abbr title=\"域名系统\">DNS</abbr> 服务器"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1501
 msgid ""
@@ -3838,7 +3833,7 @@ msgstr "允许 RFC1918 响应的域名列表"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:286
 msgid "List of domains to force to an IP address."
-msgstr "强制使用IP地址的域列表。"
+msgstr "此列表将域名强制指向某个 IP 地址。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:267
 msgid "List of hosts that supply bogus NX domain results"
@@ -3858,7 +3853,7 @@ msgstr "仅监听指定的接口，未指定则监听全部"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:318
 msgid "Listening port for inbound DNS queries"
-msgstr "入站 DNS 查询端口"
+msgstr "DNS 服务器的监听端口"
 
 #: modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json:100
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:54
@@ -3981,9 +3976,7 @@ msgstr "日志"
 msgid ""
 "Logical network from which to select the local endpoint if local IPv6 "
 "address is empty and no WAN IPv6 is available (optional)."
-msgstr ""
-"如果本地IPv6地址为空，且没有广域网IPv6可用，则从中选择本地端点的逻辑网络（可"
-"选）。"
+msgstr "如果本地 IPv6 地址为空，且没有广域网 IPv6 可用，则从中选择本地端点的逻辑网络（可选）。"
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gretap.js:57
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/grev6tap.js:62
@@ -4117,7 +4110,7 @@ msgstr "主设备"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:568
 msgid "Max <abbr title=\"Router Advertisement\">RA</abbr> interval"
-msgstr "最长<abbr title=\"Router Advertisement\">RA</abbr>间隔"
+msgstr "最长<abbr title=\"路由器通告\">RA</abbr>间隔"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:22
 msgid "Max. Attainable Data Rate (ATTNDR)"
@@ -4163,8 +4156,8 @@ msgid ""
 "Advertisement, ICMPv6 Type 134\">RA</abbr>. Default is 600 seconds "
 "(<code>600</code>)."
 msgstr ""
-"发送未被请求的<abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr>"
-"间所允许的最长时间。默认值是600秒 (<code>600</code>)。"
+"发送未被请求的<abbr title=\"路由器通告, ICMPv6 类型134\">RA</abbr>间所允许的最长时间。默认值是600秒 "
+"(<code>600</code>)。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:893
 msgid "Maximum transmit power"
@@ -4228,7 +4221,7 @@ msgstr "跃点数"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:577
 msgid "Min <abbr title=\"Router Advertisement\">RA</abbr> interval"
-msgstr "最短<abbr title=\"Router Advertisement\">RA</abbr>间隔"
+msgstr "最短<abbr title=\"路由器通告\">RA</abbr>间隔"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:788
 msgid "Minimum ARP validity time"
@@ -4250,8 +4243,8 @@ msgid ""
 "Advertisement, ICMPv6 Type 134\">RA</abbr>. Default is 200 seconds "
 "(<code>200</code>)."
 msgstr ""
-"发送未经请求的<abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr>"
-"间隔间所允许的最短时间。默认是200秒 (<code>200</code>)。"
+"发送未经请求的<abbr title=\"路由器通告，ICMPv6 类型 134\">RA</abbr>间隔间所允许的最短时间。默认是200秒 "
+"(<code>200</code>)。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/switch.js:202
 msgid "Mirror monitor port"
@@ -4287,7 +4280,7 @@ msgstr "型号"
 
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:43
 msgid "Modem bearer teardown in progress."
-msgstr "调制解调器 bearer 拆解正在进行。"
+msgstr "调制解调器 载体拆除正在进行。"
 
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:42
 msgid ""
@@ -4433,7 +4426,7 @@ msgstr "NCM"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:661
 msgid "NDP-Proxy slave"
-msgstr "NDP 代理从机"
+msgstr "NDP 代理从属设备"
 
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:72
 msgid "NT Domain"
@@ -4595,11 +4588,11 @@ msgstr "无匹配的前缀委托"
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:140
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:143
 msgid "No more slaves available"
-msgstr "没有更多的 slaves 可用"
+msgstr "没有更多的从属设备可用"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:187
 msgid "No more slaves available, can not save interface"
-msgstr "缺少 slaves 可用，无法储存接口"
+msgstr "没有更多的从属设备可用，无法保存接口"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:251
 msgid "No negative cache"
@@ -4705,7 +4698,7 @@ msgstr "注意：有些无线驱动程序不完全支持802.11w。例如，mwlwi
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:128
 msgid "Notes"
-msgstr "附注"
+msgstr "备注"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:174
 msgid "Notice"
@@ -4796,9 +4789,9 @@ msgstr "启用后仅允许与非隔离网桥端口通信"
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:229
 msgid ""
 "Only if current active slave fails and the primary slave is up (failure, 2)"
-msgstr "仅当前的活跃 slave 发生故障，且主 slave 在运行中时 （故障，2）"
+msgstr "仅在当前活跃从属设备发生故障，且主从属设备在线时（failure，2）"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:444
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:442
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:19
 msgid "Open list..."
 msgstr "打开列表…"
@@ -4839,7 +4832,7 @@ msgstr "可选"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:128
 msgid "Optional, free-form notes about this device"
-msgstr "关于此设备的可选的自由格式的注释"
+msgstr "此设备的可选任意格式备注"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:97
 msgid ""
@@ -5150,7 +5143,7 @@ msgstr "数据包"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:275
 msgid "Packets To Transmit Before Moving To Next Slave"
-msgstr "移动到下个 Slave 前要传输的数据包"
+msgstr "切换到下一个从属设备前要传输的数据包"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:153
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:967
@@ -5276,7 +5269,7 @@ msgstr "执行传出数据包序列化（可选）。"
 msgid "Perform reboot"
 msgstr "执行重启"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:378
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:376
 msgid "Perform reset"
 msgstr "执行重置"
 
@@ -5384,7 +5377,7 @@ msgstr "禁止客户端间通信"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:211
 msgid "Primary Slave"
-msgstr "主 Slave"
+msgstr "主从属设备"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:216
 msgctxt "VLAN port state"
@@ -5395,13 +5388,11 @@ msgstr "主 VLAN ID"
 msgid ""
 "Primary becomes active slave when it comes back up if speed and duplex "
 "better than current slave (better, 1)"
-msgstr ""
-"如速度和双工均好于当前 slave，主 slave 在再次运行时就会成为活跃 slave （较"
-"好，1）"
+msgstr "如果主从属设备速度和双工优于当前的从属设备，则当其重新上线时成为活动的从属设备（better，1）"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:227
 msgid "Primary becomes active slave whenever it comes back up (always, 0)"
-msgstr "只要主 slave 重新上线，它就会成为活跃 slave （始终，0）"
+msgstr "只要主从属设备重新上线，它就会成为活跃从属设备（always，0）"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:630
 msgid "Priority"
@@ -5781,7 +5772,7 @@ msgstr "需要 wpa-supplicant 支持 WEP"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:224
 msgid "Reselection policy for primary slave"
-msgstr "主 slave 的重选策略"
+msgstr "主从属设备的重选策略"
 
 #: modules/luci-base/htdocs/luci-static/resources/luci.js:2204
 #: modules/luci-base/luasrc/view/sysauth.htm:39
@@ -5796,7 +5787,7 @@ msgstr "复位"
 msgid "Reset Counters"
 msgstr "复位计数器"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:376
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:374
 msgid "Reset to defaults"
 msgstr "恢复到出厂设置"
 
@@ -5826,11 +5817,11 @@ msgstr "重启防火墙"
 msgid "Restart radio interface"
 msgstr "重启无线接口"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:372
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:370
 msgid "Restore"
 msgstr "恢复"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:382
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:380
 msgid "Restore backup"
 msgstr "恢复配置"
 
@@ -6034,7 +6025,7 @@ msgstr "交换分区"
 #: modules/luci-compat/luasrc/view/cbi/error.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:26
 #: modules/luci-compat/luasrc/view/cbi/header.htm:20
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:435
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:433
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:123
 msgid "Save"
 msgstr "保存"
@@ -6049,11 +6040,11 @@ msgstr "保存并应用"
 msgid "Save error"
 msgstr "保存出现错误"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:406
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:404
 msgid "Save mtdblock"
 msgstr "保存 mtdblock"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:396
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:394
 msgid "Save mtdblock contents"
 msgstr "保存 mtdblock 内容"
 
@@ -6078,15 +6069,6 @@ msgstr "移除的节点"
 msgid "See \"mount\" manpage for details"
 msgstr "详参“mount”联机帮助"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:257
-msgid ""
-"Select 'Force upgrade' to flash the image even if the image format check "
-"fails. Use only if you are sure that the firmware is correct and meant for "
-"your device!"
-msgstr ""
-"即使映像文件检查失败，也“强制升级”以烧录映像。仅在您确定固件正确且适用于您的"
-"设备时使用！"
-
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2641
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2781
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:2946
@@ -6095,7 +6077,7 @@ msgstr "选择文件…"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:318
 msgid "Selects the transmit hash policy to use for slave selection"
-msgstr "挑选 slave 选择所用的传输散列策略"
+msgstr "选择用于从属设备选择的传输哈希策略"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:774
 msgid "Send ICMP redirects"
@@ -6144,19 +6126,17 @@ msgstr "设置静态"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:661
 msgid "Set interface as NDP-Proxy external slave. Default is off."
-msgstr "将接口设置为NDP代理外部从机。 默认为关闭。"
+msgstr "将接口设置为 NDP 代理外部从属设备。默认为关闭。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1006
 msgid ""
 "Set interface properties regardless of the link carrier (If set, carrier "
 "sense events do not invoke hotplug handlers)."
-msgstr ""
-"不管接口的链路状态如何，总是用应用设置（如果勾选，链路状态变更将不再触发 "
-"hotplug 事件处理）。"
+msgstr "不管接口的链路状态如何，总是用应用设置（如果勾选，链路状态变更将不再触发热插拔事件处理）。"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:300
 msgid "Set same MAC Address to all slaves"
-msgstr "为所有 slave 设置相同的 MAC 地址"
+msgstr "为所有从属设备设置相同的 MAC 地址"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:665
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:669
@@ -6165,11 +6145,11 @@ msgstr "将此接口设置为 dhcpv6 中继的主接口。"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:304
 msgid "Set to currently active slave (active, 1)"
-msgstr "设置到当前活跃的 slave （活跃，1）"
+msgstr "设置到当前活跃的从属设备（active，1）"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:305
 msgid "Set to first slave added to the bond (follow, 2)"
-msgstr "设置到第一个添加到 bond 的 slave （遵循，2）"
+msgstr "设置到第一个添加到 bond 接口的从属设备（follow，2）"
 
 #: modules/luci-compat/luasrc/model/network/proto_modemmanager.lua:55
 #: modules/luci-compat/luasrc/model/network/proto_qmi.lua:55
@@ -6200,7 +6180,7 @@ msgstr "Short GI"
 msgid "Short Preamble"
 msgstr "Short Preamble"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:442
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:440
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:18
 msgid "Show current backup file list"
 msgstr "显示当前备份文件列表"
@@ -6277,7 +6257,7 @@ msgstr "跳转到导航"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:178
 msgid "Slave Interfaces"
-msgstr "Slave 接口"
+msgstr "从属接口"
 
 #: modules/luci-base/htdocs/luci-static/resources/network.js:2961
 #: modules/luci-compat/luasrc/model/network.lua:1428
@@ -6296,7 +6276,7 @@ msgstr "对不起，请求的目标未找到。"
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "对不起，服务器遇到未知错误。"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:414
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:412
 msgid ""
 "Sorry, there is no sysupgrade support present; a new firmware image must be "
 "flashed manually. Please refer to the wiki for device specific install "
@@ -6395,7 +6375,7 @@ msgstr "明确发生故障转移事件后在200毫秒间隔内发出的 IGMP 成
 msgid ""
 "Specifies the number of packets to transmit through a slave before moving to "
 "the next one"
-msgstr "明确移动到下一个 slave 之前要通过当前 slave 传输的数据包的数量"
+msgstr "指定在切换到下一个从属设备前要传输的数据包数量"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:310
 msgid ""
@@ -6409,7 +6389,7 @@ msgstr ""
 msgid ""
 "Specifies the number of seconds between instances where the bonding driver "
 "sends learning packets to each slaves peer switch"
-msgstr "明确 bonding 驱动向每个 slave 对端交换机发送学习包的实例间间隔的秒数"
+msgstr "指定 bonding 驱动程序向每个从属设备连接的交换机发送学习数据包的间隔秒数"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:374
 msgid "Specifies the quantity of ARP IP targets that must be reachable"
@@ -6425,8 +6405,7 @@ msgstr "明确链路伙伴被要求传输 LACPDU 包的速率"
 msgid ""
 "Specifies the reselection policy for the primary slave when failure of the "
 "active slave or recovery of the primary slave occurs"
-msgstr ""
-"明确活跃 slave 发生故障或主 slave 恢复事件发生时重新选择主 slave 的策略"
+msgstr "指定当活动从属设备发生故障或主从属设备恢复时，主从属设备的重选策略"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:244
 msgid "Specifies the system priority"
@@ -6436,13 +6415,13 @@ msgstr "明确系统优先级"
 msgid ""
 "Specifies the time in milliseconds to wait before disabling a slave after a "
 "link failure detection"
-msgstr "明确在检测到一个链接故障后禁用一个 slave 前等待的时间，单位为毫秒"
+msgstr "指定在检测到链路故障后，在禁用从属设备之前等待的时间（以毫秒为单位）"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:411
 msgid ""
 "Specifies the time in milliseconds to wait before enabling a slave after a "
 "link recovery detection"
-msgstr "明确检测到一个链接故障后启用一个 slave 前等待的时间，单位为毫秒"
+msgstr "指定在检测到链路恢复后，在启用从属设备之前等待的时间（以毫秒为单位）"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:615
 msgid ""
@@ -6463,7 +6442,7 @@ msgstr "明确是否应验证 ARP 探测和应答，或者应为了链路监控�
 msgid ""
 "Specifies whether active-backup mode should set all slaves to the same MAC "
 "address at enslavement"
-msgstr "明确活跃备份模式是否应将所有 slave 设置为同一 MAC 地址"
+msgstr "指定主备模式是否应在设置从属时，将所有从属设备设置为相同的 MAC 地址"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:419
 msgid ""
@@ -6474,18 +6453,18 @@ msgstr "明确相较 netif carrier ok()，miimon 是否应使用 MII 或 ETHTOOL
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:293
 msgid ""
 "Specifies whether to shuffle active flows across slaves based on the load"
-msgstr "明确是否根据负载在 slave 范围中对活跃流进行洗牌"
+msgstr "指定是否根据负载调整从属设备之间的活动数据流"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:179
 msgid ""
 "Specifies which slave interfaces should be attached to this bonding interface"
-msgstr "明确应将哪些 slave 接口附着于这个 bonding 接口"
+msgstr "指定哪些从属接口应连接到该 bonding 接口上"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:212
 msgid ""
 "Specifies which slave is the primary device. It will always be the active "
 "slave while it is available"
-msgstr "明确哪个 slave 是主设备。当它可用时，它将始终是活跃 slave"
+msgstr "指定哪个从属设备是主要设备。当它可用时，它将始终是活动的从属设备"
 
 #: protocols/luci-proto-ipip/htdocs/luci-static/resources/protocol/ipip.js:63
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:72
@@ -7008,6 +6987,8 @@ msgid ""
 "abbr> messages.<br />Default is 0 (<code>0</code>), meaning unspecified. Max "
 "255."
 msgstr ""
+"在 <abbr title=\"Router Advertisement\">RA</abbr> 报文中通告的最大跳数。<br />默认为 "
+"0（<code>0</code>），表示未指定。最大为 255。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1949
 msgid "The network name is already used"
@@ -7063,7 +7044,7 @@ msgid ""
 "when finished."
 msgstr "系统正在擦除配置分区，完成后会自动重启。"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:291
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:289
 msgid ""
 "The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
 "few minutes before you try to reconnect. It might be necessary to renew the "
@@ -7085,7 +7066,7 @@ msgstr ""
 msgid "The system password has been successfully changed."
 msgstr "系统密码已更改成功。"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:317
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:315
 msgid "The sysupgrade command failed with code %d"
 msgstr "sysupgrade 命令失败，代码 %d"
 
@@ -7159,7 +7140,7 @@ msgstr ""
 "为特定的域指定 <abbr title=\"Domain Name System\">DNS</abbr> 服务器，后者则不"
 "限定服务器的解析范围。"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:426
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:424
 #: modules/luci-mod-system/luasrc/model/cbi/admin_system/backupfiles.lua:16
 msgid ""
 "This is a list of shell glob patterns for matching files and directories to "
@@ -7273,7 +7254,7 @@ msgstr "时区"
 msgid "To login…"
 msgstr "去登录…"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:372
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:370
 msgid ""
 "To restore configuration files, you can upload a previously generated backup "
 "archive here. To reset the firmware to its initial state, click \"Perform "
@@ -7434,7 +7415,7 @@ msgid "Unable to restart firewall: %s"
 msgstr "无法重启防火墙：%s"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/crontab.js:20
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:342
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:340
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:57
 msgid "Unable to save contents: %s"
 msgstr "无法保存内容：%s"
@@ -7526,14 +7507,14 @@ msgstr "Up 延迟"
 msgid "Upload"
 msgstr "上传"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:413
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:411
 msgid ""
 "Upload a sysupgrade-compatible image here to replace the running firmware."
 msgstr "从这里上传一个 sysupgrade 兼容镜像以更新正在运行的固件。"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:138
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:169
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:384
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:382
 msgid "Upload archive..."
 msgstr "上传备份…"
 
@@ -7826,15 +7807,15 @@ msgstr "使用系统内置的 CA 包验证服务器证书，<br />需要“ca-bu
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:387
 msgid "Validation for all slaves"
-msgstr "验证所有 slave"
+msgstr "验证所有从属设备"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:385
 msgid "Validation only for active slave"
-msgstr "仅验证活跃 slave"
+msgstr "仅验证活跃的从属设备"
 
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:386
 msgid "Validation only for backup slaves"
-msgstr "仅验证备份 slave"
+msgstr "仅验证备用的从属设备"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:149
 msgid "Value must not be empty"
@@ -8583,6 +8564,17 @@ msgstr "是"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« 后退"
+
+#~ msgid "Force upgrade"
+#~ msgstr "强制升级"
+
+#~ msgid ""
+#~ "Select 'Force upgrade' to flash the image even if the image format check "
+#~ "fails. Use only if you are sure that the firmware is correct and meant "
+#~ "for your device!"
+#~ msgstr ""
+#~ "即使映像文件检查失败，也“强制升级”以烧录映像。仅在您确定固件正确且适用于您"
+#~ "的设备时使用！"
 
 #~ msgid ""
 #~ "Default is stateless + stateful<br /> <ul style=\"list-style-type:none;"
