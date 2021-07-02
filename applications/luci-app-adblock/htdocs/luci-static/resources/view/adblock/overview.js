@@ -412,7 +412,12 @@ return view.extend({
 		o.optional = true;
 		o.rmempty = true;
 
-		o = s.taboption('additional', form.Value, 'adb_fetchparm', _('Download Parameters'), _('Special config options for the selected download utility.'));
+		o = s.taboption('additional', form.Flag, 'adb_fetchinsecure', _('Download Insecure'), _('Don\'t check SSL server certificates during download.'));
+		o.default = 0
+		o.rmempty = true;
+
+		o = s.taboption('additional', form.Value, 'adb_fetchparm', _('Download Parameters'), _('Manually override the pre-configured download options for the selected download utility.'));
+		o.optional = true;
 		o.rmempty = true;
 
 		/*
@@ -501,6 +506,9 @@ return view.extend({
 
 		o = s.taboption('adv_report', form.Value, 'adb_replisten', _('Report Ports'), _('Space separated list of ports used by tcpdump.'));
 		o.placeholder = '53';
+		o.rmempty = true;
+
+		o = s.taboption('adv_report', form.Flag, 'adb_represolve', _('Resolve IPs'), _('Resolve reporting IP addresses by using reverse DNS (PTR) lookups.'));
 		o.rmempty = true;
 
 		/*
