@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-05-27 16:32+0000\n"
+"PO-Revision-Date: 2021-08-18 10:44+0000\n"
 "Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsmwan3/es/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:186
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:202
@@ -44,11 +44,10 @@ msgstr "%d minutos"
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:175
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:191
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:213
-#, fuzzy
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d segundo"
-msgstr[1] "%d segundo"
+msgstr[1] "%d segundos"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:176
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:177
@@ -73,34 +72,38 @@ msgid ""
 "%s: Name of Physical device which interface went up or down (e.g. \"eth0\" "
 "or \"wwan0\")"
 msgstr ""
+"%s: nombre del dispositivo físico cuya interfaz subió o bajó (p. ej., "
+"\"eth0\" o \"wwan0\")"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:39
 msgid "%s: Name of the action that triggered this event"
-msgstr ""
+msgstr "%s: nombre de la acción que desencadenó este evento"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:44
 msgid ""
 "%s: Name of the interface which went up or down (e.g. \"wan\" or \"wwan\")"
 msgstr ""
+"%s: nombre de la interfaz que subió o bajó (p. ej., \"wan\" o \"wwan\")"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:40
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:41
 msgid "* %s: Is called by netifd and mwan3track"
-msgstr ""
+msgstr "* %s: es llamado por netifd y mwan3track"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:43
 msgid "* %s: Is only called by mwan3track if tracking has failed"
-msgstr ""
+msgstr "* %s: solo lo llama mwan3track si el seguimiento ha fallado"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:42
 msgid "* %s: Is only called by mwan3track if tracking was successful"
 msgstr ""
+"* %s: mwan3track solo lo llama si el seguimiento se realizó correctamente"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/diagnostics.js:71
 msgid "-- Interface Selection --"
-msgstr ""
+msgstr "-- Selección de interfaz --"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:84
 msgid "-- Please choose --"
 msgstr "-- Por favor elija --"
 
@@ -144,11 +147,11 @@ msgstr "Ver tabla de enrutamiento"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:95
 msgid "Collecting data ..."
-msgstr ""
+msgstr "Recolectando datos..."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:18
 msgid "Contents have been saved."
-msgstr ""
+msgstr "Se han guardado los contenidos."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:27
 msgid "Critical"
@@ -158,11 +161,11 @@ msgstr "Crítico"
 msgid "Debug"
 msgstr "Depurar"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:50
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:51
 msgid "Destination address"
 msgstr "Dirección de destino"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:54
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:55
 msgid "Destination port"
 msgstr "Puerto de destino"
 
@@ -199,7 +202,7 @@ msgstr "Activar seguimiento de SSL"
 msgid "Enabled"
 msgstr "Activado"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:92
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:93
 msgid ""
 "Enables firewall rule logging (global mwan3 logging must also be enabled)"
 msgstr ""
@@ -276,7 +279,7 @@ msgstr "Hotplug ifdown"
 msgid "Hotplug ifup"
 msgstr "Hotplug ifup"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:81
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:82
 msgid "IPset"
 msgstr "IPset"
 
@@ -284,11 +287,11 @@ msgstr "IPset"
 msgid "IPv4"
 msgstr "IPv4"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:36
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:37
 msgid "IPv4 and IPv6"
 msgstr "IPv4 e IPv6"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:37
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:38
 msgid "IPv4 only"
 msgstr "Sólo IPv4"
 
@@ -296,7 +299,7 @@ msgstr "Sólo IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:38
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:39
 msgid "IPv6 only"
 msgstr "Sólo IPv6"
 
@@ -336,9 +339,11 @@ msgid ""
 "Interfaces may not share the same name as configured members, policies or "
 "rules."
 msgstr ""
+"Es posible que las interfaces no compartan el mismo nombre que los miembros, "
+"las políticas o las reglas configurados."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:41
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:34
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:35
 msgid "Internet Protocol"
 msgstr "Protocolo de Internet"
 
@@ -356,16 +361,19 @@ msgstr "Último recurso"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:34
 msgid "Lines beginning with # are comments and are not executed."
-msgstr ""
+msgstr "Las líneas que comienzan con # son comentarios y no se ejecutan."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:20
+#, fuzzy
 msgid ""
 "Load-balanced member interfaces distribute more traffic out those with "
 "higher weights."
 msgstr ""
+"Las interfaces de miembros con equilibrio de carga distribuyen más tráfico a "
+"las que tienen mayor peso."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:19
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:91
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:92
 msgid "Logging"
 msgstr "Inicio de sesión"
 
@@ -377,8 +385,8 @@ msgstr "Nivel de registro"
 msgid "Max TTL"
 msgstr "Máx TTL"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:46
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:55
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:47
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:56
 msgid ""
 "May be entered as a single or multiple port(s) (eg \"22\" or \"80,443\") or "
 "as a portrange (eg \"1024:2048\") without quotes"
@@ -392,11 +400,12 @@ msgstr "Miembro"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:18
 msgid "Member interfaces with lower metrics are used first."
-msgstr ""
+msgstr "Las interfaces de miembros con métricas más bajas se utilizan primero."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:19
 msgid "Member interfaces with the same metric will be load-balanced."
 msgstr ""
+"Las interfaces de miembros con la misma métrica se equilibrarán en la carga."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:30
 msgid "Member used"
@@ -406,12 +415,16 @@ msgstr "Miembro utilizado"
 msgid ""
 "Members are profiles attaching a metric and weight to an MWAN interface."
 msgstr ""
+"Los miembros son perfiles que adjuntan una métrica y un peso a una interfaz "
+"MWAN."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/member.js:19
 msgid ""
 "Members may not share the same name as configured interfaces, policies or "
 "rules."
 msgstr ""
+"Los miembros no pueden compartir el mismo nombre que las interfaces, "
+"políticas o reglas configuradas."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:263
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/member.js:33
@@ -422,55 +435,58 @@ msgstr "Métrica"
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:3
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:46
 msgid "MultiWAN Manager"
-msgstr ""
+msgstr "Administrador de MultiWAN"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/diagnostics.js:79
 msgid "MultiWAN Manager - Diagnostics"
-msgstr ""
+msgstr "Administrador de MultiWAN - Diagnóstico"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:10
 msgid "MultiWAN Manager - Globals"
-msgstr ""
+msgstr "Administrador de MultiWAN - Globales"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:20
 msgid "MultiWAN Manager - Interfaces"
-msgstr ""
+msgstr "Administrador de MultiWAN - Interfaces"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/member.js:16
 msgid "MultiWAN Manager - Members"
-msgstr ""
+msgstr "Administrador de MultiWAN - Miembros"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:26
+#, fuzzy
 msgid "MultiWAN Manager - Notify"
-msgstr ""
+msgstr "Administrador de MultiWAN - Notificar"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:92
 msgid "MultiWAN Manager - Overview"
-msgstr ""
+msgstr "Administrador de MultiWAN - Visión general"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:16
 msgid "MultiWAN Manager - Policies"
-msgstr ""
+msgstr "Administrador de MultiWAN - Políticas"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:18
 msgid "MultiWAN Manager - Rules"
-msgstr ""
+msgstr "Administrador de MultiWAN - Reglas"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/detail.js:12
 msgid "MultiWAN Manager - Status"
-msgstr ""
+msgstr "Administrador de MultiWAN - Estado"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/troubleshooting.js:12
 msgid "MultiWAN Manager - Troubleshooting"
-msgstr ""
+msgstr "Administrador de MultiWAN - Solución de problemas"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:21
 msgid ""
 "Mwan3 requires that all interfaces have a unique metric configured in /etc/"
 "config/network."
 msgstr ""
+"Mwan3 requiere que todas las interfaces tengan una métrica única configurada "
+"en /etc/config/network."
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:82
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
 msgid ""
 "Name of IPset rule. Requires IPset rule in /etc/dnsmasq.conf (eg \"ipset=/"
 "youtube.com/youtube\")"
@@ -481,22 +497,26 @@ msgstr ""
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:23
 msgid "Names may contain characters A-Z, a-z, 0-9, _ and no spaces-"
 msgstr ""
+"Los nombres pueden contener caracteres A-Z, a-z, 0-9, _ y sin espacios-"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/member.js:18
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:21
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:26
 msgid "Names may contain characters A-Z, a-z, 0-9, _ and no spaces."
 msgstr ""
+"Los nombres pueden contener caracteres A-Z, a-z, 0-9, _ y sin espacios."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:22
 msgid "Names must be 15 characters or less."
-msgstr ""
+msgstr "Los nombres deben tener 15 caracteres o menos."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:22
 msgid "Names must match the interface name found in /etc/config/network."
 msgstr ""
+"Los nombres deben coincidir con el nombre de la interfaz que se encuentra "
+"en /etc/config/network."
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:73
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:74
 msgid "No"
 msgstr "No"
 
@@ -510,20 +530,22 @@ msgid "No Tracking"
 msgstr "Sin seguimiento"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:271
+#, fuzzy
 msgid "No interface metric set!"
-msgstr ""
+msgstr "¡Sin conjunto de métricas de interfaz!"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:31
 msgid "Notes:"
-msgstr ""
+msgstr "Notas:"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:30
 msgid "Notice"
 msgstr "Aviso"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:96
+#, fuzzy
 msgid "Notify"
-msgstr ""
+msgstr "Notificar"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:38
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:37
@@ -539,7 +561,7 @@ msgstr "Conectado"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:13
 msgid "Overview"
-msgstr ""
+msgstr "Visión general"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:79
 msgid "Ping count"
@@ -578,22 +600,26 @@ msgid ""
 "Policies are profiles grouping one or more members controlling how Mwan3 "
 "distributes traffic."
 msgstr ""
+"Las políticas son perfiles que agrupan a uno o más miembros que controlan "
+"cómo Mwan3 distribuye el tráfico."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:23
 msgid ""
 "Policies may not share the same name as configured interfaces, members or "
 "rules"
 msgstr ""
+"Es posible que las políticas no compartan el mismo nombre que las "
+"interfaces, los miembros o las reglas configurados"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:80
 msgid "Policy"
 msgstr "Política"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:95
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:96
 msgid "Policy assigned"
 msgstr "Política asignada"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:59
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:60
 msgid "Protocol"
 msgstr "Protocolo"
 
@@ -602,6 +628,8 @@ msgid ""
 "Put your custom mwan3 action here, they will be executed with each netifd "
 "hotplug interface event on interfaces for which mwan3 is enabled."
 msgstr ""
+"Ponga su acción personalizada mwan3 aquí, se ejecutarán con cada evento de "
+"interfaz netifd hotplug en interfaces para las que mwan3 está activado."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:210
 msgid "Recovery interval"
@@ -629,37 +657,41 @@ msgstr "Regla"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:20
 msgid "Rules are based on IP address, port or protocol."
-msgstr ""
+msgstr "Las reglas se basan en la dirección IP, el puerto o el protocolo."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:21
+#, fuzzy
 msgid "Rules are matched from top to bottom."
-msgstr ""
+msgstr "Las reglas se combinan de arriba a abajo."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:22
 msgid "Rules below a matching rule are ignored."
-msgstr ""
+msgstr "Las reglas debajo de una regla coincidente se ignoran."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:27
 msgid ""
 "Rules may not share the same name as configured interfaces, members or "
 "policies."
 msgstr ""
+"Es posible que las reglas no compartan el mismo nombre que las interfaces, "
+"los miembros o las políticas configurados."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:19
 msgid "Rules specify which traffic will use a particular MWAN policy."
 msgstr ""
+"Las reglas especifican qué tráfico utilizará una política MWAN en particular."
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:77
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:78
 msgid "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
 msgstr ""
 "Segundos. Valores aceptables: 1-1000000. El valor predeterminado es 600 si "
 "no se establece"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:41
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
 msgid "Source address"
 msgstr "Dirección de origen"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:45
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:46
 msgid "Source port"
 msgstr "Puerto de origen"
 
@@ -670,16 +702,16 @@ msgstr "Puerto de origen"
 msgid "Status"
 msgstr "Estado"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:69
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:70
 msgid "Sticky"
 msgstr "Pegajoso"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:76
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:77
 msgid "Sticky timeout"
 msgstr "Tiempo de espera pegajoso"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:51
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:43
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:52
 msgid "Supports CIDR notation (eg \"192.168.100.0/24\") without quotes"
 msgstr ""
 "Admite la notación CIDR (por ejemplo, \"192.168.100.0/24\") sin comillas"
@@ -689,18 +721,19 @@ msgid "Task"
 msgstr "Tarea"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:29
+#, fuzzy
 msgid "The file is also preserved during sysupgrade."
-msgstr ""
+msgstr "El archivo también se conserva durante sysupgrade."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:33
 msgid ""
 "The first line of the script must be &#34;#!/bin/sh&#34; without quotes."
-msgstr ""
+msgstr "La primera línea del script debe ser &#34;#!/bin/sh&#34; sin comillas."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:37
 msgid ""
 "There are three main environment variables that are passed to this script."
-msgstr ""
+msgstr "Hay tres variables de entorno principales que se pasan a este script."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:264
 msgid ""
@@ -710,7 +743,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:32
 msgid "This file is interpreted as a shell script."
-msgstr ""
+msgstr "Este archivo se interpreta como un script de shell."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:48
 msgid ""
@@ -723,7 +756,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:28
 msgid "This section allows you to modify the content of \"/etc/mwan3.user\"."
-msgstr ""
+msgstr "Esta sección le permite modificar el contenido de \"/etc/mwan3.user\"."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:47
 msgid "Tracking hostname or IP address"
@@ -742,8 +775,10 @@ msgid ""
 "Traffic destined for known (other than default) networks is handled by the "
 "main routing table."
 msgstr ""
+"El tráfico destinado a redes conocidas (distintas de las predeterminadas) es "
+"manejado por la tabla de enrutamiento principal."
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:70
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:71
 msgid ""
 "Traffic from the same source IP address that previously matched this rule "
 "within the sticky timeout period will use the same WAN interface"
@@ -753,14 +788,19 @@ msgstr ""
 "misma interfaz WAN"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:25
+#, fuzzy
 msgid ""
 "Traffic matching a rule, but all WAN interfaces for that policy are down "
 "will be blackholed."
 msgstr ""
+"El tráfico que coincida con una regla, pero todas las interfaces WAN para "
+"esa política están inactivas, se bloqueará."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:23
 msgid "Traffic not matching any rule is routed using the main routing table."
 msgstr ""
+"El tráfico que no coincide con ninguna regla se enruta mediante la tabla de "
+"enrutamiento principal."
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:37
 msgid "Troubleshooting"
@@ -768,7 +808,7 @@ msgstr "Solución de problemas"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:20
 msgid "Unable to save contents: %s"
-msgstr ""
+msgstr "No se puede guardar el contenido: %s"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:33
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:47
@@ -777,7 +817,7 @@ msgstr ""
 msgid "Uptime"
 msgstr "Tiempo de actividad"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:60
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:61
 msgid "View the content of /etc/protocols for protocol description"
 msgstr "Ver el contenido de /etc/protocol para la descripción del protocolo"
 
@@ -792,12 +832,12 @@ msgstr ""
 "Cuando todos los miembros de la política están fuera de línea, utilice este "
 "comportamiento para el tráfico coincidente"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:72
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:73
 msgid "Yes"
 msgstr "Sí"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:41
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:102
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
 msgid "blackhole (drop)"
 msgstr "agujero negro (caída)"
 
@@ -806,7 +846,7 @@ msgid "connected (mwan3)"
 msgstr "conectado (mwan3)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:42
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:104
 msgid "default (use main routing table)"
 msgstr "predeterminado (usar tabla de enrutamiento principal)"
 
@@ -823,7 +863,7 @@ msgid "ifup (netifd)"
 msgstr "Interfaz arriba (netifd)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:40
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:101
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:102
 msgid "unreachable (reject)"
 msgstr "inalcanzable (rechazar)"
 

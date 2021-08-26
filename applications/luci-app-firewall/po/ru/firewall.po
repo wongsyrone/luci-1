@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LuCI: firewall\n"
 "POT-Creation-Date: 2013-09-05 16:02+0200\n"
-"PO-Revision-Date: 2021-03-14 05:16+0000\n"
+"PO-Revision-Date: 2021-08-11 21:12+0000\n"
 "Last-Translator: Anton Kikin <a.a.kikin@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsfirewall/ru/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.5.2-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 "Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
 "интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
 
@@ -936,8 +936,8 @@ msgstr "Дата начала (год-мес-день)"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:461
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:280
-msgid "Start Time (hh.mm.ss)"
-msgstr "Время начала (чч.мм.сс)"
+msgid "Start Time (hh:mm:ss)"
+msgstr "Время начала (чч:мм:сс)"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:473
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:292
@@ -946,8 +946,8 @@ msgstr "Дата окончания (год-мес-день)"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:465
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:284
-msgid "Stop Time (hh.mm.ss)"
-msgstr "Время окончания (чч.мм.сс)"
+msgid "Stop Time (hh:mm:ss)"
+msgstr "Время окончания (чч:мм:сс)"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:439
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:258
@@ -1289,236 +1289,3 @@ msgstr "не определено"
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:338
 msgid "valid firewall mark"
 msgstr "верная метка брандмауэра"
-
-#~ msgid "%s in %s"
-#~ msgstr "%s в %s"
-
-#~ msgid "%s%s with %s"
-#~ msgstr "%s%s с %s"
-
-#~ msgid "%s, %s in %s"
-#~ msgstr "%s, %s в %s"
-
-#~ msgid "<var>%d</var> pkts. per <var>%s</var>"
-#~ msgstr "<var>%d</var> пакетов за <var>%s</var>"
-
-#~ msgid "<var>%d</var> pkts. per <var>%s</var>, burst <var>%d</var> pkts."
-#~ msgstr ""
-#~ "<var>%d</var> пакетов за <var>%s</var>, подряд <var>%d</var> пакетов"
-
-#~ msgid "<var>%s</var> and limit to %s"
-#~ msgstr "<var>%s</var> с пределом в %s"
-
-#~ msgid "Accept forward"
-#~ msgstr "Принимать перенаправляемый трафик"
-
-#~ msgid "Accept input"
-#~ msgstr "Принимать входящий трафик"
-
-#~ msgid "Accept output"
-#~ msgstr "Принимать исходящий трафик"
-
-#~ msgid "Destination IP address"
-#~ msgstr "IP-адрес назначения"
-
-#~ msgid "Discard forward"
-#~ msgstr "Отклонять перенаправляемый трафик"
-
-#~ msgid "Discard input"
-#~ msgstr "Отклонять входящий трафик"
-
-#~ msgid "Discard output"
-#~ msgstr "Отклонять исходящий трафик"
-
-#~ msgid "Do not rewrite"
-#~ msgstr "Не перезаписывать"
-
-#~ msgid "Do not track forward"
-#~ msgstr "Не отслеживать перенаправляемый трафик"
-
-#~ msgid "Do not track input"
-#~ msgstr "Не отслеживать входящий трафик"
-
-#~ msgid "Do not track output"
-#~ msgstr "Не отслеживать исходящий трафик"
-
-#~ msgid "Forward to"
-#~ msgstr "Перенаправлять на"
-
-#~ msgid "From %s in %s"
-#~ msgstr "Из %s в %s"
-
-#~ msgid "From %s in %s with source %s"
-#~ msgstr "Из %s в %s с источником %s"
-
-#~ msgid "From %s in %s with source %s and %s"
-#~ msgstr "Из %s в %s с источниками %s и %s"
-
-#~ msgid "From %s on <var>this device</var>"
-#~ msgstr "Из %s в <var>это устройство</var>"
-
-#~ msgid "From %s on <var>this device</var> with source %s"
-#~ msgstr "Из %s в <var>это устройство</var> с источником %s"
-
-#~ msgid "From %s on <var>this device</var> with source %s and %s"
-#~ msgstr "Из %s в <var>это устройство</var> с источниками %s and %s"
-
-#~ msgid "From %{ipaddr?:any host} %{port?with source %{port}}"
-#~ msgstr "Из %{ipaddr?:любой хост} %{port?с источником %{port}}"
-
-#~ msgid "IP"
-#~ msgstr "IP-адрес"
-
-#~ msgid "IP range"
-#~ msgstr "Диапазон IP-адресов"
-
-#~ msgid "IPs"
-#~ msgstr "IP-адреса"
-
-#~ msgid "IPv4"
-#~ msgstr "IPv4"
-
-#~ msgid "IPv6"
-#~ msgstr "IPv6"
-
-#~ msgid "MAC"
-#~ msgstr "MAC"
-
-#~ msgid "MACs"
-#~ msgstr "MAC-адреса"
-
-#~ msgid ""
-#~ "Match %{protocol?%{family} %{protocol} traffic:any %{family} traffic} "
-#~ "%{mark?with firewall mark %{mark}} %{limit?limited to %{limit}}"
-#~ msgstr ""
-#~ "Соответствует %{protocol?%{family} %{protocol} трафику:любому %{family} "
-#~ "трафику} %{mark?с меткой брандмауэра %{mark}}"
-
-#~ msgid "Network"
-#~ msgstr "Сеть"
-
-#~ msgid "Refuse forward"
-#~ msgstr "Сбрасывать перенаправляемый трафик"
-
-#~ msgid "Refuse input"
-#~ msgstr "Сбрасывать входящий трафик"
-
-#~ msgid "Refuse output"
-#~ msgstr "Сбрасывать исходящий трафик"
-
-#~ msgid "Rewrite to"
-#~ msgstr "Перезаписать"
-
-#~ msgid "Rewrite to %{ipaddr?%{port?%{ipaddr}, %{port}:%{ipaddr}}:%{port}}"
-#~ msgstr ""
-#~ "Перезаписать на %{ipaddr?%{port?%{ipaddr}, %{port}:%{ipaddr}}:%{port}}"
-
-#~ msgid "Rewrite to outbound device IP"
-#~ msgstr "Перезаписать на IP-адрес исходящего устройства"
-
-#~ msgid "To %s at %s on <var>this device</var>"
-#~ msgstr "К %s, %s на <var>этом устройстве</var>"
-
-#~ msgid "To %s in %s"
-#~ msgstr "К %s в %s"
-
-#~ msgid "To %s on <var>this device</var>"
-#~ msgstr "К %s на <var>этом устройстве</var>"
-
-#~ msgid "To %s, %s in %s"
-#~ msgstr "К %s, %s в %s"
-
-#~ msgid ""
-#~ "To %{ipaddr?:any destination} %{port?at %{port}} %{zone?via zone %{zone}} "
-#~ "%{device?egress device %{device}}"
-#~ msgstr ""
-#~ "На %{ipaddr?:любой адрес назначения} %{port?порт %{port}} %{zone?через "
-#~ "зону %{zone}} %{device?исходящее устройство %{device}}"
-
-#~ msgid "Via %s"
-#~ msgstr "Через %s"
-
-#~ msgid "Via %s at %s"
-#~ msgstr "Через %s, %s"
-
-#~ msgid "any host"
-#~ msgstr "любого хоста"
-
-#~ msgid "any router IP"
-#~ msgstr "любой IP-адрес маршрутизатора"
-
-#~ msgid "not"
-#~ msgstr "нет"
-
-#~ msgid "port"
-#~ msgstr "порт"
-
-#~ msgid "ports"
-#~ msgstr "порты"
-
-#~ msgid "type"
-#~ msgstr "тип"
-
-#~ msgid "types"
-#~ msgstr "типы"
-
-#~ msgid "Force connection tracking"
-#~ msgstr "Принудительно включать отслеживание соединений"
-
-#~ msgid ""
-#~ "Prevent the installation of <em>NOTRACK</em> rules which would bypass "
-#~ "connection tracking."
-#~ msgstr ""
-#~ "Предотвратить установку <em>NOTRACK</em> правил, которые позволяют "
-#~ "обходить отслеживание соединений (connection tracking)."
-
-#~ msgid "Disable"
-#~ msgstr "Отключить"
-
-#~ msgid "Restart Firewall"
-#~ msgstr "Перезапустить межсетевой экран"
-
-#~ msgid "Rule is disabled"
-#~ msgstr "Правило отключено"
-
-#~ msgid "Rule is enabled"
-#~ msgstr "Правило включено"
-
-#~ msgid "Add"
-#~ msgstr "Добавить"
-
-#~ msgid "Add and edit..."
-#~ msgstr "Добавить и редактировать..."
-
-#~ msgid "External zone"
-#~ msgstr "Внешняя зона"
-
-#~ msgid "New SNAT rule"
-#~ msgstr "Новое правило SNAT"
-
-#~ msgid "New forward rule"
-#~ msgstr "Новое правило перенаправления"
-
-#~ msgid "New input rule"
-#~ msgstr "Новое правило для входящего трафика"
-
-#~ msgid "New port forward"
-#~ msgstr "Новое перенаправление порта"
-
-#~ msgid "New source NAT"
-#~ msgstr "Новый SNAT"
-
-#~ msgid "Open ports on router"
-#~ msgstr "Открыть порты на маршрутизаторе"
-
-#~ msgid "Other..."
-#~ msgstr "Другое..."
-
-#~ msgid "To source IP"
-#~ msgstr "К IP-адресу источника"
-
-#~ msgid "To source port"
-#~ msgstr "К порту источника"
-
-#~ msgid "Output zone"
-#~ msgstr "Исходящая зона"

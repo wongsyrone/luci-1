@@ -1,5 +1,3 @@
-#  luci-fw.pot
-#  generated from ./applications/luci-fw/luasrc/i18n/luci-fw.en.lua
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -805,7 +803,7 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:461
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:280
-msgid "Start Time (hh.mm.ss)"
+msgid "Start Time (hh:mm:ss)"
 msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:473
@@ -815,7 +813,7 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:465
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:284
-msgid "Stop Time (hh.mm.ss)"
+msgid "Stop Time (hh:mm:ss)"
 msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:439
@@ -1121,9 +1119,3 @@ msgstr ""
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:338
 msgid "valid firewall mark"
 msgstr ""
-
-#~ msgid "IPv4"
-#~ msgstr "IPv4"
-
-#~ msgid "MAC"
-#~ msgstr "MAC"
