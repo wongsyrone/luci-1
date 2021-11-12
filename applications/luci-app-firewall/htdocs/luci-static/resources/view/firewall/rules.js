@@ -62,7 +62,7 @@ function rule_src_txt(s, hosts) {
 	    d = (uci.get('firewall', s, 'direction') == 'in') ? uci.get('firewall', s, 'device') : null;
 
 	return fwtool.fmt(_('From %{src}%{src_device?, interface <var>%{src_device}</var>}%{src_ip?, IP %{src_ip#%{next?, }<var%{item.inv? data-tooltip="Match IP addresses except %{item.val}."}>%{item.ival}</var>}}%{src_port?, port %{src_port#%{next?, }<var%{item.inv? data-tooltip="Match ports except %{item.val}."}>%{item.ival}</var>}}%{src_mac?, MAC %{src_mac#%{next?, }<var%{item.inv? data-tooltip="Match MACs except %{item.val}%{item.hint.name? a.k.a. %{item.hint.name}}.":%{item.hint.name? data-tooltip="%{item.hint.name}"}}>%{item.ival}</var>}}'), {
-		src: E('span', { 'class': 'zonebadge', 'style': 'background-color:' + fwmodel.getColorForName((z && z != '*') ? z : null) }, [(z == '*') ? E('em', _('any zone')) : (z || E('em', _('this device')))]),
+		src: E('span', { 'class': 'zonebadge', 'style': fwmodel.getZoneColorStyle(z) }, [(z == '*') ? E('em', _('any zone')) : (z ? E('strong', z) : E('em', _('this device')))]),
 		src_ip: fwtool.map_invert(uci.get('firewall', s, 'src_ip'), 'toLowerCase'),
 		src_mac: fwtool.map_invert(uci.get('firewall', s, 'src_mac'), 'toUpperCase').map(function(v) { return Object.assign(v, { hint: hosts[v.val] }) }),
 		src_port: fwtool.map_invert(uci.get('firewall', s, 'src_port')),
@@ -75,7 +75,7 @@ function rule_dest_txt(s) {
 	    d = (uci.get('firewall', s, 'direction') == 'out') ? uci.get('firewall', s, 'device') : null;
 
 	return fwtool.fmt(_('To %{dest}%{dest_device?, interface <var>%{dest_device}</var>}%{dest_ip?, IP %{dest_ip#%{next?, }<var%{item.inv? data-tooltip="Match IP addresses except %{item.val}."}>%{item.ival}</var>}}%{dest_port?, port %{dest_port#%{next?, }<var%{item.inv? data-tooltip="Match ports except %{item.val}."}>%{item.ival}</var>}}'), {
-		dest: E('span', { 'class': 'zonebadge', 'style': 'background-color:' + fwmodel.getColorForName((z && z != '*') ? z : null) }, [(z == '*') ? E('em', _('any zone')) : (z || E('em', _('this device')))]),
+		dest: E('span', { 'class': 'zonebadge', 'style': fwmodel.getZoneColorStyle(z) }, [(z == '*') ? E('em', _('any zone')) : (z ? E('strong', z) : E('em', _('this device')))]),
 		dest_ip: fwtool.map_invert(uci.get('firewall', s, 'dest_ip'), 'toLowerCase'),
 		dest_port: fwtool.map_invert(uci.get('firewall', s, 'dest_port')),
 		dest_device: d
@@ -298,6 +298,8 @@ return view.extend({
 		o.value('', 'any');
 		o.value('address-mask-reply');
 		o.value('address-mask-request');
+		o.value('address-unreachable'); /* ipv6 */
+		o.value('bad-header');  /* ipv6 */
 		o.value('communication-prohibited');
 		o.value('destination-unreachable');
 		o.value('echo-reply');
@@ -315,6 +317,7 @@ return view.extend({
 		o.value('network-redirect');
 		o.value('network-unknown');
 		o.value('network-unreachable');
+		o.value('no-route');  /* ipv6 */
 		o.value('packet-too-big');
 		o.value('parameter-problem');
 		o.value('port-unreachable');
@@ -335,6 +338,8 @@ return view.extend({
 		o.value('TOS-network-unreachable');
 		o.value('ttl-zero-during-reassembly');
 		o.value('ttl-zero-during-transit');
+		o.value('unknown-header-type');  /* ipv6 */
+		o.value('unknown-option');  /* ipv6 */
 		o.depends({ proto: 'icmp', '!contains': true });
 		o.depends({ proto: 'icmpv6', '!contains': true });
 

@@ -76,6 +76,26 @@ msgstr "Cloudflare (安全保護)"
 msgid "Configuration"
 msgstr "組態"
 
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.controld.freedns.malware-ads-social.lua:3
+msgid "ControlD (Block Malware + Ads + Social)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.controld.freedns.malware-ads.lua:3
+msgid "ControlD (Block Malware + Ads)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.controld.freedns.malware.lua:3
+msgid "ControlD (Block Malware)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.controld.freedns.family.lua:3
+msgid "ControlD (Family)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.controld.freedns.unfiltered.lua:3
+msgid "ControlD (Unfiltered)"
+msgstr ""
+
 #: applications/luci-app-https-dns-proxy/luasrc/controller/https-dns-proxy.lua:4
 msgid "DNS HTTPS Proxy"
 msgstr "DNS HTTPS Proxy"
@@ -143,6 +163,10 @@ msgstr "Google"
 #: applications/luci-app-https-dns-proxy/root/usr/share/rpcd/acl.d/luci-app-https-dns-proxy.json:3
 msgid "Grant UCI and file access for luci-app-https-dns-proxy"
 msgstr "授予 luci-app-https-dns-proxy 擁有 UCI 和檔案存取的權限"
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/net.he.ordns.lua:3
+msgid "Hurricane Electric"
+msgstr ""
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/net.idnet.doh.lua:3
 msgid "IDNet.net (UK)"
