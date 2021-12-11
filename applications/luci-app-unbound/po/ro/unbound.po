@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-05 17:56+0000\n"
+"PO-Revision-Date: 2021-12-10 15:48+0000\n"
 "Last-Translator: Simona Iacob <s@zp1.net>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsunbound/ro/>\n"
@@ -317,35 +317,35 @@ msgstr "Nume gazdă, toate adresele"
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:193
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:205
 msgid "Hostname, Primary Address"
-msgstr ""
+msgstr "Numele gazdei, adresa primară"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:190
 msgid "How to enter the LAN or local network router in DNS"
-msgstr ""
+msgstr "Cum să introduceți routerul LAN sau al rețelei locale în DNS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:179
 msgid "How to treat queries of this local domain"
-msgstr ""
+msgstr "Cum se tratează interogările din acest domeniu local"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:241
 msgid "IP4 All and IP6 Local"
-msgstr ""
+msgstr "IP4 Toate și IP6 Local"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:240
 msgid "IP4 Only"
-msgstr ""
+msgstr "Numai IP4"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:244
 msgid "IP4 and IP6"
-msgstr ""
+msgstr "IP4 și IP6"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:242
 msgid "IP6 Only*"
-msgstr ""
+msgstr "Numai IP6*"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:243
 msgid "IP6 Preferred"
-msgstr ""
+msgstr "IP6 Preferat"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:216
 msgid "Ignore"
@@ -354,76 +354,78 @@ msgstr "Ignoră"
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:196
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:208
 msgid "Interface FQDN, All Addresses"
-msgstr ""
+msgstr "Interfața FQDN, toate adresele"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:189
 msgid "LAN DNS"
-msgstr ""
+msgstr "LAN DNS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:130
 msgid "LAN Networks"
-msgstr ""
+msgstr "Rețele LAN"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:254
 msgid "Large"
-msgstr ""
+msgstr "Mare"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:121
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:304
 msgid "Limit days between RFC5011 copies to reduce flash writes"
 msgstr ""
+"Limitarea numărului de zile între copiile RFC5011 pentru a reduce scrierile "
+"flash"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:280
 msgid "Limit extended DNS packet size"
-msgstr ""
+msgstr "Limitarea dimensiunii pachetelor DNS extinse"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:159
 msgid "Link to supported programs to load DHCP into DNS"
-msgstr ""
+msgstr "Legătura cu programele acceptate pentru a încărca DHCP în DNS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:116
 msgid "List domains to bypass checks of DNSSEC"
-msgstr ""
+msgstr "Lista domeniilor pentru a ocoli verificările DNSSEC"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:83
 msgid "Listening Port"
-msgstr ""
+msgstr "Port de ascultare"
 
 #: applications/luci-app-unbound/luasrc/controller/unbound.lua:51
 msgid "Local Data"
-msgstr ""
+msgstr "Date locale"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:172
 msgid "Local Domain"
-msgstr ""
+msgstr "Domeniul local"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:178
 msgid "Local Domain Type"
-msgstr ""
+msgstr "Tip de domeniu local"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:232
 msgid "Local Host, Encrypted"
-msgstr ""
+msgstr "Gazdă locală, criptată"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:231
 msgid "Local Host, No Encryption"
-msgstr ""
+msgstr "Gazdă locală, fără criptare"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:67
 msgid "Local Service"
-msgstr ""
+msgstr "Serviciul local"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:233
 msgid "Local Subnet, Encrypted"
-msgstr ""
+msgstr "Subnet local, criptat"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:234
 msgid "Local Subnet, Static Encryption"
-msgstr ""
+msgstr "Subnet local, criptare statică"
 
 #: applications/luci-app-unbound/luasrc/controller/unbound.lua:54
 msgid "Local Zones"
-msgstr ""
+msgstr "Zonele locale"
 
 #: applications/luci-app-unbound/luasrc/controller/unbound.lua:42
 msgid "Log"
@@ -431,94 +433,103 @@ msgstr "Jurnal"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:58
 msgid "Manual Conf"
-msgstr ""
+msgstr "Conf. manuală"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:253
 msgid "Medium"
-msgstr ""
+msgstr "Mediu"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:248
 msgid "Memory Resource"
-msgstr ""
+msgstr "Resurse de memorie"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:149
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:314
 msgid "Networks that may trigger Unbound to reload (avoid wan6)"
-msgstr ""
+msgstr "Rețele care pot declanșa reîncărcarea Unbound (evitați wan6)"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:131
 msgid "Networks to consider LAN (served) beyond those served by DHCP"
 msgstr ""
+"Rețele care trebuie luate în considerare LAN (deservite) în afară de cele "
+"deservite de DHCP"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:140
 msgid "Networks to consider WAN (unserved)"
-msgstr ""
+msgstr "Rețele de luat în considerare WAN (neservite)"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:192
 msgid "No Entry"
-msgstr ""
+msgstr "Nici o intrare"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:97
 msgid "No Filter"
-msgstr ""
+msgstr "Fără filtru"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:230
 msgid "No Remote Control"
-msgstr ""
+msgstr "Fără telecomandă"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:45
 msgid ""
 "Note: SSL/TLS library is missing an API. Please review syslog. >> logread ..."
 msgstr ""
+"Notă: Bibliotecii SSL/TLS îi lipsește o API. Vă rugăm să revizuiți syslogul. "
+">> logread ..."
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:36
 msgid ""
 "Note: local DNS is configured to look at odhpcd, but odhpcd UCI lease "
 "trigger is incorrectly set:"
 msgstr ""
+"Notă: DNS local este configurat pentru a se uita la odhpcd, dar odhpcd UCI "
+"lease trigger este setat incorect:"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zones.lua:16
 msgid ""
 "Organize directed forward, stub, and authoritative zones <a href=\"%s\" "
 "target=\"_blank\">(help)</a>."
 msgstr ""
+"Organizați zonele direcționate forward, stub și authoritative <a href=\"%s\" "
+"target=\"_blank\">(help)</a>."
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:202
 msgid "Override the WAN side router entry in DNS"
-msgstr ""
+msgstr "Suprascrieți intrarea routerului din partea WAN în DNS"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:261
 msgid "Passive"
-msgstr ""
+msgstr "Pasiv"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:68
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:74
 msgid "Port servers will receive queries on"
-msgstr ""
+msgstr "Serverele de port vor primi interogări pe"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:108
 msgid "Prefix for generated DNS64 addresses"
-msgstr ""
+msgstr "Prefix pentru adresele DNS64 generate"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:292
 msgid "Prevent client query overload; zero is off"
-msgstr ""
+msgstr "Previne supraîncărcarea interogării clientului; zero este oprit"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:286
 msgid "Prevent excessively short cache periods"
-msgstr ""
+msgstr "Preveniți perioadele de memorie cache excesiv de scurte"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:91
 msgid "Protect against upstream response of 127.0.0.0/8"
-msgstr ""
+msgstr "Protecție împotriva răspunsului în amonte de 127.0.0.0/8"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:96
 msgid "Protect against upstream responses within local subnets"
 msgstr ""
+"Protejarea împotriva răspunsurilor în amonte în cadrul subrețelelor locale"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:266
 msgid "Query Minimize"
-msgstr ""
+msgstr "Minimizarea interogării"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:291
 msgid "Query Rate Limit"

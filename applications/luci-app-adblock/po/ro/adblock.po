@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-05 17:56+0000\n"
+"PO-Revision-Date: 2021-12-10 15:48+0000\n"
 "Last-Translator: Simona Iacob <s@zp1.net>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock/ro/>\n"
@@ -376,7 +376,7 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:445
 msgid "Fifth instance"
-msgstr ""
+msgstr "A cincea instanță"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:157
 msgid "Filter criteria like date, domain or client (optional)"
@@ -384,15 +384,15 @@ msgstr "Criterii de filtrare precum dată, domeniu sau client (opțional)"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:328
 msgid "Firewall ports that should be forced locally."
-msgstr ""
+msgstr "Porturile firewall care trebuie forțate la nivel local."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:321
 msgid "Firewall source zones that should be forced locally."
-msgstr ""
+msgstr "Zonele sursă de firewall care ar trebui să fie forțate la nivel local."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:441
 msgid "First instance (default)"
-msgstr ""
+msgstr "Prima instanță (implicit)"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:460
 msgid "Flush DNS Cache"
@@ -408,15 +408,15 @@ msgstr "Forţează DNS Local"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:328
 msgid "Forced Ports"
-msgstr ""
+msgstr "Porturi forțate"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:321
 msgid "Forced Zones"
-msgstr ""
+msgstr "Zonele forțate"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:444
 msgid "Fourth instance"
-msgstr ""
+msgstr "A patra instanță"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:355
 msgid ""
@@ -435,7 +435,7 @@ msgstr "Setări generale"
 
 #: applications/luci-app-adblock/root/usr/share/rpcd/acl.d/luci-app-adblock.json:3
 msgid "Grant access to LuCI app adblock"
-msgstr ""
+msgstr "Acordă acces la aplicația LuCI adblock"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:223
 msgid "Information"
@@ -455,15 +455,15 @@ msgstr "Ultimele Cereri DNS"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:342
 msgid "Limit SafeSearch"
-msgstr ""
+msgstr "Limitarea SafeSearch"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:342
 msgid "Limit SafeSearch to certain providers."
-msgstr ""
+msgstr "Limitați SafeSearch la anumiți furnizori."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:65
 msgid "Line number to remove"
-msgstr ""
+msgstr "Numărul liniei de eliminat"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:498
 msgid "List of available network devices used by tcpdump."
@@ -488,7 +488,7 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:407
 msgid "List of supported and fully pre-configured download utilities."
-msgstr ""
+msgstr "Lista utilităților de descărcare acceptate și complet pre-configurate."
 
 #: applications/luci-app-adblock/luasrc/controller/adblock.lua:11
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:51
@@ -497,17 +497,19 @@ msgstr "Vizualizare jurnal"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:374
 msgid "Low Priority Service"
-msgstr ""
+msgstr "Serviciu cu prioritate scăzută"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:419
 msgid ""
 "Manually override the pre-configured download options for the selected "
 "download utility."
 msgstr ""
+"Suprascrieți manual opțiunile de descărcare preconfigurate pentru utilitarul "
+"de descărcare selectat."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:124
 msgid "No Query results!"
-msgstr "Nu există rezultate de interogare!"
+msgstr "Nu există rezultate de căutare!"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/logread.js:21
 msgid "No adblock related logs yet!"
@@ -542,13 +544,15 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:363
 msgid "Receiver address for adblock notification e-mails."
-msgstr ""
+msgstr "Adresa destinatarului pentru e-mailurile de notificare adblock."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:318
 msgid ""
 "Redirect all DNS queries from specified zones to the local DNS resolver, "
 "applies to UDP and TCP protocol."
 msgstr ""
+"Redirecționează toate interogările DNS din zonele specificate către "
+"rezolvatorul DNS local; se aplică protocoalelor UDP și TCP."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:374
 msgid ""
@@ -570,19 +574,19 @@ msgstr "Actualizare Raport DNS"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:15
 msgid "Refresh Timer"
-msgstr ""
+msgstr "Cronometru de reîmprospătare"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:266
 msgid "Refresh Timer..."
-msgstr ""
+msgstr "Cronometru de reîmprospătare..."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:329
 msgid "Refresh..."
-msgstr ""
+msgstr "Reîmprospătați..."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:351
 msgid "Relax SafeSearch"
-msgstr ""
+msgstr "Relaxare SafeSearch"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:281
 msgid "Reload"
@@ -590,19 +594,19 @@ msgstr "Reîncărcare"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:61
 msgid "Remove an existing job"
-msgstr ""
+msgstr "Îndepărtarea unei lucrări existente"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:507
 msgid "Report Chunk Count"
-msgstr ""
+msgstr "Raportați numărul de bucăți"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:512
 msgid "Report Chunk Size"
-msgstr ""
+msgstr "Raportați dimensiunea bucăților"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:503
 msgid "Report Directory"
-msgstr ""
+msgstr "Director de rapoarte"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:498
 msgid "Report Interface"
@@ -642,7 +646,7 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:253
 msgid "Run Flags"
-msgstr ""
+msgstr "Fixați indicatoarele"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:245
 msgid "Run Interfaces"
