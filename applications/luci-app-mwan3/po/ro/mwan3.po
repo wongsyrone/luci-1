@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 15:48+0000\n"
+"PO-Revision-Date: 2021-12-12 23:09+0000\n"
 "Last-Translator: Simona Iacob <s@zp1.net>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsmwan3/ro/>\n"
@@ -102,7 +102,7 @@ msgstr "* %s: Este apelat de mwan3track doar dacă urmărirea a avut succes"
 msgid "-- Interface Selection --"
 msgstr "-- Selectarea interfeței --"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:84
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:85
 msgid "-- Please choose --"
 msgstr "-- Vă rugăm să alegeți --"
 
@@ -160,11 +160,11 @@ msgstr "Critic"
 msgid "Debug"
 msgstr "Depanare"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:51
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:61
 msgid "Destination address"
 msgstr "Adresa de destinație"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:55
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:65
 msgid "Destination port"
 msgstr "Portul de destinație"
 
@@ -200,7 +200,7 @@ msgstr "Activați urmărirea ssl"
 msgid "Enabled"
 msgstr "Activat"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:93
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:94
 msgid ""
 "Enables firewall rule logging (global mwan3 logging must also be enabled)"
 msgstr ""
@@ -257,7 +257,8 @@ msgstr "Masă de comandă la culoare"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:256
 msgid "Flush global firewall conntrack table on interface events"
-msgstr "Spălarea tabelului global firewall conntrack la evenimente de interfață"
+msgstr ""
+"Spălarea tabelului global firewall conntrack la evenimente de interfață"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:56
 msgid "Globals"
@@ -275,7 +276,7 @@ msgstr "Conectare la cald dacă este căzut"
 msgid "Hotplug ifup"
 msgstr "Conectare la cald dacă este în sus"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:82
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
 msgid "IPset"
 msgstr "SetIP"
 
@@ -366,7 +367,7 @@ msgstr ""
 "cele cu ponderi mai mari."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:19
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:92
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:93
 msgid "Logging"
 msgstr "Jurnalizare"
 
@@ -378,8 +379,8 @@ msgstr "Nivel de jurnal"
 msgid "Max TTL"
 msgstr "TTL maxim"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:47
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:56
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:57
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:66
 msgid ""
 "May be entered as a single or multiple port(s) (eg \"22\" or \"80,443\") or "
 "as a portrange (eg \"1024:2048\") without quotes"
@@ -480,7 +481,7 @@ msgstr ""
 "Mwan3 necesită ca toate interfețele să aibă o metrică unică configurată în /"
 "etc/config/network."
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:84
 msgid ""
 "Name of IPset rule. Requires IPset rule in /etc/dnsmasq.conf (eg \"ipset=/"
 "youtube.com/youtube\")"
@@ -605,11 +606,11 @@ msgstr ""
 msgid "Policy"
 msgstr "Politica"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:96
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:97
 msgid "Policy assigned"
 msgstr "Politica atribuită"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:60
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
 msgid "Protocol"
 msgstr "Protocol"
 
@@ -618,62 +619,69 @@ msgid ""
 "Put your custom mwan3 action here, they will be executed with each netifd "
 "hotplug interface event on interfaces for which mwan3 is enabled."
 msgstr ""
+"Puneți aici acțiunea mwan3 personalizată, care va fi executată la fiecare "
+"eveniment de interfață netifd hotplug pe interfețele pentru care mwan3 este "
+"activat."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:210
 msgid "Recovery interval"
-msgstr ""
+msgstr "Interval de recuperare"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:144
 msgid "Recovery latency [ms]"
-msgstr ""
+msgstr "Latența de recuperare [ms]"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:157
 msgid "Recovery packet loss [%]"
-msgstr ""
+msgstr "Pierderea pachetelor de recuperare [%]"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:39
 msgid "Routing table %d"
-msgstr ""
+msgstr "Tabelul de rutare %d"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:36
 msgid "Routing table lookup"
-msgstr ""
+msgstr "Căutarea tabelei de rutare"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:88
 msgid "Rule"
-msgstr ""
+msgstr "Regula"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:20
 msgid "Rules are based on IP address, port or protocol."
-msgstr ""
+msgstr "Regulile se bazează pe adresa IP, port sau protocol."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:21
 msgid "Rules are matched from top to bottom."
-msgstr ""
+msgstr "Regulile sunt comparate de sus în jos."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:22
 msgid "Rules below a matching rule are ignored."
-msgstr ""
+msgstr "Regulile aflate sub o regulă de potrivire sunt ignorate."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:27
 msgid ""
 "Rules may not share the same name as configured interfaces, members or "
 "policies."
 msgstr ""
+"Regulile nu pot purta același nume ca interfețele, membrii sau politicile "
+"configurate."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:19
 msgid "Rules specify which traffic will use a particular MWAN policy."
-msgstr ""
+msgstr "Regulile specifică ce trafic va utiliza o anumită politică MWAN."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:78
 msgid "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
 msgstr ""
+"Secunde. Valori acceptabile: 1-1000000. Valoarea implicită este 600 dacă nu "
+"este setată"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:52
 msgid "Source address"
-msgstr ""
+msgstr "Adresă sursă"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:46
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:56
 msgid "Source port"
 msgstr "Port sursă"
 
@@ -686,16 +694,16 @@ msgstr "Stare"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:70
 msgid "Sticky"
-msgstr ""
+msgstr "Lipicios"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:77
 msgid "Sticky timeout"
-msgstr ""
+msgstr "Timp de așteptare persistent"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:43
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:52
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:53
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:62
 msgid "Supports CIDR notation (eg \"192.168.100.0/24\") without quotes"
-msgstr ""
+msgstr "Suportă notația CIDR (de exemplu \"192.168.100.0/24\") fără ghilimele"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/diagnostics.js:91
 msgid "Task"
@@ -703,78 +711,94 @@ msgstr "Sarcină"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:29
 msgid "The file is also preserved during sysupgrade."
-msgstr ""
+msgstr "Fișierul este păstrat și în timpul actualizării sistemului."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:33
 msgid ""
 "The first line of the script must be &#34;#!/bin/sh&#34; without quotes."
 msgstr ""
+"Prima linie a scriptului trebuie să fie &#34;#!/bin/sh&#34; fără ghilimele."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:37
 msgid ""
 "There are three main environment variables that are passed to this script."
 msgstr ""
+"Există trei variabile de mediu principale care sunt transmise acestui script."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:264
 msgid ""
 "This displays the metric assigned to this interface in /etc/config/network"
 msgstr ""
+"Aceasta afișează metrica atribuită acestei interfețe în /etc/config/network"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:32
 msgid "This file is interpreted as a shell script."
-msgstr ""
+msgstr "Acest fișier este interpretat ca un script shell."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:48
 msgid ""
 "This hostname or IP address will be pinged to determine if the link is up or "
 "down. Leave blank to assume interface is always online"
 msgstr ""
+"Acest nume de gazdă sau această adresă IP va fi apelată pentru a determina "
+"dacă legătura este activă sau inactivă. Lăsați gol pentru a presupune că "
+"interfața este întotdeauna online"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:28
 msgid "This section allows you to modify the content of \"/etc/mwan3.user\"."
 msgstr ""
+"Această secțiune vă permite să modificați conținutul fișierului \"/etc/mwan3."
+"user\"."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:47
 msgid "Tracking hostname or IP address"
-msgstr ""
+msgstr "Numele de gazdă de urmărire sau adresa IP"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:52
 msgid "Tracking method"
-msgstr ""
+msgstr "Metoda de urmărire"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:74
 msgid "Tracking reliability"
-msgstr ""
+msgstr "Fiabilitatea urmăririi"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:24
 msgid ""
 "Traffic destined for known (other than default) networks is handled by the "
 "main routing table."
 msgstr ""
+"Traficul destinat rețelelor cunoscute (altele decât cele implicite) este "
+"gestionat de tabelul principal de rutare."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:71
 msgid ""
 "Traffic from the same source IP address that previously matched this rule "
 "within the sticky timeout period will use the same WAN interface"
 msgstr ""
+"Traficul provenit de la aceeași adresă IP sursă care a corespuns anterior "
+"acestei reguli în perioada de timeout sticky va utiliza aceeași interfață WAN"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:25
 msgid ""
 "Traffic matching a rule, but all WAN interfaces for that policy are down "
 "will be blackholed."
 msgstr ""
+"Traficul care se potrivește unei reguli, dar toate interfețele WAN pentru "
+"politica respectivă sunt oprite, va fi blocat."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:23
 msgid "Traffic not matching any rule is routed using the main routing table."
 msgstr ""
+"Traficul care nu se potrivește cu nicio regulă este direcționat cu ajutorul "
+"tabelului principal de rutare."
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:37
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Depanare"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:20
 msgid "Unable to save contents: %s"
-msgstr ""
+msgstr "Nu se poate salva conținutul: %s"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:33
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:47
@@ -783,9 +807,11 @@ msgstr ""
 msgid "Uptime"
 msgstr "Timp de funcționare"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:61
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:43
 msgid "View the content of /etc/protocols for protocol description"
 msgstr ""
+"Vizualizați conținutul fișierului /etc/protocoale pentru descrierea "
+"protocolului"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:29
 msgid "Warning"
@@ -795,41 +821,43 @@ msgstr "Avertisment"
 msgid ""
 "When all policy members are offline use this behavior for matched traffic"
 msgstr ""
+"Atunci când toți membrii politicii sunt offline, utilizați acest "
+"comportament pentru traficul potrivit"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:73
 msgid "Yes"
 msgstr "Da"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:41
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:104
 msgid "blackhole (drop)"
-msgstr ""
+msgstr "gaură neagră (picătură)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:259
 msgid "connected (mwan3)"
-msgstr ""
+msgstr "conectat (mwan3)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:42
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:104
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:105
 msgid "default (use main routing table)"
-msgstr ""
+msgstr "implicit (utilizează tabelul principal de rutare)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:260
 msgid "disconnected (mwan3)"
-msgstr ""
+msgstr "deconectat (mwan3)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:258
 msgid "ifdown (netifd)"
-msgstr ""
+msgstr "în cazul în care nu funcționează (netifd)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:257
 msgid "ifup (netifd)"
-msgstr ""
+msgstr "dacă este activ (netifd)"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:40
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:102
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
 msgid "unreachable (reject)"
-msgstr ""
+msgstr "inaccesibil (respingere)"
 
 #~ msgid "Collecting data..."
 #~ msgstr "Colectare date..."
