@@ -5,6 +5,7 @@
 'require uci';
 'require rpc';
 'require form';
+'require tools.widgets as widgets';
 
 var callInitList, callInitAction, callTimezone,
     callGetLocaltime, callSetLocaltime, CBILocalTime;
@@ -227,10 +228,11 @@ return view.extend({
 		o.ucioption = 'lang';
 		o.value('auto');
 
-		var k = Object.keys(uci.get('luci', 'languages') || {}).sort();
+		var l = Object.assign({ en: 'English' }, uci.get('luci', 'languages')),
+		    k = Object.keys(l).sort();
 		for (var i = 0; i < k.length; i++)
 			if (k[i].charAt(0) != '.')
-				o.value(k[i], uci.get('luci', 'languages', k[i]));
+				o.value(k[i], l[k[i]]);
 
 		o = s.taboption('language', form.ListValue, '_mediaurlbase', _('Design'))
 		o.uciconfig = 'luci';
@@ -280,6 +282,15 @@ return view.extend({
 			o = s.taboption('timesync', form.Flag, 'enable_server', _('Provide NTP server'));
 			o.ucisection = 'ntp';
 			o.depends('enabled', '1');
+
+			o = s.taboption('timesync', widgets.NetworkSelect, 'interface',
+				_('Bind NTP server'),
+				_('Provide the NTP server to the selected interface or, if unspecified, to all interfaces'));
+			o.ucisection = 'ntp';
+			o.depends('enable_server', '1');
+			o.multiple = false;
+			o.nocreate = true;
+			o.optional = true;
 
 			o = s.taboption('timesync', form.Flag, 'use_dhcp', _('Use DHCP advertised servers'));
 			o.ucisection = 'ntp';
