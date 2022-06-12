@@ -1,30 +1,26 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2022-06-05 12:16+0000\n"
-"Last-Translator: viniribeirossa <viniribeirossa@gmail.com>\n"
-"Language-Team: English <https://hosted.weblate.org/projects/openwrt/"
-"luciapplicationsopkg/en/>\n"
-"Language: en\n"
-"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-05-20 01:17+0000\n"
+"Last-Translator: Amir Mahdi ajoodani <amir.ajoodani@gmail.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsopkg/fa/>\n"
+"Language: fa\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.13-dev\n"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1044
 msgid "Actions"
-msgstr ""
+msgstr "اقدام ها"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:850
 msgid "Automatically remove unused dependencies"
-msgstr ""
+msgstr "حذف اتوماتیک پیش نیازهای بدون استفاده"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1054
 msgid "Available"
-msgstr ""
+msgstr "در دسترس"
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:775
 msgid ""
@@ -40,7 +36,7 @@ msgstr ""
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:856
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:949
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1031
 msgid "Clear"
@@ -230,7 +226,7 @@ msgstr ""
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:940
 msgid "SHA256"
-msgstr "SHA256"
+msgstr ""
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:812
 msgid "Save"
@@ -312,7 +308,7 @@ msgstr ""
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:842
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:1070
 msgid "Version"
-msgstr "Versão"
+msgstr ""
 
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:491
 #: applications/luci-app-opkg/htdocs/luci-static/resources/view/opkg.js:509
