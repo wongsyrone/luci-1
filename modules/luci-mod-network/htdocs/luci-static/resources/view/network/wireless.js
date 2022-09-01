@@ -1146,6 +1146,11 @@ return view.extend({
 					o.depends('mode', 'ap-wds');
 					o.default = o.enabled;
 
+					/* https://w1.fi/cgit/hostap/commit/?id=34f7c699a6bcb5c45f82ceb6743354ad79296078  */
+					/* multicast_to_unicast https://github.com/openwrt/openwrt/commit/7babb978ad9d7fc29acb1ff86afb1eb343af303a */
+					o = ss.taboption('advanced', form.Flag, 'multicast_to_unicast', _('Multi To Unicast'), _('ARP, IPv4 and IPv6 (even 802.1Q) with multicast destination MACs are unicast to the STA MAC address. Note: This is not Directed Multicast Service (DMS) in 802.11v. Note: might break receiver STA multicast expectations.'));
+					o.rmempty = true;
+
 					o = ss.taboption('advanced', form.Flag, 'isolate', _('Isolate Clients'), _('Prevents client-to-client communication'));
 					o.depends('mode', 'ap');
 					o.depends('mode', 'ap-wds');
@@ -1446,6 +1451,10 @@ return view.extend({
 				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
 				o.rmempty = true;
 				o.password = true;
+
+				//WPA(1) has only WPA IE. Only >= WPA2 has RSN IE Preauth frames.
+				o = ss.taboption('encryption', form.Flag, 'rsn_preauth', _('RSN Preauth'), _('Robust Security Network (RSN): Allow roaming preauth for WPA2-EAP networks (and advertise it in WLAN beacons). Only works if the specified network interface is a bridge. Shortens the time-critical reassociation process.'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa2', 'wpa3', 'wpa3-mixed'] });
 
 
 				o = ss.taboption('encryption', form.Value, '_wpa_key', _('Key'));
