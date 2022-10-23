@@ -255,6 +255,8 @@ return view.extend({
 		s.tab('advanced', _('Advanced Settings'));
 		s.tab('leases', _('Static Leases'));
 		s.tab('hosts', _('Hostnames'));
+		s.tab('srvhosts', _('SRV'));
+		s.tab('mxhosts', _('MX'));
 		s.tab('ipsets', _('IP Sets'));
 
 		s.taboption('general', form.Flag, 'domainneeded',
@@ -287,9 +289,12 @@ return view.extend({
 
 		o = s.taboption('general', form.DynamicList, 'address',
 			_('Addresses'),
-			_('List of domains to force to an IP address.'));
+			_('Resolve specified FQDNs to an IP.') + '<br />' +
+			_('Syntax: <code>/fqdn[/fqdn…]/[ipaddr]</code>.') + '<br />' +
+			_('<code>/#/</code> matches any domain. <code>/example.com/</code> returns NXDOMAIN.') + '<br />' +
+			_('<code>/example.com/#</code> returns NULL addresses (<code>0.0.0.0</code> and <code>::</code>) for example.com and its subdomains.'));
 		o.optional = true;
-		o.placeholder = '/router.local/192.168.0.1';
+		o.placeholder = '/router.local/router.lan/192.168.0.1';
 
 		o = s.taboption('general', form.DynamicList, 'ipset',
 			_('IP sets'),
@@ -385,7 +390,8 @@ return view.extend({
 
 		s.taboption('advanced', form.Flag, 'filterwin2k',
 			_('Filter useless'),
-			_('Do not forward queries that cannot be answered by public resolvers.'));
+			_('Avoid uselessly triggering dial-on-demand links (filters SRV/SOA records and names with underscores).') + '<br />' +
+			_('May prevent VoIP or other services from working.'));
 
 		s.taboption('advanced', form.Flag, 'localise_queries',
 			_('Localise queries'),
@@ -545,6 +551,72 @@ return view.extend({
 		Object.values(L.uci.sections('dhcp', 'dnsmasq')).forEach(function(val, index) {
 			so.value(index, '%s (Domain: %s, Local: %s)'.format(index, val.domain || '?', val.local || '?'));
 		});
+
+		o = s.taboption('srvhosts', form.SectionValue, '__srvhosts__', form.TableSection, 'srvhost', null,
+			_('Bind service records to a domain name: specify the location of services. See <a href="%s">RFC2782</a>.').format('https://datatracker.ietf.org/doc/html/rfc2782')
+			+ '<br />' + _('_service: _sip, _ldap, _imap, _stun, _xmpp-client, … . (Note: while _http is possible, no browsers support SRV records.)')
+			+ '<br />' + _('_proto: _tcp, _udp, _sctp, _quic, … .')
+			+ '<br />' + _('You may add multiple records for the same Target.')
+			+ '<br />' + _('Larger weights (of the same prio) are given a proportionately higher probability of being selected.'));
+
+		ss = o.subsection;
+
+		ss.addremove = true;
+		ss.anonymous = true;
+		ss.sortable  = true;
+		ss.rowcolors = true;
+
+		so = ss.option(form.Value, 'srv', _('SRV'), _('Syntax: <code>_service._proto.example.com</code>.'));
+		so.rmempty = false;
+		so.datatype = 'hostname';
+		so.placeholder = '_sip._tcp.example.com';
+
+		so = ss.option(form.Value, 'target', _('Target'), _('CNAME or fqdn'));
+		so.rmempty = false;
+		so.datatype = 'hostname';
+		so.placeholder = 'sip.example.com';
+
+		so = ss.option(form.Value, 'port', _('Port'));
+		so.rmempty = false;
+		so.datatype = 'port';
+		so.placeholder = '5060';
+
+		so = ss.option(form.Value, 'class', _('Priority'), _('Ordinal: lower comes first.'));
+		so.rmempty = true;
+		so.datatype = 'range(0,65535)';
+		so.placeholder = '10';
+
+		so = ss.option(form.Value, 'weight', _('Weight'));
+		so.rmempty = true;
+		so.datatype = 'range(0,65535)';
+		so.placeholder = '50';
+
+		o = s.taboption('mxhosts', form.SectionValue, '__mxhosts__', form.TableSection, 'mxhost', null,
+			_('Bind service records to a domain name: specify the location of services.')
+			 + '<br />' + _('You may add multiple records for the same domain.'));
+
+		ss = o.subsection;
+
+		ss.addremove = true;
+		ss.anonymous = true;
+		ss.sortable  = true;
+		ss.rowcolors = true;
+		ss.nodescriptions = true;
+
+		so = ss.option(form.Value, 'domain', _('Domain'));
+		so.rmempty = false;
+		so.datatype = 'hostname';
+		so.placeholder = 'example.com';
+
+		so = ss.option(form.Value, 'relay', _('Relay'));
+		so.rmempty = false;
+		so.datatype = 'hostname';
+		so.placeholder = 'relay.example.com';
+
+		so = ss.option(form.Value, 'pref', _('Priority'), _('Ordinal: lower comes first.'));
+		so.rmempty = true;
+		so.datatype = 'range(0,65535)';
+		so.placeholder = '0';
 
 		o = s.taboption('hosts', form.SectionValue, '__hosts__', form.GridSection, 'domain', null,
 			_('Hostnames are used to bind a domain name to an IP address. This setting is redundant for hostnames already configured with static leases, but it can be useful to rebind an FQDN.'));
