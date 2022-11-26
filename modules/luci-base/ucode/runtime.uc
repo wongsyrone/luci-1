@@ -61,6 +61,16 @@ const Class = {
 		return this.L;
 	},
 
+	is_ucode_template: function(path) {
+		return access(`${template_directory}/${path}.ut`);
+	},
+
+	is_lua_template: function(path) {
+		let vm = this.init_lua(true);
+
+		return vm && access(`${vm.get('_G', 'luci', 'template', 'viewdir')}/${path}.htm`);
+	},
+
 	render_ucode: function(path, scope) {
 		let tmplfunc = loadfile(path, { raw_mode: false });
 

@@ -6,13 +6,9 @@ module("luci.dispatcher", package.seeall)
 
 local http = _G.L.http
 
-context = setmetatable({
-	request = _G.L.ctx.request_path;
-	requested = _G.L.node;
-	dispatched = _G.L.node;
-}, {
+context = setmetatable({}, {
 	__index = function(t, k)
-		if k == "requestpath" then
+		if k == "request" or k == "requestpath" then
 			return _G.L.ctx.request_path
 		elseif k == "requestargs" then
 			return _G.L.ctx.request_args
@@ -186,6 +182,11 @@ function process_lua_controller(path)
 			entry.auth = {}
 		end
 
+		if entry.action == nil and type(entry.target) == "table" then
+			entry.action = entry.target
+			entry.target = nil
+		end
+
 		entry.leaf = nil
 
 		entry.file_depends = nil
@@ -351,6 +352,12 @@ function invoke_form_action(model, ...)
 		res:render()
 	end
 	_G.L.include("footer")
+end
+
+function render_lua_template(path)
+	local tpl = require "luci.template"
+
+	tpl.render(path, getfenv(1))
 end
 
 

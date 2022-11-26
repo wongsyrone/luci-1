@@ -774,7 +774,12 @@ function render_action(fn) {
 function run_action(request_path, lang, tree, resolved, action) {
 	switch (action?.type) {
 	case 'template':
-		runtime.render(action.path, {});
+		if (runtime.is_ucode_template(action.path))
+			runtime.render(action.path, {});
+		else
+			render_action(() => {
+				runtime.call('luci.dispatcher', 'render_lua_template', action.path);
+			});
 		break;
 
 	case 'view':
@@ -856,7 +861,7 @@ dispatch = function(_http, path) {
 	let version = determine_version();
 	let lang = determine_request_language();
 
-	runtime = LuCIRuntime({
+	runtime = runtime || LuCIRuntime({
 		http,
 		ubus,
 		uci,
@@ -892,7 +897,8 @@ dispatch = function(_http, path) {
 		let resolved = resolve_page(menu, path);
 
 		runtime.env.ctx = resolved.ctx;
-		runtime.env.node = resolved.node;
+		runtime.env.dispatched = resolved.node;
+		runtime.env.requested ??= resolved.node;
 
 		if (length(resolved.ctx.auth)) {
 			let session = is_authenticated(resolved.ctx.auth);
@@ -916,15 +922,18 @@ dispatch = function(_http, path) {
 					http.header('X-LuCI-Login-Required', 'yes');
 
 					let scope = { duser: 'root', fuser: user };
+					let theme_sysauth = `themes/${basename(runtime.env.media)}/sysauth`;
 
-					try {
-						runtime.render(`themes/${basename(runtime.env.media)}/sysauth`, scope);
-					}
-					catch (e) {
-						runtime.render('sysauth', scope);
+					if (runtime.is_ucode_template(theme_sysauth) || runtime.is_lua_template(theme_sysauth)) {
+						try {
+							return runtime.render(theme_sysauth, scope);
+						}
+						catch (e) {
+							runtime.env.media_error = `${e}`;
+						}
 					}
 
-					return;
+					return runtime.render('sysauth', scope);
 				}
 
 				let cookie_name = (http.getenv('HTTPS') == 'on') ? 'sysauth_https' : 'sysauth_http',
