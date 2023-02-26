@@ -314,23 +314,15 @@ var CBIWifiFrequencyValue = form.Value.extend({
 			this.channels = {
 				'2g': L.hasSystemFeature('hostapd', 'acs') ? [ 'auto', 'auto', true ] : [],
 				'5g': L.hasSystemFeature('hostapd', 'acs') ? [ 'auto', 'auto', true ] : [],
-				'6g': [],
+				'6g': L.hasSystemFeature('hostapd', 'acs') ? [ 'auto', 'auto', true ] : [],
 				'60g': []
 			};
 
 			for (var i = 0; i < data[1].length; i++) {
-				var band;
-
-				if (data[1][i].mhz >= 2412 && data[1][i].mhz <= 2484)
-					band = '2g';
-				else if (data[1][i].mhz >= 5160 && data[1][i].mhz <= 5885)
-					band = '5g';
-				else if (data[1][i].mhz >= 5925 && data[1][i].mhz <= 7125)
-					band = '6g';
-				else if (data[1][i].mhz >= 58320 && data[1][i].mhz <= 69120)
-					band = '60g';
-				else
+				if (!data[1][i].band)
 					continue;
+
+				var band = '%dg'.format(data[1][i].band);
 
 				this.channels[band].push(
 					data[1][i].channel,
@@ -343,10 +335,10 @@ var CBIWifiFrequencyValue = form.Value.extend({
 				.reduce(function(o, v) { o[v] = true; return o }, {});
 
 			this.modes = [
-				'', 'Legacy', true,
+				'', 'Legacy', hwmodelist.a || hwmodelist.b || hwmodelist.g,
 				'n', 'N', hwmodelist.n,
-				'ac', 'AC', hwmodelist.ac,
-				'ax', 'AX', hwmodelist.ax
+				'ac', 'AC', L.hasSystemFeature('hostapd', '11ac') && hwmodelist.ac,
+				'ax', 'AX', L.hasSystemFeature('hostapd', '11ax') && hwmodelist.ax
 			];
 
 			var htmodelist = L.toArray(data[0] ? data[0].getHTModes() : null)
@@ -387,7 +379,8 @@ var CBIWifiFrequencyValue = form.Value.extend({
 				],
 				'ax': [
 					'2g', '2.4 GHz', this.channels['2g'].length > 3,
-					'5g', '5 GHz', this.channels['5g'].length > 3
+					'5g', '5 GHz', this.channels['5g'].length > 3,
+					'6g', '6 GHz', this.channels['6g'].length > 3
 				]
 			};
 		}, this));
@@ -1159,6 +1152,7 @@ return view.extend({
 
 					o = ss.taboption('advanced', form.Value, 'ifname', _('Interface name'), _('Override default interface name'));
 					o.optional = true;
+					o.datatype = 'maxlength(15)';
 					o.placeholder = radioNet.getIfname();
 					if (/^radio\d+\.network/.test(o.placeholder))
 						o.placeholder = '';
@@ -1437,6 +1431,38 @@ return view.extend({
 				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
 				o.rmempty = true;
 				o.password = true;
+
+				/* extra RADIUS settings start */
+				o = ss.taboption('encryption', form.ListValue, 'dynamic_vlan', _('RADIUS Dynamic VLAN Assignment'), _('Required: Rejects auth if RADIUS server does not provide appropriate VLAN attributes.'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
+				o.value('0', _('Disabled'));
+				o.value('1', _('Optional'));
+				o.value('2', _('Required'));
+				o.write = function (section_id, value) {
+					return this.super('write', [section_id, (value == 0) ? null: value]);
+				}
+
+				o = ss.taboption('encryption', form.Flag, 'per_sta_vif', _('RADIUS Per STA VLAN'), _('Each STA is assigned its own AP_VLAN interface.'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
+
+				//hostapd internally defaults to vlan_naming=1 even with dynamic VLAN off
+				o = ss.taboption('encryption', form.Flag, 'vlan_naming', _('RADIUS VLAN Naming'), _('Off: <code>vlanXXX</code>, e.g., <code>vlan1</code>. On: <code>vlan_tagged_interface.XXX</code>, e.g. <code>eth0.1</code>.'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
+
+				o = ss.taboption('encryption', widgets.DeviceSelect, 'vlan_tagged_interface', _('RADIUS VLAN Tagged Interface'), _('E.g. eth0, eth1'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
+				o.size = 1;
+				o.rmempty = true;
+				o.multiple = false;
+				o.noaliases = true;
+				o.nobridges = true;
+				o.nocreate = true;
+				o.noinactive = true;
+
+				o = ss.taboption('encryption', form.Value, 'vlan_bridge', _('RADIUS VLAN Bridge Naming Scheme'), _('E.g. <code>br-vlan</code> or <code>brvlan</code>.'));
+				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
+				o.rmempty = true;
+				/* extra RADIUS settings end */
 
 				o = ss.taboption('encryption', form.Value, 'dae_client', _('DAE-Client'), _('Dynamic Authorization Extension client.'));
 				add_dependency_permutations(o, { mode: ['ap', 'ap-wds'], encryption: ['wpa', 'wpa2', 'wpa3', 'wpa3-mixed'] });
