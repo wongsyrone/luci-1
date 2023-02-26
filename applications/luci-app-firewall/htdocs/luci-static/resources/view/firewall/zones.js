@@ -57,6 +57,10 @@ return view.extend({
 
 		o = s.option(form.Flag, 'drop_invalid', _('Drop invalid packets'));
 
+		if (L.hasSystemFeature('firewall4')) {
+			o = s.option(form.Flag, 'fullcone', _('Full-cone NAT'));
+		}
+
 		var p = [
 			s.option(form.ListValue, 'input', _('Input')),
 			s.option(form.ListValue, 'output', _('Output')),
@@ -166,6 +170,15 @@ return view.extend({
 
 			return null;
 		};
+
+		if (L.hasSystemFeature('firewall4')) {
+			o = s.taboption('general', form.Flag, 'fullcone4', _('IPv4 Full-cone NAT'));
+			o.modalonly = true;
+
+			o = s.taboption('general', form.Flag, 'fullcone6', _('IPv6 Full-cone NAT'));
+			o.modalonly = true;
+		}
+
 
 		o = s.taboption('general', form.Flag, 'mtu_fix', _('MSS clamping'));
 		o.modalonly = true;
