@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2023-05-08 14:25+0000\n"
-"Last-Translator: Keen <keen_kwuo@msn.com>\n"
+"PO-Revision-Date: 2023-09-14 12:13+0000\n"
+"Last-Translator: haoge101 <haoge101@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsstatistics/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/apcups.js:7
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/apcups.json:2
@@ -75,6 +75,18 @@ msgstr "基本监控"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/processes.js:25
 msgid "Basic process monitoring enabled"
 msgstr "基础进程监控已启用"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:100
+msgid "Bitrate"
+msgstr "比特率"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:82
+msgid "Bitswap Down"
+msgstr "BitSwap 协议下行"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:77
+msgid "Bitswap Up"
+msgstr "Bitswap 协议上行"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpu.js:15
 msgid "By setting this, CPU is not aggregate of all processors on the system"
@@ -218,6 +230,30 @@ msgstr "DNS"
 msgid "DNS Plugin Configuration"
 msgstr "DNS 插件配置"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:6
+msgid "DSL"
+msgstr "DSL"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:65
+msgid "DSL Flags"
+msgstr "DSL 标记"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:52
+msgid "DSL Line Uptime"
+msgstr "DSL Line 运行时间"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:13
+msgid "DSL Signal"
+msgstr "DSL 信号"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:128
+msgid "Data Rate Down"
+msgstr "数据率下行"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:123
+msgid "Data Rate Up"
+msgstr "数据率上行"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:74
 msgid "Data collection interval"
 msgstr "数据收集间隙"
@@ -317,7 +353,7 @@ msgstr "启用统计"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/ping.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/processes.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:12
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:22
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:23
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:13
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:12
@@ -342,6 +378,10 @@ msgstr "熵插件配置"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/entropy.js:10
 msgid "Entropy monitoring enabled"
 msgstr "熵值监控已启用"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:136
+msgid "Errors"
+msgstr "错误"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:206
 msgid "Every 30 seconds"
@@ -524,6 +564,14 @@ msgstr "Iptables 插件配置"
 msgid "Leave unselected to automatically determine interfaces to monitor."
 msgstr "自动保留对未选中接口的监控。"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:24
+msgid "Line Attenuation Down (LATN)"
+msgstr "线路衰减下行（LATN)"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:19
+msgid "Line Attenuation Up (LATN)"
+msgstr "线路衰减上行（LATN）"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:39
 msgid ""
 "List of time spans to be stored in RRD database. E.g. \"1hour 1day 14day\". "
@@ -576,6 +624,14 @@ msgid ""
 "average RRAs'"
 msgstr "在不使用“仅平均 RRA”的情况下，可以使用一段时间的最大值而不是平均值"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:118
+msgid "Max. Attainable Data Rate (ATTNDR) Down"
+msgstr "最大可达到数据率（ATTNDR）下行"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:113
+msgid "Max. Attainable Data Rate (ATTNDR) Up"
+msgstr "最大可达到数据率（ATTNDR）上行"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/ping.js:36
 msgid "Maximum Missed Packets"
 msgstr "最大丢包数"
@@ -607,7 +663,7 @@ msgstr "已启用内存监控"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/irq.js:45
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:25
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:41
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:48
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:49
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:21
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/thermal.js:34
 msgid "Monitor all except specified"
@@ -669,7 +725,7 @@ msgstr "监测远程端口"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:41
 msgid "Monitoring %s and %s, %s %s"
-msgstr ""
+msgstr "正在监控 %s 和 %s, %s %s"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/df.js:106
 msgid "Monitoring %s, %s, %s"
@@ -714,7 +770,7 @@ msgid "Monitoring all but one interrupt"
 msgid_plural "Monitoring all but %d interrupts"
 msgstr[0] "监控除 %d 中断外的所有中断"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:57
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:58
 msgid "Monitoring all but one sensor"
 msgid_plural "Monitoring all but %d sensors"
 msgstr[0] "监控除 %d 传感器外的所有传感器"
@@ -742,7 +798,7 @@ msgstr "监视所有中断"
 msgid "Monitoring all partitions"
 msgstr "监视所有分区"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:61
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:62
 msgid "Monitoring all sensors"
 msgstr "监视所有传感器"
 
@@ -792,7 +848,7 @@ msgid "Monitoring one process"
 msgid_plural "Monitoring %d processes"
 msgstr[0] "正监控 %d 个进程"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:59
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:60
 msgid "Monitoring one sensor"
 msgid_plural "Monitoring %d sensors"
 msgstr[0] "正监控 %d 个传感器"
@@ -841,6 +897,14 @@ msgstr "Network 插件"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:178
 msgid "No RRD data found"
 msgstr "未找到 RRD 数据"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:44
+msgid "Noise Margin Down (SNR)"
+msgstr "噪声容限下行（SNR）"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:39
+msgid "Noise Margin Up (SNR)"
+msgstr "噪声容限上行（SNR）"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:15
 msgid ""
@@ -987,6 +1051,22 @@ msgstr "行/RRA"
 msgid "Rule monitoring enabled"
 msgstr "已启用监控规则"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:142
+msgid "Rx Corrupted Far"
+msgstr "接收端远端数据损坏"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:147
+msgid "Rx Corrupted Near"
+msgstr "接收端近端数据损坏"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:152
+msgid "Rx Retransmitted Far"
+msgstr "接收端远程重发"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:162
+msgid "Rx Retransmitted Near"
+msgstr "接收端近端重发"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/snmp6.js:7
 msgid "SNMP6"
 msgstr "SNMP6"
@@ -1018,7 +1098,7 @@ msgstr "脚本"
 msgid "Seconds"
 msgstr "秒"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:24
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:25
 msgid "Sensor list"
 msgstr "传感器列表"
 
@@ -1027,7 +1107,7 @@ msgstr "传感器列表"
 msgid "Sensors"
 msgstr "传感器"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:16
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:17
 msgid "Sensors Plugin Configuration"
 msgstr "传感器插件配置"
 
@@ -1047,6 +1127,10 @@ msgstr "服务器端口"
 msgid "Set the maximum size for datagrams sent over the network"
 msgstr "设置通过网络发送的数据报的最大大小"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:185
+msgid "Set up collectd"
+msgstr "设置collectd"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:14
 msgid "Sets the syslog log-level."
 msgstr "设置系统日志日志级别。"
@@ -1054,10 +1138,6 @@ msgstr "设置系统日志日志级别。"
 #: applications/luci-app-statistics/root/usr/share/luci/menu.d/luci-app-statistics.json:24
 msgid "Setup"
 msgstr "设置"
-
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:185
-msgid "Setup collectd"
-msgstr "设置collectd"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:31
 msgid "Shaping class monitoring"
@@ -1070,6 +1150,14 @@ msgstr "显示空闲状态"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:34
 msgid "Show max values instead of averages"
 msgstr "显示最大值而不是平均值"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:34
+msgid "Signal Attenuation Down (SATN)"
+msgstr "信号衰减下行（SATN）"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:29
+msgid "Signal Attenuation Up (SATN)"
+msgstr "信号衰减上行（SATN）"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpufreq.js:23
 msgid "Simple CPU frequency monitoring enabled"
@@ -1153,7 +1241,7 @@ msgstr "正在将 CSV 数据保存到 %s"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:30
 msgid "Summary of all ports"
-msgstr ""
+msgstr "所有端口概述"
 
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/syslog.json:2
 msgid "Syslog"
@@ -1373,7 +1461,7 @@ msgstr ""
 "><strong>警告：错误的参数设置，将导致非常高的临时内存消耗。这可能会使设备无法"
 "使用！</strong>"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:17
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:18
 msgid ""
 "The sensors plugin uses the Linux Sensors framework to gather environmental "
 "statistics."
@@ -1454,6 +1542,14 @@ msgstr "轮询时间超时"
 msgid "Try to lookup fully qualified hostname"
 msgstr "尝试解析主机全域名"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:157
+msgid "Tx Retransmitted Far"
+msgstr "发送端远端重发"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:167
+msgid "Tx Retransmitted Near"
+msgstr "发送端近端重发"
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/nut.js:7
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/nut.js:14
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/nut.json:2
@@ -1480,6 +1576,7 @@ msgstr "Unix互联通讯socket"
 msgid "Unixsock Plugin Configuration"
 msgstr "Unixsock 插件配置"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:58
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/uptime.js:15
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/uptime.json:2
 msgid "Uptime"
@@ -1505,6 +1602,14 @@ msgstr "正在使用的 PID 文件"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/exec.js:47
 msgid "User"
 msgstr "用户"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:92
+msgid "Vectoring Down"
+msgstr "Vectoring 下行"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:87
+msgid "Vectoring Up"
+msgstr "Vectoring 上行"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:21
 msgid "Verbose monitoring"
@@ -1560,7 +1665,7 @@ msgstr "您需要设置 <em>collectd</em> 来将数据写入 <em>.rrd</em> 文�
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:44
 msgid "all local listening ports,"
-msgstr ""
+msgstr "所有本地侦听端口，"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/curl.js:31
 msgid "cURL plugin enabled"
@@ -1577,7 +1682,7 @@ msgstr "cUrl 插件配置"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:45
 msgid "no summary"
-msgstr ""
+msgstr "无概述"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:139
 msgid "none"
@@ -1596,7 +1701,7 @@ msgstr[0] "%d 个文件系统类型"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:42
 msgid "one local"
 msgid_plural "%d local"
-msgstr[0] ""
+msgstr[0] "%d 个本地连接"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/df.js:108
 msgid "one mount"
@@ -1614,7 +1719,7 @@ msgstr "减少 rrd 大小"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:45
 msgid "summary of all ports"
-msgstr ""
+msgstr "所有端口概述"
 
 #~ msgid "Monitoring %s and %s"
 #~ msgstr "监视 %s 和 %s"

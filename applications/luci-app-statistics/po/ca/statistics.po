@@ -74,6 +74,18 @@ msgstr "Monitoratge bàsic"
 msgid "Basic process monitoring enabled"
 msgstr ""
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:100
+msgid "Bitrate"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:82
+msgid "Bitswap Down"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:77
+msgid "Bitswap Up"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpu.js:15
 msgid "By setting this, CPU is not aggregate of all processors on the system"
 msgstr ""
@@ -218,6 +230,30 @@ msgstr "DNS"
 msgid "DNS Plugin Configuration"
 msgstr "Configuració del connector DNS"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:6
+msgid "DSL"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:65
+msgid "DSL Flags"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:52
+msgid "DSL Line Uptime"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:13
+msgid "DSL Signal"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:128
+msgid "Data Rate Down"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:123
+msgid "Data Rate Up"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:74
 msgid "Data collection interval"
 msgstr "Interval de recol·lecció de dades"
@@ -317,7 +353,7 @@ msgstr ""
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/ping.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/processes.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:12
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:22
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:23
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:13
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:12
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/tcpconns.js:12
@@ -341,6 +377,10 @@ msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/entropy.js:10
 msgid "Entropy monitoring enabled"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:136
+msgid "Errors"
 msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:206
@@ -527,6 +567,14 @@ msgstr "Configuració del connector iptables"
 msgid "Leave unselected to automatically determine interfaces to monitor."
 msgstr ""
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:24
+msgid "Line Attenuation Down (LATN)"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:19
+msgid "Line Attenuation Up (LATN)"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:39
 msgid ""
 "List of time spans to be stored in RRD database. E.g. \"1hour 1day 14day\". "
@@ -577,6 +625,14 @@ msgid ""
 "average RRAs'"
 msgstr ""
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:118
+msgid "Max. Attainable Data Rate (ATTNDR) Down"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:113
+msgid "Max. Attainable Data Rate (ATTNDR) Up"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/ping.js:36
 msgid "Maximum Missed Packets"
 msgstr ""
@@ -608,7 +664,7 @@ msgstr ""
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/irq.js:45
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/iwinfo.js:25
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:41
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:48
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:49
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/snmp6.js:21
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/thermal.js:34
 msgid "Monitor all except specified"
@@ -719,7 +775,7 @@ msgid_plural "Monitoring all but %d interrupts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:57
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:58
 msgid "Monitoring all but one sensor"
 msgid_plural "Monitoring all but %d sensors"
 msgstr[0] ""
@@ -748,7 +804,7 @@ msgstr ""
 msgid "Monitoring all partitions"
 msgstr ""
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:61
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:62
 msgid "Monitoring all sensors"
 msgstr ""
 
@@ -805,7 +861,7 @@ msgid_plural "Monitoring %d processes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:59
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:60
 msgid "Monitoring one sensor"
 msgid_plural "Monitoring %d sensors"
 msgstr[0] ""
@@ -854,6 +910,14 @@ msgstr "Connectors de xarxa"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:178
 msgid "No RRD data found"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:44
+msgid "Noise Margin Down (SNR)"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:39
+msgid "Noise Margin Up (SNR)"
 msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:15
@@ -999,6 +1063,22 @@ msgstr "Files per RRA"
 msgid "Rule monitoring enabled"
 msgstr ""
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:142
+msgid "Rx Corrupted Far"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:147
+msgid "Rx Corrupted Near"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:152
+msgid "Rx Retransmitted Far"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:162
+msgid "Rx Retransmitted Near"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/snmp6.js:7
 msgid "SNMP6"
 msgstr ""
@@ -1030,7 +1110,7 @@ msgstr ""
 msgid "Seconds"
 msgstr "Segons"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:24
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:25
 msgid "Sensor list"
 msgstr "Llista de sensors"
 
@@ -1039,7 +1119,7 @@ msgstr "Llista de sensors"
 msgid "Sensors"
 msgstr "Sensors"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:16
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:17
 msgid "Sensors Plugin Configuration"
 msgstr "Configuració del connector Sensors"
 
@@ -1059,16 +1139,16 @@ msgstr "Port del servidor"
 msgid "Set the maximum size for datagrams sent over the network"
 msgstr ""
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:185
+msgid "Set up collectd"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:14
 msgid "Sets the syslog log-level."
 msgstr ""
 
 #: applications/luci-app-statistics/root/usr/share/luci/menu.d/luci-app-statistics.json:24
 msgid "Setup"
-msgstr ""
-
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:185
-msgid "Setup collectd"
 msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:31
@@ -1081,6 +1161,14 @@ msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:34
 msgid "Show max values instead of averages"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:34
+msgid "Signal Attenuation Down (SATN)"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:29
+msgid "Signal Attenuation Up (SATN)"
 msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpufreq.js:23
@@ -1416,7 +1504,7 @@ msgstr ""
 "incorrectes comportarà un consum molt alt de memòria al directori temporal. "
 "Això pot inutilitzar el dispositiu!</strong>"
 
-#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:17
+#: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:18
 msgid ""
 "The sensors plugin uses the Linux Sensors framework to gather environmental "
 "statistics."
@@ -1503,6 +1591,14 @@ msgstr ""
 msgid "Try to lookup fully qualified hostname"
 msgstr "Intenta resoldre el nom de màquina (fqdn)"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:157
+msgid "Tx Retransmitted Far"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:167
+msgid "Tx Retransmitted Near"
+msgstr ""
+
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/nut.js:7
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/nut.js:14
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/nut.json:2
@@ -1529,6 +1625,7 @@ msgstr "Sock Unix"
 msgid "Unixsock Plugin Configuration"
 msgstr "Configuració de connector Unixsock"
 
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:58
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/uptime.js:15
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/uptime.json:2
 msgid "Uptime"
@@ -1554,6 +1651,14 @@ msgstr "Fitxer PID usat"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/exec.js:47
 msgid "User"
 msgstr "Usuari"
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:92
+msgid "Vectoring Down"
+msgstr ""
+
+#: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dsl.js:87
+msgid "Vectoring Up"
+msgstr ""
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:21
 msgid "Verbose monitoring"

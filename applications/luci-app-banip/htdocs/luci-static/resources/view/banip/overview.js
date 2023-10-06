@@ -264,7 +264,6 @@ return view.extend({
 
 		o = s.taboption('general', widgets.DeviceSelect, 'ban_dev', _('Network Devices'), _('Select the WAN network device(s).'));
 		o.depends('ban_autodetect', '0');
-		o.unspecified = true;
 		o.multiple = true;
 		o.nocreate = true;
 		o.optional = true;
@@ -272,7 +271,6 @@ return view.extend({
 
 		o = s.taboption('general', widgets.NetworkSelect, 'ban_ifv4', _('Network Interfaces'), _('Select the logical WAN IPv4 network interface(s).'));
 		o.depends('ban_autodetect', '0');
-		o.unspecified = true;
 		o.multiple = true;
 		o.nocreate = true;
 		o.optional = true;
@@ -280,7 +278,6 @@ return view.extend({
 
 		o = s.taboption('general', widgets.NetworkSelect, 'ban_ifv6', _('Network Interfaces'), _('Select the logical WAN IPv6 network interface(s).'));
 		o.depends('ban_autodetect', '0');
-		o.unspecified = true;
 		o.multiple = true;
 		o.nocreate = true;
 		o.optional = true;
@@ -300,22 +297,14 @@ return view.extend({
 		o.optional = true;
 		o.retain = true;
 
-		o = s.taboption('general', widgets.NetworkSelect, 'ban_trigger', _('Startup Trigger Interface'), _('List of available network interfaces to trigger the banIP start.'));
-		o.unspecified = true;
+		o = s.taboption('general', widgets.NetworkSelect, 'ban_trigger', _('Reload Trigger Interface'), _('List of available reload trigger interface(s).'));
 		o.multiple = true;
 		o.nocreate = true;
 		o.rmempty = true;
 
-		o = s.taboption('general', form.Value, 'ban_triggerdelay', _('Trigger Delay'), _('Additional trigger delay in seconds before banIP processing actually starts.'));
+		o = s.taboption('general', form.Value, 'ban_triggerdelay', _('Trigger Delay'), _('Additional trigger delay in seconds during interface reload and boot.'));
 		o.placeholder = '10';
 		o.datatype = 'range(1,300)';
-		o.rmempty = true;
-
-		o = s.taboption('general', form.ListValue, 'ban_triggeraction', _('Trigger Action'), _('Trigger action on ifup interface events.'));
-		o.value('start', _('start (default)'));
-		o.value('reload', _('reload'));
-		o.value('restart', _('restart'));
-		o.optional = true;
 		o.rmempty = true;
 
 		o = s.taboption('general', form.ListValue, 'ban_fetchretry', _('Download Retries'), _('Number of download attempts in case of an error (not supported by uclient-fetch).'));
@@ -363,7 +352,7 @@ return view.extend({
 		o.optional = true;
 		o.rmempty = true;
 
-		o = s.taboption('advanced', form.ListValue, 'ban_splitsize', _('Set Split Size'), _('Split external set loading after every n members to save RAM.'));
+		o = s.taboption('advanced', form.ListValue, 'ban_splitsize', _('Set Split Size'), _('Split external Set loading after every n members to save RAM.'));
 		o.value('256');
 		o.value('512');
 		o.value('1024');
@@ -384,7 +373,7 @@ return view.extend({
 		o.placeholder = '/tmp/banIP-report';
 		o.rmempty = true;
 
-		o = s.taboption('advanced', form.Flag, 'ban_deduplicate', _('Deduplicate IPs'), _('Deduplicate IP addresses across all active Sets and and tidy up the local blocklist.'));
+		o = s.taboption('advanced', form.Flag, 'ban_deduplicate', _('Deduplicate IPs'), _('Deduplicate IP addresses across all active Sets and tidy up the local blocklist.'));
 		o.default = 1
 		o.rmempty = false;
 
@@ -411,6 +400,24 @@ return view.extend({
 		o.value('-200', _('-200 (default)'));
 		o.value('-300', _('-300'));
 		o.value('-400', _('-400'));
+		o.optional = true;
+		o.rmempty = true;
+
+		o = s.taboption('adv_chain', widgets.DeviceSelect, 'ban_vlanallow', _('Allow VLAN Forwards'), _('Always allow certain VLAN forwards.'));
+		o.multiple = true;
+		o.nocreate = true;
+		o.optional = true;
+		o.rmempty = true;
+
+		o = s.taboption('adv_chain', widgets.DeviceSelect, 'ban_vlanblock', _('Block VLAN Forwards'), _('Always block certain VLAN forwards.'));
+		o.multiple = true;
+		o.nocreate = true;
+		o.optional = true;
+		o.rmempty = true;
+
+		o = s.taboption('adv_chain', form.ListValue, 'ban_blocktype', _('Block Type'), _('Drop packets silently or actively reject the traffic on WAN-Input and WAN-Forward chains.'));
+		o.value('drop', _('drop (default)'));
+		o.value('reject', _('reject'));
 		o.optional = true;
 		o.rmempty = true;
 
@@ -608,6 +615,11 @@ return view.extend({
 		o = s.taboption('feeds', form.Flag, 'ban_autoblocklist', _('Auto Blocklist'), _('Automatically add resolved domains and suspicious IPs to the local banIP blocklist.'));
 		o.default = 1
 		o.rmempty = false;
+
+		o = s.taboption('feeds', form.Flag, 'ban_autoblocksubnet', _('Auto Block Subnet'), _('Automatically add entire subnets to the blocklist Set based on an additional RDAP request with the suspicious IP.'));
+		o.default = 0
+		o.optional = true;
+		o.rmempty = true;
 
 		o = s.taboption('feeds', form.ListValue, 'ban_nftexpiry', _('Blocklist Set Expiry'), _('Expiry time for auto added blocklist Set members.'));
 		o.value('10s');
