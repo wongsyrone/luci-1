@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-10 09:10+0000\n"
-"Last-Translator: drax red <drax@outlook.dk>\n"
+"PO-Revision-Date: 2024-01-12 18:09+0000\n"
+"Last-Translator: Hannu Nyman <hannu.nyman@iki.fi>\n"
 "Language-Team: Danish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationswifischedule/da/>\n"
 "Language: da\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:81
 msgid "Activate wifi"
@@ -22,10 +22,6 @@ msgstr ""
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:244
 msgid "Could not find required program /usr/bin/iwinfo"
 msgstr "Kunne ikke finde det nødvendige program /usr/bin/iwinfo"
-
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:45
-msgid "Cron Jobs"
-msgstr "Cron job"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:154
 msgid "Day(s) of Week"
@@ -83,10 +79,6 @@ msgstr "Mandag"
 msgid "Saturday"
 msgstr "Lørdag"
 
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:31
-msgid "Schedule"
-msgstr "Tidsplan"
-
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:142
 msgid "Schedule events"
 msgstr "Planlæg begivenheder"
@@ -127,14 +119,6 @@ msgstr "Tirsdag"
 msgid "Unload Modules (experimental; saves more power)"
 msgstr "unload af moduler (eksperimentelt; sparer mere strøm)"
 
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:33
-msgid "View Cron Jobs"
-msgstr "Se Cron Jobs"
-
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:32
-msgid "View Logfile"
-msgstr "Se logfil"
-
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:159
 msgid "Wednesday"
 msgstr "Onsdag"
@@ -144,6 +128,17 @@ msgstr "Onsdag"
 msgid "Wifi Schedule"
 msgstr "Wifi tidsplan"
 
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:39
-msgid "Wifi Schedule Logfile"
-msgstr "Wifi tidsplan logfil"
+#~ msgid "Cron Jobs"
+#~ msgstr "Cron job"
+
+#~ msgid "Schedule"
+#~ msgstr "Tidsplan"
+
+#~ msgid "View Cron Jobs"
+#~ msgstr "Se Cron Jobs"
+
+#~ msgid "View Logfile"
+#~ msgstr "Se logfil"
+
+#~ msgid "Wifi Schedule Logfile"
+#~ msgstr "Wifi tidsplan logfil"

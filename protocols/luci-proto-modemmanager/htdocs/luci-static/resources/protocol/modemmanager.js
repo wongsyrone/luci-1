@@ -76,11 +76,13 @@ return network.registerProtocol('modemmanager', {
 		o = s.taboption('general', form.Value, 'pincode', _('PIN'));
 		o.datatype = 'and(uinteger,minlength(4),maxlength(8))';
 
-		o = s.taboption('general', form.ListValue, 'auth', _('Authentication Type'));
-		o.value('both', _('PAP/CHAP (both)'));
+		o = s.taboption('general', form.DynamicList, 'allowedauth', _('Authentication Type'));
 		o.value('pap', 'PAP');
 		o.value('chap', 'CHAP');
-		o.value('none', _('None'));
+		o.value('mschap', 'MSCHAP');
+		o.value('mschapv2', 'MSCHAPv2');
+		o.value('eap', 'EAP');
+		o.value('', _('None'));
 		o.default = 'none';
 
 		o = s.taboption('general', form.ListValue, 'allowedmode', _('Allowed network technology'),
@@ -145,5 +147,17 @@ return network.registerProtocol('modemmanager', {
 
 		o = s.taboption('general', form.Value, 'signalrate', _('Signal Refresh Rate'), _("In seconds"));
 		o.datatype = 'uinteger';
+		
+		s.taboption('general', form.Value, 'metric', _('Gateway metric'));
+		
+		s.taboption('advanced', form.Flag, 'debugmode', _('Enable Debugmode'));
+
+		o = s.taboption('advanced', form.ListValue, 'loglevel', _('Log output level'));
+		o.value('ERR', _('Error'))
+		o.value('WARN', _('Warning'));
+		o.value('INFO', _('Info'));
+		o.value('DEBUG', _('Debug'));
+		o.default = 'ERR';
+		
 	}
 });

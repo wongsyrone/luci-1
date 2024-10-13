@@ -7,6 +7,7 @@
 'require form';
 'require network';
 'require validation';
+'require uqr';
 
 var generateKey = rpc.declare({
 	object: 'luci.wireguard',
@@ -64,28 +65,16 @@ function generateDescription(name, texts) {
 	]);
 }
 
-function invokeQREncode(data, code) {
-	return fs.exec_direct('/usr/bin/qrencode', [
-		'--inline', '--8bit', '--type=SVG',
-		'--output=-', '--', data
-	]).then(function(svg) {
-		code.style.opacity = '';
-		dom.content(code, Object.assign(E(svg), { style: 'width:100%;height:auto' }));
-	}).catch(function(error) {
-		code.style.opacity = '';
-
-		if (L.isObject(error) && error.name == 'NotFoundError') {
-			dom.content(code, [
-				Object.assign(E(qrIcon), { style: 'width:32px;height:32px;opacity:.2' }),
-				E('p', _('The <em>qrencode</em> package is required for generating an QR code image of the configuration.'))
-			]);
-		}
-		else {
-			dom.content(code, [
-				_('Unable to generate QR code: %s').format(L.isObject(error) ? error.message : error)
-			]);
-		}
-	});
+function buildSVGQRCode(data, code) {
+	// pixel size larger than 4 clips right and bottom edges of complex configs
+	const options = {
+		pixelSize: 4,
+		whiteColor: 'white',
+		blackColor: 'black'
+	};
+	const svg = uqr.renderSVG(data, options);
+	code.style.opacity = '';
+	dom.content(code, Object.assign(E(svg), { style: 'width:100%;height:auto' }));
 }
 
 var cbiKeyPairGenerate = form.DummyValue.extend({
@@ -96,9 +85,6 @@ var cbiKeyPairGenerate = form.DummyValue.extend({
 				var prv = this.section.getUIElement(section_id, 'private_key'),
 				    pub = this.section.getUIElement(section_id, 'public_key'),
 				    map = this.map;
-
-				if ((prv.getValue() || pub.getValue()) && !confirm(_('Do you want to replace the current keys?')))
-					return;
 
 				return generateKey().then(function(keypair) {
 					prv.setValue(keypair.priv);
@@ -510,9 +496,10 @@ return network.registerProtocol('wireguard', {
 			return E('em', _('No peers defined yet.'));
 		};
 
-		o = ss.option(form.Flag, 'disabled', _('Peer disabled'), _('Enable / Disable peer. Restart wireguard interface to apply changes.'));
-		o.modalonly = true;
+		o = ss.option(form.Flag, 'disabled', _('Disabled'), _('Enable / Disable peer. Restart wireguard interface to apply changes.'));
+		o.editable = true;
 		o.optional = true;
+		o.width = '5%';
 
 		o = ss.option(form.Value, 'description', _('Description'), _('Optional. Description of peer.'));
 		o.placeholder = 'My Peer';
@@ -610,9 +597,6 @@ return network.registerProtocol('wireguard', {
 					var psk = this.section.getUIElement(section_id, 'preshared_key'),
 					    map = this.map;
 
-					if (psk.getValue() && !confirm(_('Do you want to replace the current PSK?')))
-						return;
-
 					return generatePsk().then(function(key) {
 						psk.setValue(key);
 						map.save(null, true);
@@ -692,7 +676,7 @@ return network.registerProtocol('wireguard', {
 
 		o.modalonly = true;
 
-		o.createPeerConfig = function(section_id, endpoint, ips) {
+		o.createPeerConfig = function(section_id, endpoint, ips, eips, dns) {
 			var pub = s.formvalue(s.section, 'public_key'),
 			    port = s.formvalue(s.section, 'listen_port') || '51820',
 			    prv = this.section.formvalue(section_id, 'private_key'),
@@ -708,7 +692,9 @@ return network.registerProtocol('wireguard', {
 			return [
 				'[Interface]',
 				'PrivateKey = ' + prv,
+				eips && eips.length ? 'Address = ' + eips.join(', ') : '# Address not defined',
 				eport ? 'ListenPort = ' + eport : '# ListenPort not defined',
+				dns && dns.length ? 'DNS = ' + dns.join(', ') : '# DNS not defined',
 				'',
 				'[Peer]',
 				'PublicKey = ' + pub,
@@ -723,11 +709,13 @@ return network.registerProtocol('wireguard', {
 			var mapNode = ss.getActiveModalMap(),
 			    headNode = mapNode.parentNode.querySelector('h4'),
 			    configGenerator = this.createPeerConfig.bind(this, section_id),
-			    parent = this.map;
+			    parent = this.map,
+				eips = this.section.formvalue(section_id, 'allowed_ips');
 
 			return Promise.all([
 				network.getWANNetworks(),
 				network.getWAN6Networks(),
+				network.getNetwork('lan'),
 				L.resolveDefault(uci.load('ddns')),
 				L.resolveDefault(uci.load('system')),
 				parent.save(null, true)
@@ -752,9 +740,19 @@ return network.registerProtocol('wireguard', {
 
 				var ips = [ '0.0.0.0/0', '::/0' ];
 
+				var dns = [];
+
+				var lan = data[2];
+				if (lan) {
+					var lanIp = lan.getIPAddr();
+					if (lanIp) {
+						dns.unshift(lanIp)
+					}
+				}
+
 				var qrm, qrs, qro;
 
-				qrm = new form.JSONMap({ config: { endpoint: hostnames[0], allowed_ips: ips } }, null, _('The generated configuration can be imported into a WireGuard client application to set up a connection towards this device.'));
+				qrm = new form.JSONMap({ config: { endpoint: hostnames[0], allowed_ips: ips, addresses: eips, dns_servers: dns } }, null, _('The generated configuration can be imported into a WireGuard client application to set up a connection towards this device.'));
 				qrm.parent = parent;
 
 				qrs = qrm.section(form.NamedSection, 'config');
@@ -764,12 +762,14 @@ return network.registerProtocol('wireguard', {
 					    conf = this.map.findElement('.client-config'),
 					    endpoint = this.section.getUIElement(section_id, 'endpoint'),
 					    ips = this.section.getUIElement(section_id, 'allowed_ips');
+					    eips = this.section.getUIElement(section_id, 'addresses');
+					    dns = this.section.getUIElement(section_id, 'dns_servers');
 
 					if (this.isValid(section_id)) {
-						conf.firstChild.data = configGenerator(endpoint.getValue(), ips.getValue());
+						conf.firstChild.data = configGenerator(endpoint.getValue(), ips.getValue(), eips.getValue(), dns.getValue());
 						code.style.opacity = '.5';
 
-						invokeQREncode(conf.firstChild.data, code);
+						buildSVGQRCode(conf.firstChild.data, code);
 					}
 				};
 
@@ -784,9 +784,20 @@ return network.registerProtocol('wireguard', {
 				ips.forEach(function(ip) { qro.value(ip) });
 				qro.onchange = handleConfigChange;
 
+				qro = qrs.option(form.DynamicList, 'dns_servers', _('DNS Servers'), _('DNS servers for the remote clients using this tunnel to your openwrt device. Some wireguard clients require this to be set.'));
+				qro.datatype = 'ipaddr';
+				qro.default = dns;
+				qro.onchange = handleConfigChange;
+
+				qro = qrs.option(form.DynamicList, 'addresses', _('Addresses'), _('IP addresses for the peer to use inside the tunnel. Some clients require this setting.'));
+				qro.datatype = 'ipaddr';
+				qro.default = eips;
+				eips.forEach(function(eip) { qro.value(eip) });
+				qro.onchange = handleConfigChange;
+
 				qro = qrs.option(form.DummyValue, 'output');
 				qro.renderWidget = function() {
-					var peer_config = configGenerator(hostnames[0], ips);
+					var peer_config = configGenerator(hostnames[0], ips, eips, dns);
 
 					var node = E('div', {
 						'style': 'display:flex;flex-wrap:wrap;align-items:center;gap:.5em;width:100%'
@@ -812,7 +823,7 @@ return network.registerProtocol('wireguard', {
 						}, [ peer_config ])
 					]);
 
-					invokeQREncode(peer_config, node.firstChild);
+					buildSVGQRCode(peer_config, node.firstChild);
 
 					return node;
 				};

@@ -3,47 +3,23 @@
 // - [@jow-](https://github.com/jow-)
 // - [@stokito](https://github.com/stokito)
 // - [@vsviridov](https://github.com/vsviridov)
+// noinspection JSAnnotator
 
 "use strict";
 "require form";
 "require rpc";
-"require uci";
 "require view";
 "require https-dns-proxy.status as hdp";
 
-var pkg = {
-	get Name() {
-		return "https-dns-proxy";
-	},
-	get URL() {
-		return "https://docs.openwrt.melmac.net/" + pkg.Name + "/";
-	},
-	templateToRegexp: function (template) {
-		return RegExp(
-			"^" +
-				template
-					.split(/(\{\w+\})/g)
-					.map((part) => {
-						let placeholder = part.match(/^\{(\w+)\}$/);
-						if (placeholder) return `(?<${placeholder[1]}>.*?)`;
-						else return part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-					})
-					.join("") +
-				"$"
-		);
-	},
-	templateToResolver: function (template, args) {
-		return template.replace(/{(\w+)}/g, (_, v) => args[v]);
-	},
-};
+var pkg = hdp.pkg;
 
 return view.extend({
 	load: function () {
 		return Promise.all([
 			L.resolveDefault(hdp.getPlatformSupport(pkg.Name), {}),
 			L.resolveDefault(hdp.getProviders(pkg.Name), {}),
-			uci.load(pkg.Name),
-			uci.load("dhcp"),
+			L.resolveDefault(L.uci.load(pkg.Name), {}),
+			L.resolveDefault(L.uci.load("dhcp"), {}),
 		]);
 	},
 
@@ -72,12 +48,13 @@ return view.extend({
 		m = new form.Map(pkg.Name, _("HTTPS DNS Proxy - Configuration"));
 
 		s = m.section(form.NamedSection, "config", pkg.Name);
+
 		o = s.option(
 			form.ListValue,
-			"dnsmasq_config_update",
+			"dnsmasq_config_update_option",
 			_("Update DNSMASQ Config on Start/Stop"),
 			_(
-				"If update option is selected, the %s'DNS forwardings' section of DHCP and DNS%s will be automatically updated to use selected DoH providers (%smore information%s)."
+				"If update option is selected, the %s'DNS Forwards' section of DHCP and DNS%s will be automatically updated to use selected DoH providers (%smore information%s)."
 			).format(
 				'<a href="' + L.url("admin", "network", "dhcp") + '">',
 				"</a>",
@@ -86,27 +63,62 @@ return view.extend({
 			)
 		);
 		o.value("*", _("Update all configs"));
-		var sections = uci.sections("dhcp", "dnsmasq");
-		sections.forEach((element) => {
+		o.value("+", _("Update select configs"));
+		o.value("-", _("Do not update configs"));
+		o.default = "*";
+		o.retain = true;
+		o.cfgvalue = function (section_id) {
+			let val = this.map.data.get(
+				this.map.config,
+				section_id,
+				"dnsmasq_config_update"
+			);
+			if (val && val[0]) {
+				switch (val[0]) {
+					case "*":
+					case "-":
+						return val[0];
+					default:
+						return "+";
+				}
+			} else return "*";
+		};
+		o.write = function (section_id, formvalue) {
+			L.uci.set(pkg.Name, section_id, "dnsmasq_config_update", formvalue);
+		};
+
+		o = s.option(
+			form.MultiValue,
+			"dnsmasq_config_update",
+			_("Select the DNSMASQ Configs to update")
+		);
+		Object.values(L.uci.sections("dhcp", "dnsmasq")).forEach(function (
+			element
+		) {
 			var description;
 			var key;
-			if (element[".name"] === uci.resolveSID("dhcp", element[".name"])) {
+			if (element[".name"] === L.uci.resolveSID("dhcp", element[".name"])) {
 				key = element[".index"];
 				description = "dnsmasq[" + element[".index"] + "]";
 			} else {
 				key = element[".name"];
 				description = element[".name"];
 			}
-			o.value(key, _("Update %s only").format(description));
+			o.value(key, description);
 		});
-		o.value("-", _("Do not update configs"));
-		o.default = "*";
+		o.depends("dnsmasq_config_update_option", "+");
+		o.retain = true;
 
 		o = s.option(
 			form.ListValue,
 			"force_dns",
 			_("Force Router DNS"),
-			_("Forces Router DNS use on local devices, also known as DNS Hijacking.")
+			_(
+				"Forces Router DNS use on local devices, also known as DNS Hijacking. Only works on `lan` interface by default (%smore information%s)."
+			).format(
+				'<a href="' + pkg.URL + "#force_dns" + '" target="_blank">',
+				"</a>"
+			)
 		);
 		o.value("0", _("Let local devices use their own DNS servers if set"));
 		o.value("1", _("Force Router DNS server to all local devices"));
@@ -184,7 +196,7 @@ return view.extend({
 			reply.providers.forEach((prov) => {
 				var option;
 				let regexp = pkg.templateToRegexp(prov.template);
-				let resolver = uci.get(pkg.Name, section_id, "resolver_url");
+				let resolver = L.uci.get(pkg.Name, section_id, "resolver_url");
 				resolver = resolver === undefined ? null : resolver;
 				if (!found && resolver && regexp.test(resolver)) {
 					found = true;
@@ -233,7 +245,7 @@ return view.extend({
 			return ret || "";
 		};
 		_provider.write = function (section_id, formvalue) {
-			uci.set(pkg.Name, section_id, "resolver_url", formvalue);
+			L.uci.set(pkg.Name, section_id, "resolver_url", formvalue);
 		};
 
 		reply.providers.forEach((prov, i) => {
@@ -265,11 +277,11 @@ return view.extend({
 						section_id,
 						"resolver_url"
 					);
-					if (_paramList.template !== template) return 0;
-					let resolver = pkg.templateToResolver(template, {
+					if (!formvalue && _paramList.template !== template) return 0;
+					let resolver = pkg.templateToResolver(_paramList.template, {
 						option: formvalue || "",
 					});
-					uci.set(pkg.Name, section_id, "resolver_url", resolver);
+					L.uci.set(pkg.Name, section_id, "resolver_url", resolver);
 				};
 				_paramList.remove = _paramList.write;
 			} else if (
@@ -303,11 +315,11 @@ return view.extend({
 						section_id,
 						"resolver_url"
 					);
-					if (_paramText.template !== template) return 0;
-					let resolver = pkg.templateToResolver(template, {
+					if (!formvalue && _paramText.template !== template) return 0;
+					let resolver = pkg.templateToResolver(_paramText.template, {
 						option: formvalue || "",
 					});
-					uci.set(pkg.Name, section_id, "resolver_url", resolver);
+					L.uci.set(pkg.Name, section_id, "resolver_url", resolver);
 				};
 				_paramText.remove = _paramText.write;
 			}
@@ -317,48 +329,57 @@ return view.extend({
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "listen_addr", _("Listen Address"));
 		o.datatype = "ipaddr";
 		o.default = "";
 		o.optional = true;
 		o.placeholder = "127.0.0.1";
-		var n = 0;
+
 		o = s.option(form.Value, "listen_port", _("Listen Port"));
 		o.datatype = "port";
 		o.default = "";
 		o.optional = true;
-		o.placeholder = n + 5053;
+		o.placeholder = "5053";
+
 		o = s.option(form.Value, "user", _("Run As User"));
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "group", _("Run As Group"));
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "dscp_codepoint", _("DSCP Codepoint"));
 		o.datatype = "and(uinteger, range(0,63))";
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "verbosity", _("Logging Verbosity"));
 		o.datatype = "and(uinteger, range(0,4))";
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "logfile", _("Logging File Path"));
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "polling_interval", _("Polling Interval"));
 		o.datatype = "and(uinteger, range(5,3600))";
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.Value, "proxy_server", _("Proxy Server"));
 		o.default = "";
 		o.modalonly = true;
 		o.optional = true;
+
 		o = s.option(form.ListValue, "use_http1", _("Use HTTP/1"));
 		o.modalonly = true;
 		o.optional = true;
@@ -366,6 +387,7 @@ return view.extend({
 		o.value("", _("Use negotiated HTTP version"));
 		o.value("1", _("Force use of HTTP/1"));
 		o.default = "";
+
 		o = s.option(
 			form.ListValue,
 			"use_ipv6_resolvers_only",

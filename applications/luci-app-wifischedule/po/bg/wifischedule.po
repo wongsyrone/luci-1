@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-22 00:01+0000\n"
-"Last-Translator: Iskren Mihaylov <iskren.mihaylov91@gmail.com>\n"
+"PO-Revision-Date: 2024-01-14 10:54+0000\n"
+"Last-Translator: Boyan Alexiev <nneauu@gmail.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationswifischedule/bg/>\n"
 "Language: bg\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:81
 msgid "Activate wifi"
@@ -21,10 +21,6 @@ msgstr "Не мога да намеря необходимия /usr/bin/wifi_sch
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:244
 msgid "Could not find required program /usr/bin/iwinfo"
 msgstr "Не можах да намеря необходимата програма/usr/bin/iwinfo"
-
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:45
-msgid "Cron Jobs"
-msgstr "Крон Джобс"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:154
 msgid "Day(s) of Week"
@@ -49,7 +45,7 @@ msgstr "Деактивиран WiFi принудително"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:148
 msgid "Enable"
-msgstr "Разрешаване"
+msgstr "Включване"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:55
 #, fuzzy
@@ -58,7 +54,7 @@ msgstr "Активиране на графика за Wifi"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:74
 msgid "Enable logging"
-msgstr "Разреши журнала"
+msgstr "Включване на логване"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:235
 msgid "Force disabling wifi even if stations associated"
@@ -83,10 +79,6 @@ msgstr "Понеделник"
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:162
 msgid "Saturday"
 msgstr "Събота"
-
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:31
-msgid "Schedule"
-msgstr "График"
 
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:142
 msgid "Schedule events"
@@ -128,14 +120,6 @@ msgstr "Вторник"
 msgid "Unload Modules (experimental; saves more power)"
 msgstr "Изключване на модулите (експериментално; спестява повече енергия)"
 
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:33
-msgid "View Cron Jobs"
-msgstr "Виж Cron Задачите"
-
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:32
-msgid "View Logfile"
-msgstr "Виж журнал"
-
 #: applications/luci-app-wifischedule/luasrc/model/cbi/wifischedule/wifi_schedule.lua:159
 msgid "Wednesday"
 msgstr "Сряда"
@@ -145,6 +129,17 @@ msgstr "Сряда"
 msgid "Wifi Schedule"
 msgstr "WiFi график"
 
-#: applications/luci-app-wifischedule/luasrc/controller/wifischedule/wifi_schedule.lua:39
-msgid "Wifi Schedule Logfile"
-msgstr "журнал на Wifi график"
+#~ msgid "Cron Jobs"
+#~ msgstr "Крон Джобс"
+
+#~ msgid "Schedule"
+#~ msgstr "График"
+
+#~ msgid "View Cron Jobs"
+#~ msgstr "Виж Cron Задачите"
+
+#~ msgid "View Logfile"
+#~ msgstr "Виж журнал"
+
+#~ msgid "Wifi Schedule Logfile"
+#~ msgstr "журнал на Wifi график"

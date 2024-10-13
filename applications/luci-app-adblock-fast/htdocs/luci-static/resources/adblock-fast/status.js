@@ -11,8 +11,19 @@ var pkg = {
 	get Name() {
 		return "adblock-fast";
 	},
+	get ReadmeCompat() {
+		return "";
+	},
 	get URL() {
-		return "https://docs.openwrt.melmac.net/" + pkg.Name + "/";
+		return (
+			"https://docs.openwrt.melmac.net/" + pkg.Name + "/" + pkg.ReadmeCompat
+		);
+	},
+	humanFileSize: function (bytes, si = false, dp = 2) {
+		return `%${si ? 1000 : 1024}.${dp ?? 0}mB`.format(bytes);
+	},
+	isObjEmpty: function (obj) {
+		return Object.keys(obj).length === 0;
 	},
 };
 
@@ -112,9 +123,7 @@ var status = baseclass.extend({
 					statusRestarting: _("Restarting"),
 					statusForceReloading: _("Force Reloading"),
 					statusDownloading: _("Downloading lists"),
-					statusError: _("Error"),
-					statusWarning: _("Warning"),
-					statusFail: _("Fail"),
+					statusFail: _("Failed to start"),
 					statusSuccess: _("Active"),
 				};
 
@@ -191,6 +200,16 @@ var status = baseclass.extend({
 						warningMissingRecommendedPackages: _(
 							"Some recommended packages are missing"
 						),
+						warningOutdatedLuciPackage: _(
+							"The WebUI application (luci-app-adblock-fast) is outdated, please update it"
+						),
+						warningOutdatedPrincipalPackage: _(
+							"The principal package (adblock-fast) is outdated, please update it"
+						),
+						warningInvalidCompressedCacheDir: _(
+							"Invalid compressed cache directory '%s'"
+						),
+						warningFreeRamCheckFail: _("Can't detect free RAM"),
 					};
 					var warningsTitle = E(
 						"label",
@@ -199,8 +218,11 @@ var status = baseclass.extend({
 					);
 					var text = "";
 					reply.status.warnings.forEach((element) => {
-						text +=
-							warningTable[element.id].format(element.extra || " ") + "<br />";
+						if (element.id && warningTable[element.id])
+							text +=
+								warningTable[element.id].format(element.extra || " ") +
+								"<br />";
+						else text += _("Unknown warning") + "<br />";
 					});
 					var warningsText = E("div", {}, text);
 					var warningsField = E(
@@ -279,6 +301,9 @@ var status = baseclass.extend({
 						errorNothingToDo: _(
 							"No blocked list URLs nor blocked-domains enabled"
 						),
+						errorTooLittleRam: _(
+							"Free ram (%s) is not enough to process all enabled block-lists"
+						),
 					};
 					var errorsTitle = E(
 						"label",
@@ -287,12 +312,14 @@ var status = baseclass.extend({
 					);
 					var text = "";
 					reply.status.errors.forEach((element) => {
-						text +=
-							errorTable[element.id].format(element.extra || " ") + "<br />";
+						if (element.id && errorTable[element.id])
+							text +=
+								errorTable[element.id].format(element.extra || " ") + "!<br />";
+						else text += _("Unknown error") + "<br />";
 					});
-					text += _("Errors encountered, please check the %sREADME%s!").format(
+					text += _("Errors encountered, please check the %sREADME%s").format(
 						'<a href="' + pkg.URL + '" target="_blank">',
-						"</a><br />"
+						"</a>!<br />"
 					);
 					var errorsText = E("div", {}, text);
 					var errorsField = E("div", { class: "cbi-value-field" }, errorsText);
@@ -328,7 +355,7 @@ var status = baseclass.extend({
 					_("Start")
 				);
 
-				var btn_action = E(
+				var btn_action_dl = E(
 					"button",
 					{
 						class: "btn cbi-button cbi-button-apply",
@@ -338,13 +365,28 @@ var status = baseclass.extend({
 								E(
 									"p",
 									{ class: "spinning" },
-									_("Force re-downloading %s block lists").format(pkg.Name)
+									_("Force redownloading %s block lists").format(pkg.Name)
 								),
 							]);
 							return RPC.setInitAction(pkg.Name, "dl");
 						},
 					},
-					_("Force Re-Download")
+					_("Redownload")
+				);
+
+				var btn_action_pause = E(
+					"button",
+					{
+						class: "btn cbi-button cbi-button-apply",
+						disabled: true,
+						click: function (ev) {
+							ui.showModal(null, [
+								E("p", { class: "spinning" }, _("Pausing %s").format(pkg.Name)),
+							]);
+							return RPC.setInitAction(pkg.Name, "pause");
+						},
+					},
+					_("Pause")
 				);
 
 				var btn_stop = E(
@@ -410,17 +452,20 @@ var status = baseclass.extend({
 					switch (reply.status.status) {
 						case "statusSuccess":
 							btn_start.disabled = true;
-							btn_action.disabled = false;
+							btn_action_dl.disabled = false;
+							btn_action_pause.disabled = false;
 							btn_stop.disabled = false;
 							break;
 						case "statusStopped":
 							btn_start.disabled = false;
-							btn_action.disabled = true;
+							btn_action_dl.disabled = true;
+							btn_action_pause.disabled = true;
 							btn_stop.disabled = true;
 							break;
 						default:
 							btn_start.disabled = false;
-							btn_action.disabled = true;
+							btn_action_dl.disabled = true;
+							btn_action_pause.disabled = true;
 							btn_stop.disabled = false;
 							btn_enable.disabled = true;
 							btn_disable.disabled = true;
@@ -428,7 +473,8 @@ var status = baseclass.extend({
 					}
 				} else {
 					btn_start.disabled = true;
-					btn_action.disabled = true;
+					btn_action_dl.disabled = true;
+					btn_action_pause.disabled = true;
 					btn_stop.disabled = true;
 					btn_enable.disabled = false;
 					btn_disable.disabled = true;
@@ -443,7 +489,9 @@ var status = baseclass.extend({
 				var buttonsText = E("div", {}, [
 					btn_start,
 					btn_gap,
-					btn_action,
+					// btn_action_pause,
+					// btn_gap,
+					btn_action_dl,
 					btn_gap,
 					btn_stop,
 					btn_gap_long,
@@ -478,6 +526,8 @@ RPC.on("setInitAction", function (reply) {
 
 return L.Class.extend({
 	status: status,
+	pkg: pkg,
+	getInitStatus: getInitStatus,
 	getFileUrlFilesizes: getFileUrlFilesizes,
 	getPlatformSupport: getPlatformSupport,
 });

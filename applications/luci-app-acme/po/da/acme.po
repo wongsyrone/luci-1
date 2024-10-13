@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-08-10 08:04+0000\n"
+"PO-Revision-Date: 2024-01-25 02:53+0000\n"
 "Last-Translator: drax red <drax@outlook.dk>\n"
 "Language-Team: Danish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsacme/da/>\n"
@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:25
 #: applications/luci-app-acme/root/usr/share/luci/menu.d/luci-app-acme.json:3
@@ -19,7 +19,7 @@ msgstr "ACME-certifikater"
 msgid "ACME global config"
 msgstr "ACME global konfiguration"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:514
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:508
 msgid "ACME server URL"
 msgstr "URL til ACME-serveren"
 
@@ -43,7 +43,7 @@ msgstr "Cert-filer gemmes i"
 msgid "Certificate config"
 msgstr "Certifikatkonfiguration"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:605
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:599
 msgid "Certificates"
 msgstr "Certifikater"
 
@@ -52,10 +52,6 @@ msgid "Challenge Alias"
 msgstr "Udfordr Alias"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:509
-msgid "Custom ACME CA"
-msgstr "Brugerdefineret ACME CA"
-
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:515
 msgid "Custom ACME server directory URL."
 msgstr "Brugerdefineret URL til ACME-serverens mappe."
 
@@ -75,7 +71,7 @@ msgstr "DNS-API legitimationsoplysninger"
 msgid "DNS Challenge Validation"
 msgstr "DNS Udfordringsvalidering"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:521
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:515
 msgid "Days until renewal"
 msgstr "Antal dage indtil fornyelse"
 
@@ -127,7 +123,7 @@ msgstr "Aktivér debug logning"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:59
 msgid "Enabled"
-msgstr "Aktiver"
+msgstr "Aktiveret"
 
 #: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:54
 msgid "General Settings"
@@ -153,7 +149,7 @@ msgstr ""
 "Hvis et certifikat ikke blev fornyet i tide, vil du modtage en meddelelse på "
 "20 dage før udløbet."
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:587
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:581
 msgid "Issued on"
 msgstr "udstedt den"
 
@@ -165,7 +161,7 @@ msgstr "Nøglestørrelse (og -type) for det genererede certifikat."
 msgid "Key type"
 msgstr "Nøglestørrelse"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:584
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:578
 msgid "Main Domain"
 msgstr "Hoveddomæne"
 
@@ -188,11 +184,11 @@ msgstr ""
 msgid "Path to private API signing key file in PEM format"
 msgstr "Sti til privat API underskrift nøglefil i PEM format"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:585
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:579
 msgid "Private Key"
 msgstr "Privat nøgle"
 
-#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:586
+#: applications/luci-app-acme/htdocs/luci-static/resources/view/acme.js:580
 msgid "Public Certificate"
 msgstr "Offentligt certifikat"
 
@@ -341,5 +337,5 @@ msgstr ""
 "køre Acme i webroot-tilstand. Webserveren skal være tilgængelig fra "
 "internettet på port 80."
 
-#~ msgid "ACME certs"
-#~ msgstr "ACME certs"
+#~ msgid "Custom ACME CA"
+#~ msgstr "Brugerdefineret ACME CA"

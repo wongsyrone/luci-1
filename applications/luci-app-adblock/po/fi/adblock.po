@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-15 00:58+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"PO-Revision-Date: 2024-10-11 13:44+0000\n"
+"Last-Translator: Hannu Nyman <hannu.nyman@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock/fi/>\n"
 "Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:272
 msgid "Action"
@@ -20,7 +20,7 @@ msgstr "Aktiiviset lähteet"
 
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:3
 msgid "Adblock"
-msgstr ""
+msgstr "Mainosesto"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:40
 msgid "Adblock action"
@@ -254,7 +254,7 @@ msgstr "Älä tarkista SSL-palvelinvarmenteita latauksen aikana."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:404
 msgid "Download Insecure"
-msgstr ""
+msgstr "Lataa turvattomasti"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:408
 msgid "Download Parameters"
@@ -278,15 +278,15 @@ msgstr "Sähköpostiprofiili"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:361
 msgid "E-Mail Receiver Address"
-msgstr "Sähköposti: vastaanottajan osoite"
+msgstr "Sähköpostin saajan osoite"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:511
 msgid "E-Mail Sender Address"
-msgstr "Sähköposti: lähettäjän osoite"
+msgstr "Sähköpostin lähettäjän osoite"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:515
 msgid "E-Mail Topic"
-msgstr "Sähköposti: otsikko"
+msgstr "Sähköpostin aihe"
 
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:35
 msgid "Edit Blacklist"
@@ -301,6 +301,8 @@ msgid ""
 "Empty the DNS cache before adblock processing starts to reduce the memory "
 "consumption."
 msgstr ""
+"Tyhjennä DNS-välimuisti ennen adblock-prosessointia muistinkulutuksen "
+"vähentämiseksi."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:336
 msgid "Enable SafeSearch"
@@ -468,10 +470,6 @@ msgstr ""
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:124
 msgid "No Query results!"
 msgstr "Ei kyselyn tuloksia!"
-
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/logread.js:21
-msgid "No adblock related logs yet!"
-msgstr "Ei vielä Adblock-lokeja!"
 
 #: applications/luci-app-adblock/root/usr/share/luci/menu.d/luci-app-adblock.json:19
 msgid "Overview"
@@ -698,10 +696,6 @@ msgstr ""
 msgid "The minutes portion (opt., range: 0-59)"
 msgstr ""
 
-#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/logread.js:28
-msgid "The syslog output, pre-filtered for adblock related messages only."
-msgstr ""
-
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:432
 msgid "Third instance"
 msgstr "Kolmas instanssi"
@@ -750,7 +744,7 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:323
 msgid "Total DNS Requests"
-msgstr ""
+msgstr "DNS-pyyntöjä yhteensä"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:377
 msgid "Trigger Delay"
@@ -762,6 +756,8 @@ msgid "Unable to save changes: %s"
 msgstr "Muutoksia ei voitu tallentaa: %s"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:584
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:600
+#: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:616
 msgid "Variants"
 msgstr ""
 
@@ -807,6 +803,9 @@ msgstr ""
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:418
 msgid "unbound (/var/lib/unbound)"
 msgstr ""
+
+#~ msgid "No adblock related logs yet!"
+#~ msgstr "Ei vielä Adblock-lokeja!"
 
 #~ msgid "Top 10 Statistics"
 #~ msgstr "Top 10 -tilastot"

@@ -1,5 +1,5 @@
 :root {
-	--main-bright-color: #00A3E1;
+	--main-bright-color: #00B5E2;
 	--main-dark-color: #002B49;
 	--secondary-bright-color: #FFFFFF;
 	--secondary-dark-color: #212322;
@@ -275,6 +275,18 @@ body.modal-overlay-active #modal_overlay {
 
 .modal .cbi-section > legend:first-child { font-size: 120%; }
 
+.modal .button-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal .button-row > :not(:last-child) {
+	margin-right: .5em;
+}
+
+.modal .button-row > :first-child {
+	margin-right: auto;
+}
 
 /*
  * table layout
@@ -1123,6 +1135,19 @@ textarea {
 	padding: .2em 0;
 }
 
+.cbi-map-descr a,
+.cbi-value-description a {
+	color: var(--main-bright-color);
+	text-decoration: none;
+	outline: 0;
+}
+.cbi-map-descr a:hover,
+.cbi-value-description a:hover {
+	color: var(--main-bright-color);
+	text-decoration: underline;
+	outline: 0;
+}
+
 .cbi-map-descr,
 .cbi-tab-descr,
 .cbi-section-descr,
@@ -1352,7 +1377,8 @@ textarea {
 	color: var(--secondary-bright-color);
 }
 
-.cbi-dropdown[open] > ul.dropdown > li.focus {
+.cbi-dropdown[open] > ul.dropdown > li.focus,
+.cbi-dropdown[open] > ul.dropdown > li:hover {
 	background: var(--main-bright-color);
 }
 

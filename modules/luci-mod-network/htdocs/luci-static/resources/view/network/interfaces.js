@@ -175,9 +175,9 @@ function iface_updown(up, id, ev, force) {
 
 				ui.showModal(_('Confirm disconnect'), [
 					E('p', _('You appear to be currently connected to the device via the "%h" interface. Do you really want to shut down the interface?').format(id)),
-					E('div', { 'class': 'right' }, [
+					E('div', { 'class': 'button-row' }, [
 						E('button', {
-							'class': 'cbi-button cbi-button-neutral',
+							'class': 'btn cbi-button cbi-button-neutral',
 							'click': function(ev) {
 								btns[1].classList.remove('spinning');
 								btns[1].disabled = false;
@@ -188,7 +188,7 @@ function iface_updown(up, id, ev, force) {
 						}, _('Cancel')),
 						' ',
 						E('button', {
-							'class': 'cbi-button cbi-button-negative important',
+							'class': 'btn cbi-button cbi-button-negative important',
 							'click': function(ev) {
 								dsc.setAttribute('disconnect', '');
 								dom.content(dsc, E('em', _('Interface is shutting down...')));
@@ -239,6 +239,25 @@ function has_peerdns(proto) {
 	case 'pptp':
 	case 'openvpn':
 	case 'sstp':
+		return true;
+	}
+
+	return false;
+}
+
+function has_sourcefilter(proto) {
+	switch (proto) {
+	case '3g':
+	case 'dhcpv6':
+	case 'directip':
+	case 'mbim':
+	case 'modemmanager':
+	case 'ncm':
+	case 'ppp':
+	case 'pppoa':
+	case 'pppoe':
+	case 'pptp':
+	case 'qmi':
 		return true;
 	}
 
@@ -484,7 +503,8 @@ return view.extend({
 		s.load = function() {
 			return Promise.all([
 				network.getNetworks(),
-				firewall.getZones()
+				firewall.getZones(),
+				uci.load('system')
 			]).then(L.bind(function(data) {
 				this.networks = data[0];
 				this.zones = data[1];
@@ -535,6 +555,11 @@ return view.extend({
 				tdEl.lastChild.childNodes[0].disabled = true;
 				tdEl.lastChild.childNodes[2].disabled = true;
 				tdEl.lastChild.childNodes[3].disabled = true;
+			}
+
+			if (dynamic) {
+				//disable the 'Edit' button on dynamic interfaces
+				tdEl.lastChild.childNodes[2].disabled = true;
 			}
 
 			return tdEl;
@@ -588,6 +613,10 @@ return view.extend({
 				o.nobridges = false;
 				o.optional = false;
 				o.network = ifc.getName();
+				o.exclude = '@' + ifc.getName();
+
+				o = s.taboption('general', form.Flag, 'disabled', _('Disable this interface'));
+				o.modalonly = true;
 
 				o = s.taboption('general', form.Flag, 'auto', _('Bring up on boot'));
 				o.modalonly = true;
@@ -740,12 +769,35 @@ return view.extend({
 						var hybrid_downstream_desc = _('Operate in <em>relay mode</em> if a designated master interface is configured and active, otherwise fall back to <em>server mode</em>.'),
 						    ndp_downstream_desc = _('Operate in <em>relay mode</em> if a designated master interface is configured and active, otherwise disable <abbr title="Neighbour Discovery Protocol">NDP</abbr> proxying.'),
 						    hybrid_master_desc = _('Operate in <em>relay mode</em> if an upstream IPv6 prefix is present, otherwise disable service.'),
+						    ra_server_allowed = true,
 						    checked = this.formvalue(section_id),
 						    dhcpv6 = this.section.getOption('dhcpv6').getUIElement(section_id),
 						    ndp = this.section.getOption('ndp').getUIElement(section_id),
 						    ra = this.section.getOption('ra').getUIElement(section_id);
 
-						if (checked == '1' || protoval != 'static') {
+						/* Assume that serving RAs by default is fine, but disallow it for certain
+						   interface protocols such as DHCP, DHCPv6 or the various PPP flavors.
+						   The intent is to only allow RA serving for interface protocols doing
+						   some kind of static IP config over something resembling a layer 2
+						   ethernet device. */
+						switch (protoval) {
+						case 'dhcp':
+						case 'dhcpv6':
+						case '3g':
+						case 'l2tp':
+						case 'ppp':
+						case 'pppoa':
+						case 'pppoe':
+						case 'pptp':
+						case 'pppossh':
+						case 'ipip':
+						case 'gre':
+						case 'grev6':
+							ra_server_allowed = false;
+							break;
+						}
+
+						if (checked == '1' || !ra_server_allowed) {
 							dhcpv6.node.querySelector('li[data-value="server"]').setAttribute('unselectable', '');
 
 							if (dhcpv6.getValue() == 'server')
@@ -763,7 +815,7 @@ return view.extend({
 							ndp.node.querySelector('li[data-value="hybrid"] > div > span').innerHTML = hybrid_master_desc;
 						}
 						else {
-							if (protoval == 'static') {
+							if (ra_server_allowed) {
 								dhcpv6.node.querySelector('li[data-value="server"]').removeAttribute('unselectable');
 								ra.node.querySelector('li[data-value="server"]').removeAttribute('unselectable');
 							}
@@ -938,6 +990,31 @@ return view.extend({
 					so.depends('dhcpv6', 'server');
 					so.depends({ dhcpv6: 'hybrid', master: '0' });
 
+					//This is a DHCPv6 specific odhcpd setting
+					so = ss.taboption('ipv6', form.DynamicList, 'ntp', _('NTP Servers'),
+						_('DHCPv6 option 56. %s.', 'DHCPv6 option 56. RFC5908 link').format('<a href="%s" target="_blank">RFC5908</a>').format('https://www.rfc-editor.org/rfc/rfc5908#section-4'));
+					so.datatype = 'host(0)';
+					for(var x of uci.get('system', 'ntp', 'server') || '') {
+						so.value(x);
+					}
+					var local_nets = this.networks.filter(function(n) { return n.getName() != 'loopback' });
+					if(local_nets) {
+						// If ntpd is set up, suggest our IP(v6) also
+						if(uci.get('system', 'ntp', 'enable_server')) {
+							local_nets.forEach(function(n){
+								n.getIPAddrs().forEach(function(i4) {
+									so.value(i4.split('/')[0]);
+								});
+								n.getIP6Addrs().forEach(function(i6) {
+									so.value(i6.split('/')[0]);
+								});
+							});
+						}
+					}
+					so.optional = true;
+					so.rmempty = true;
+					so.depends('dhcpv6', 'server');
+					so.depends({ dhcpv6: 'hybrid', master: '0' });
 
 					so = ss.taboption('ipv6', cbiRichListValue, 'ndp', _('<abbr title="Neighbour Discovery Protocol">NDP</abbr>-Proxy'),
 						_('Configures the operation mode of the NDP proxy service on this interface.'));
@@ -995,7 +1072,8 @@ return view.extend({
 				o.datatype = 'uinteger';
 				o.placeholder = '0';
 
-				o = nettools.replaceOption(s, 'advanced', form.Value, 'metric', _('Use gateway metric'));
+				o = nettools.replaceOption(s, 'advanced', form.Value, 'metric', _('Use gateway metric'),
+					_('Metric is an ordinal, where a gateway with 1 is chosen 1st, 2 is chosen 2nd, 3 is chosen 3rd, etc'));
 				o.datatype = 'uinteger';
 				o.placeholder = '0';
 
@@ -1009,7 +1087,7 @@ return view.extend({
 				for (var i = 0; i < rtTables.length; i++)
 					o.value(rtTables[i][1], '%s (%d)'.format(rtTables[i][1], rtTables[i][0]));
 
-				if (protoval == 'dhcpv6') {
+				if (has_sourcefilter(protoval)) {
 					o = nettools.replaceOption(s, 'advanced', form.Flag, 'sourcefilter', _('IPv6 source routing'), _('Automatically handle multiple uplink interfaces using source-based policy routing.'));
 					o.default = o.enabled;
 				}
@@ -1159,7 +1237,10 @@ return view.extend({
 			};
 
 			proto = s2.option(form.ListValue, 'proto', _('Protocol'));
-			proto.validate = name.validate;
+			proto.onchange = function(ev, section_id, value) {
+				var elem = name.getUIElement(section_id);
+				elem.triggerValidation();
+			};
 
 			device = s2.option(widgets.DeviceSelect, 'device', _('Device'));
 			device.noaliases = false;
@@ -1513,12 +1594,30 @@ return view.extend({
 		s.addremove = false;
 		s.anonymous = true;
 
-		o = s.option(form.Value, 'ula_prefix', _('IPv6 ULA-Prefix'), _('Unique Local Address - in the range <code>fc00::/7</code>.  Typically only within the &#8216;local&#8217; half <code>fd00::/8</code>. ULA for IPv6 is analogous to IPv4 private network addressing. This prefix is randomly generated at first install.'));
+		o = s.option(form.Value, 'ula_prefix', _('IPv6 ULA-Prefix'),
+			_('Unique Local Address (%s) - prefix <code>fd00::/8</code> (the L bit is always 1).').format('<a href="%s" target="_blank">RFC4193</a>').format('https://datatracker.ietf.org/doc/html/rfc4193#section-3') + ' ' +
+			_('ULA for IPv6 is analogous to IPv4 private network addressing.') + ' ' +
+			_('This prefix is randomly generated at first install.'));
 		o.datatype = 'cidr6';
 
-		o = s.option(form.Flag, 'packet_steering', _('Packet Steering'), _('Enable packet steering across all CPUs. May help or hinder network speed.'));
+		o = s.option(form.ListValue, 'packet_steering', _('Packet Steering'), _('Enable packet steering across CPUs. May help or hinder network speed.'));
+		o.value('', _('Disabled'));
+		o.value('1',_('Enabled'));
+		o.value('2',_('Enabled (all CPUs)'));
 		o.optional = true;
 
+		var steer_flow = uci.get('network', 'globals', 'steering_flows');	
+
+		o = s.option(form.Value, 'steering_flows', _('Steering flows (<abbr title="Receive Packet Steering">RPS</abbr>)'),
+			_('Directs packet flows to specific CPUs where the local socket owner listens (the local service).') + ' ' +
+			_('Note: this setting is for local services on the device only (not for forwarding).'));
+		o.value('', _('Standard: none'));
+		o.value('128', _('Suggested: 128'));
+		o.value('256', _('256'));
+		o.depends('packet_steering', '1');
+		o.depends('packet_steering', '2');
+		o.datatype = 'uinteger';
+		o.default = steer_flow;
 
 		if (dslModemType != null) {
 			s = m.section(form.TypedSection, 'dsl', _('DSL'));
