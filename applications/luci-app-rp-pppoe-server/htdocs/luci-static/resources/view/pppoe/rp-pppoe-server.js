@@ -12,7 +12,7 @@ return view.extend({
 	},
 
 	render: function (loaded_promises) {
-		var m, s, o;
+		let m, s, o;
 		const networks = loaded_promises[0];
 
 		m = new form.Map('pppoe', _('Roaring Penguin PPPoE Server'),
@@ -86,7 +86,7 @@ return view.extend({
 		o.rmempty = true;
 		o.depends({ enabled: '1' });
 
-		o = s.option(form.Flag, 'randomsessions', _('Random session selection'), _('Tells the PPPoE server to randomly permute session numbers.'));
+		o = s.option(form.Flag, 'randomsessions', _('Random session selection'), _('Tells the PPPoE server to permute session numbers randomly.'));
 		o.optional = true;
 		o.rmempty = true;
 		o.depends({ enabled: '1' });

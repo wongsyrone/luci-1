@@ -357,7 +357,7 @@ function initNetworkState(refresh) {
 			L.resolveDefault(callLuciHostHints(), {}),
 			getProtocolHandlers(),
 			L.resolveDefault(uci.load('network')),
-			L.resolveDefault(uci.load('wireless')),
+			L.hasSystemFeature('wifi') ? L.resolveDefault(uci.load('wireless')) : L.resolveDefault(),
 			L.resolveDefault(uci.load('luci'))
 		]).then(function(data) {
 			var netifd_ifaces = data[0],
@@ -1655,7 +1655,7 @@ Network = baseclass.extend(/** @lends LuCI.network.prototype */ {
 		if (name == null)
 			return null;
 
-		proto = (proto == null ? uci.get('network', name, 'proto') : proto);
+		proto = (proto == null ? (uci.get('network', name, 'proto') || 'none') : proto);
 
 		var protoClass = _protocols[proto] || Protocol;
 		return new protoClass(name);
@@ -2158,8 +2158,8 @@ Protocol = baseclass.extend(/** @lends LuCI.network.Protocol.prototype */ {
 				var prefixes = [...v6_prefixes, ...v6_addresses];
 
 				if(prefixes.length && typeof(prefixes[0].valid) == 'number') {
-	          		var r = prefixes[0].valid;
-          			return (r > 0 ? r : 0);
+					var r = prefixes[0].valid;
+					return (r > 0 ? r : 0);
 				}
 			}
 		}
@@ -2388,6 +2388,25 @@ Protocol = baseclass.extend(/** @lends LuCI.network.Protocol.prototype */ {
 	},
 
 	/**
+	 * Query the routed IPv6 prefixes associated with the logical interface.
+	 *
+	 * @returns {null|string[]}
+	 * Returns an array of the routed IPv6 prefixes registered by the remote 
+	 * protocol handler or `null` if no prefixes are present.
+	 */
+	getIP6Prefixes: function() {
+		var prefixes = this._ubus('ipv6-prefix');
+		var rv = [];
+
+		if (Array.isArray(prefixes))
+			for (var i = 0; i < prefixes.length; i++)
+				if (L.isObject(prefixes[i]))
+					rv.push('%s/%d'.format(prefixes[i].address, prefixes[i].mask));
+
+		return rv.length > 0 ? rv: null;
+	},
+
+	/**
 	 * Query interface error messages published in `ubus` runtime state.
 	 *
 	 * Interface errors are emitted by remote protocol handlers if the setup
@@ -2433,17 +2452,19 @@ Protocol = baseclass.extend(/** @lends LuCI.network.Protocol.prototype */ {
 	},
 
 	/**
-	 * Get the name of the opkg package providing the protocol functionality.
+	 * Gets the name of the package providing the protocol functionality. The
+	 * package is available via the system default package manager. This is used
+	 * when a config refers to a protocol handler which is not yet installed.
 	 *
 	 * This function should be overwritten by protocol specific subclasses.
 	 *
 	 * @abstract
 	 *
 	 * @returns {string}
-	 * Returns the name of the opkg package required for the protocol to
+	 * Returns the name of the package to download, required for the protocol to
 	 * function, e.g. `odhcp6c` for the `dhcpv6` protocol.
 	 */
-	getOpkgPackage: function() {
+	getPackageName: function() {
 		return null;
 	},
 
@@ -3251,7 +3272,7 @@ Device = baseclass.extend(/** @lends LuCI.network.Device.prototype */ {
 	 * @returns {null|LuCI.network.Device}
 	 * Returns a `Network.Device` instance representing the parent device or
 	 * `null` when this device has no parent, as it is the case for e.g.
-	 * ordinary ethernet interfaces.
+	 * ordinary Ethernet interfaces.
 	 */
 	getParent: function() {
 		if (this.dev.parent)
@@ -3951,7 +3972,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	 *
 	 * @property {number} inactive
 	 * The amount of milliseconds the peer has been inactive, e.g. due
-	 * to powersave.
+	 * to power-saving.
 	 *
 	 * @property {number} connected_time
 	 * The amount of milliseconds the peer is associated to this network.
@@ -4001,7 +4022,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	 *  - `UNKNOWN`
 	 *
 	 * @property {number} [mesh local PS]
-	 * The local powersafe mode for the peer link, may be an empty
+	 * The local power-save mode for the peer link, may be an empty
 	 * string (`''`) or absent if not applicable or supported by
 	 * the driver.
 	 *
@@ -4012,7 +4033,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	 *  - `UNKNOWN`
 	 *
 	 * @property {number} [mesh peer PS]
-	 * The remote powersafe mode for the peer link, may be an empty
+	 * The remote power-save mode for the peer link, may be an empty
 	 * string (`''`) or absent if not applicable or supported by
 	 * the driver.
 	 *
@@ -4023,7 +4044,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	 *  - `UNKNOWN`
 	 *
 	 * @property {number} [mesh non-peer PS]
-	 * The powersafe mode for all non-peer neighbours, may be an empty
+	 * The power-save mode for all non-peer neighbours, may be an empty
 	 * string (`''`) or absent if not applicable or supported by the driver.
 	 *
 	 * The following modes are known:
@@ -4317,7 +4338,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	},
 
 	/**
-	 * Get the primary logical interface this wireless network is attached to.
+	 * Get the primary logical interface this network is attached to.
 	 *
 	 * @returns {null|LuCI.network.Protocol}
 	 * Returns a `Network.Protocol` instance representing the logical
@@ -4329,7 +4350,7 @@ WifiNetwork = baseclass.extend(/** @lends LuCI.network.WifiNetwork.prototype */ 
 	},
 
 	/**
-	 * Get the logical interfaces this wireless network is attached to.
+	 * Get the logical interfaces this network is attached to.
 	 *
 	 * @returns {Array<LuCI.network.Protocol>}
 	 * Returns an array of `Network.Protocol` instances representing the

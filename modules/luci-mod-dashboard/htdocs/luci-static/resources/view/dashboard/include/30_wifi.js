@@ -41,12 +41,10 @@ return baseclass.extend({
 				'src': L.resource('view/dashboard/icons/wireless.svg'),
 				'width': 55,
 				'title': this.title,
-				'class': 'middle'
+				'class': 'middle svgmonotone'
 			}),
 			E('h3', this.title)
 		]));
-
-		container_box.appendChild(E('hr'));
 
 		for (var i =0; i < this.params.wifi.radios.length; i++) {
 
@@ -79,19 +77,16 @@ return baseclass.extend({
 		container_box.appendChild(container_radio);
 
 		var container_devices = E('table', { 'class': 'table assoclist devices-info' }, [
-			E('tr', { 'class': 'tr table-titles  dashboard-bg' }, [
+			E('tr', { 'class': 'tr dashboard-bg' }, [
 				E('th', { 'class': 'th nowrap' }, _('Hostname')),
 				E('th', { 'class': 'th' }, _('SSID')),
 				E('th', { 'class': 'th', 'width': '45%' }, _('Signal Strength')),
-				E('th', { 'class': 'th' }, 'Transferred %s / %s'.format( _('Up.'), _('Down.')))
+				E('th', { 'class': 'th' }, _('Transferred') + ' %s / %s'.format( _('Up.'), _('Down.')))
 			])
 		]);
 
-		var container_devices_item;
-		var container_devices_list = E('table', { 'class': 'table assoclist devices-info' });
-
 		for (var i =0; i < this.params.wifi.devices.length; i++) {
-			container_devices_item = E('tr', { 'class': 'tr cbi-rowstyle-1' });
+			var container_devices_item = E('tr', { 'class': 'tr cbi-rowstyle-1' });
 
 			for(var idx in this.params.wifi.devices[i]) {
 				var device = this.params.wifi.devices[i];
@@ -127,13 +122,10 @@ return baseclass.extend({
 				container_devices_item.appendChild(container_content);
 			}
 
-			container_devices_list.appendChild(container_devices_item);
+			container_devices.appendChild(container_devices_item);
 		}
 
-		container_devices.appendChild(container_devices_list);
-		container_box.appendChild(E('hr'));
 		container_box.appendChild(container_devices);
-		container_box.appendChild(container_devices_list);
 		container_wapper.appendChild(container_box);
 
 		return container_wapper;
@@ -205,8 +197,10 @@ return baseclass.extend({
 					name = hosthints.getHostnameByMACAddr(bss.mac);
 
 				var progress_style;
+				var defaultNF = -90; // default noise floor for devices that do not report it
+				var defaultCeil = -30;
 				// var q = Math.min((bss.signal + 110) / 70 * 100, 100);
-				var q = 100 * ((bss.signal - bss.noise) / (-30 - bss.noise));
+				var q = 100 * ((bss.signal - (bss.noise ? bss.noise: defaultNF) ) / (defaultCeil - (bss.noise ? bss.noise : defaultNF)));
 
 				if (q == 0 || q < 25)
 					progress_style = 'bg-danger';

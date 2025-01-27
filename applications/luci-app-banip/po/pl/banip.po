@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-14 11:58+0000\n"
-"Last-Translator: Piotr Kołtun <pkoltungm@gmail.com>\n"
+"PO-Revision-Date: 2025-01-09 18:03+0000\n"
+"Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsbanip/pl/>\n"
 "Language: pl\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/setreport.js:78
 msgid "-- Set Selection --"
@@ -601,7 +601,7 @@ msgstr "Limit dziennika"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:595
 msgid "Log Prerouting"
-msgstr "Wstępne trasowanie dziennika"
+msgstr "Rejestrowanie preroutingu"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:251
 msgid "Log Settings"
@@ -621,7 +621,7 @@ msgstr "Rejestrowanie wejścia WAN"
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:595
 msgid "Log suspicious Prerouting packets."
-msgstr "Rejestruj podejrzane pakiety ze wstępnego trasowania."
+msgstr "Rejestruj podejrzane pakiety preroutingu."
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:604
 msgid "Log suspicious forwarded LAN packets."
@@ -1096,9 +1096,9 @@ msgstr ""
 "Za pomocą tego edytora możesz przesłać lokalny plik źródeł niestandardowych "
 "lub wypełnić plik początkowy (kopia 1:1 wersji dostarczonej w pakiecie). "
 "Plik znajduje się pod adresem '/etc/banip/banip.custom.feeds'. Następnie "
-"możesz edytować ten plik, usuwać wpisy, dodawać nowe lub wykonać lokalną "
-"kopię zapasową. Aby wrócić do wersji opiekunów, po prostu wyczyść plik "
-"źródeł niestandardowych."
+"możesz edytować ten plik, usuwać i dodawać wpisy lub wykonać lokalną kopię "
+"zapasową. Aby wrócić do wersji oryginalnej, po prostu wyczyść plik źródeł "
+"niestandardowych."
 
 #: applications/luci-app-banip/htdocs/luci-static/resources/view/banip/overview.js:582
 msgid "alert"
